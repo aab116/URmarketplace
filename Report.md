@@ -1,4 +1,4 @@
-# URMarketplace – Student Move-Out Exchange  
+# URMarketplace  
 **ENSE 375 – Software Testing and Validation**  
 **University of Regina**
 
