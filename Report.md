@@ -1,4 +1,3 @@
-![University of Regina Header](<img width="975" height="166" alt="image" src="https://github.com/user-attachments/assets/da26a6f9-8fd5-45bf-a0eb-c7c37379271e" />)
 # URMarketplace  
 **ENSE 375 – Software Testing and Validation**  
 **University of Regina**
