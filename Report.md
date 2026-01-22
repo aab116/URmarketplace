@@ -48,7 +48,6 @@ Informal marketplaces do not support essential features such as tracking the ori
 
 To address this gap, there is a need for a dedicated software tool, referred to as **URMarketplace**, that provides a structured marketplace tailored to student needs. The system must support the buying and selling of items, track original ownership, manage pricing and holding fees, and record seller earnings when items are purchased. Additionally, the system must allow administrators to oversee item listings, manage transactions, and ensure the proper handling of items throughout their lifecycle.
 
-URMarketplace is a conceptual system developed for academic purposes and is not an official University of Regina platform.
 
 ---
 
