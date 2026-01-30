@@ -106,32 +106,31 @@ Functions such as these will lay the groundwork for a software solution that can
 
 ### <strong>2.2.1 — Functions<a id="221-functions"></a></strong>
   <ul style="margin-left: 40px;">
-        •	Post items for sale with descriptions, photos, and prices.<br>
+        •	Post items for sale with descriptions, photos, videos and prices.<br>
         •	Submit counteroffers on listed items.<br>
         •	Arrange temporary storage services for items with associated fees.<br>
         •	Rate buyers and sellers after transactions.<br>
         •	Allow administrators to oversee listings, enforce rules, and blacklist users.<br>
-        •	Manage item lifecycle from listing to sale or removal.<br>
+        •	Manage item lifecycle from listing to sale or removal/republishing option to avoid orphan listings.<br>
         •	Track original owners and calculate net seller earnings after fees.<br>
   </ul>
             <span style="font-size: 1em;">&nbsp;</span>
 
 ### <strong>2.2.2 — Objectives<a id="222-objectives"></a></strong>
    <ul style="margin-left: 40px;">
-        •	User-friendly interface for quick posting and browsing.<br>
-        •	Transparent transaction history for trust building.<br>
-        •	Secure payment processing with fee deductions.<br>
+        •	User-friendly interface if we reach that far in testing for quick posting and browsing.<br>
+        •	Transparent transaction history that will build trust.<br>
+        •	Preventative processing for secure payments with fee deductions.<br>
         •	Efficient administrative controls for compliance.<br>
         •	Scalable to handle peak end-of-term traffic.<br>
-        •	Reliable for accurate ratings and lifecycle tracking.<br>
+        •	Reliable for accurate ratings.<br>
    </ul>
             <span style="font-size: 1em;">&nbsp;</span>
 
 ###  <strong>2.2.3 — Constraints<a id="223-constraints"></a></strong>
    <ul style="margin-left: 40px;">
         • Accessible only to verified University of Regina campus residents.<br>
-        • Compliant with Canadian privacy laws (PIPEDA).<br>
-        • Supports web and mobile browsers without native apps.<br>
+        • Compliant with Canadian & University of Regina privacy laws (PIPEDA).<br>
         • Handles up to 1,000 concurrent users.<br>
         • Integrates no external payment gateways initially.<br>
         • Operational within university network policies<br>
