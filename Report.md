@@ -215,7 +215,9 @@ These ratings and comments will be stored and referenced by other components of 
         • ModifyItem.java (concrete class)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• ArrangeStorage.java (interface)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• ArrangeStorage.java (implementation)<br>
         • FeeCalculator.java (interface);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• TrackOwnerAndCalculateFees.java (implementation)<br>
    </ul>
-   <br>
+   
+<br>
+<p></p>
 <p></p>
 <br>
 
