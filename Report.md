@@ -229,6 +229,7 @@ Represents a system participant with profile information and aggregated rating d
         • currentRating<br>  
         • List<UserComment>       
    </ul>
+<p></p>
 User  Testing Rules:
 <table align="center">
   <tr>
@@ -308,6 +309,7 @@ Models a marketplace listing created by a seller. Contains essential sales data:
         • biddingPrice<br>
         • sellerId
    </ul>
+<p></p>
 Product  Testing Rules:
 <table align="center">
   <tr>
@@ -386,6 +388,7 @@ Captures individual rating events between users. Records raterId, rateeId for re
         • comment (250 char max)<br>
         • timestamp<br>     
    </ul>
+<p></p>
 UserComment Testing Rules:
 <table align="center">
   <tr>
@@ -464,6 +467,7 @@ Core methods include are for submitting/validating ratings and getting the avera
         • comment (250 char max)<br>
         • timestamp<br>     
    </ul>
+<p></p>
 RatingService Testing Rules:
 <table align="center">
   <tr>
@@ -542,6 +546,7 @@ Provides CRUD operations (saveUser(), findById(), findByEmail()) plus rating upd
         • comment (250 char max)<br>
         • timestamp<br>     
    </ul>
+<p></p>
 UserRepository Testing Rules:
 <table align="center">
   <tr>
@@ -631,6 +636,7 @@ Data access layer for product listings. Exposes save(), findBySellerId(), and fi
         • comment (250 char max)<br>
         • timestamp<br>     
    </ul>
+<p></p>
 ProductRepository Testing Rules:
 <table align="center">
   <tr>
