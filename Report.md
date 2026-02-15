@@ -751,7 +751,7 @@ Based on the results, "Solution 2: Refined Modular Architecture" provides:
         • Isolating responsibilities and minimizing coupling between components<br>
         • Greater long-term scalability<br>
    </ul>
-     Therefore, "Solution 2: Refined Modular Architectur" was selected as the architecture for URMarketplace.
+Therefore, "Solution 2: Refined Modular Architectur" was selected as the architecture for URMarketplace.
 
 
 
