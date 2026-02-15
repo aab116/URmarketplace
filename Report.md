@@ -208,8 +208,6 @@ These ratings and comments will be stored and referenced by other components of 
 <br>
 
 
-### Evaluation for Solution 1
-
 | Evaluation Criterion | Assessment | Analysis |
 |----------------------|------------|----------|
 | Clarity of Responsibility Separation | Moderate | Functional areas are grouped logically; however, validation, processing, and persistence logic are partially combined. The Single Responsibility Principle is not consistently applied. |
@@ -718,7 +716,6 @@ ProductRepository Testing Rules:
 <br>
 <br>
 
-## Evaluation for Solution 2
 
 | Evaluation Criterion | Assessment | Analysis |
 |----------------------|------------|----------|
