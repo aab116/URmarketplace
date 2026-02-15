@@ -207,7 +207,14 @@ These ratings and comments will be stored and referenced by other components of 
 <br>
 <br>
 
-
+###  This table below involves the following:
+   <ul style="margin-left: 40px;">
+        • ModifyItem.java (concrete class)<br>
+        • ArrangeStorage.java (interface)<br>
+        • ArrangeStorage.java (implementation)<br>
+        • FeeCalculator.java (interface)<br>
+        • TrackOwnerAndCalculateFees.java (implementation)<br>
+   </ul>
 | Evaluation Criterion | Assessment | Analysis |
 |----------------------|------------|----------|
 | Clarity of Responsibility Separation | Moderate | Functional areas are grouped logically; however, validation, processing, and persistence logic are partially combined. The Single Responsibility Principle is not consistently applied. |
