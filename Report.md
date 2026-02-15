@@ -723,6 +723,22 @@ ProductRepository Testing Rules:
 | Protection Against Invalid Input & Misuse | High | Authentication and authorization layers prevent unauthorized actions. Centralized validation ensures invalid inputs are rejected before reaching operational logic. |
 | Long-Term Maintainability & Scalability | High | Low coupling and high cohesion allow new features to be added with minimal modification to existing components. This structure supports safe expansion and easier testing. |
 
+<br>
+<br>
+
+| Criterion | Solution 1: Initial Modular Structure | Solution 2: Refined Modular Architecture | Why Solution 2 is Better |
+|------------|----------------------------------------|-------------------------------------------|----------------------------|
+| Responsibility Separation | Modules exist, but validation + processing + persistence can overlap | Clear separation: CLI → Services → Validators → Repositories | Reduces confusion, enforces single responsibility, easier to reason about |
+| Fault Isolation | Failures may propagate across features due to tighter coupling | Failures contained within components (validators/services isolated) | Prevents cascading errors and improves reliability |
+| Validation Consistency | Rules embedded in multiple flows → possible inconsistent enforcement | Centralized validators/rules ensure consistent checks everywhere | Stronger correctness guarantees and fewer edge-case bugs |
+| Security & Misuse Prevention | Authorization checks may be scattered or uneven | Auth and admin boundaries are explicit and isolated | Reduces privilege bypass and incorrect actions |
+| Lifecycle Management | Lifecycle transitions may be mixed into transaction logic | Lifecycle handled by dedicated service/state logic | Prevents invalid states (e.g., sold item still accepting offers) |
+| Fee & Earnings Calculation | Calculations can be embedded in transaction flows | Fee calculation isolated (e.g., FeeCalculator/Strategy) | Easier to change fee rules without breaking other code |
+| Testability | Harder to unit test due to mixed responsibilities | High testability: services + validators are testable in isolation | Enables strong unit/integration testing with clear coverage |
+| Maintainability | Feature growth increases risk of unintended side effects | Low coupling supports safer changes and extension | Easier long-term development and fewer regressions |
+| Scalability | Expansion risks complexity and “spaghetti growth” | Architecture supports adding features cleanly | Better fit for future growth and peak-term load |
+| Terminal-Only Compatibility | Works, but CLI may hold too much logic | CLI is thin; logic stays in services/validators | Cleaner design while staying fully terminal-based |
+
 
 
 <br>
