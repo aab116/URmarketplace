@@ -739,8 +739,19 @@ ProductRepository Testing Rules:
 | Scalability | Expansion risks complexity and “spaghetti growth” | Architecture supports adding features cleanly | Better fit for future growth and peak-term load |
 | Terminal-Only Compatibility | Works, but CLI may hold too much logic | CLI is thin; logic stays in services/validators | Cleaner design while staying fully terminal-based |
 
-Based on the evaluation results, Solution 2 provides stronger separation of concerns, improved reliability, consistent validation enforcement, and greater long-term scalability. Therefore, Solution 2 was selected as the architecture for URMarketplace.
-
+Based on the results, "Solution 2: Refined Modular Architecture" provides:
+   <ul style="margin-left: 40px;">
+        • Stronger sSeparation of concerns<br>
+        • Improved reliability<br>
+        • Strict Layering Principles<br>
+        • Core domain entities (Such as User, Product, and UserComment) separated from business logic & handled through dedicated service interfaces<br>
+        • Data persistence, managed by repository abstractions<br>
+        • Consistent validation enforcement<br>
+        • Validation rules are centralized and consistently enforced<br>
+        • Isolating responsibilities and minimizing coupling between components<br>
+        • Greater long-term scalability<br>
+     Therefore, "Solution 2: Refined Modular Architectur" was selected as the architecture for URMarketplace.
+<p></p>
 
 
 
