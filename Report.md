@@ -729,7 +729,7 @@ ProductRepository Testing Rules:
 
 <br>
 <br>
-DO NOT DELETE THIS OR POST AFTER THIS
+DO NOT DELETE THIS OR POST AFTER THIS (Temporary Formatting Note)
 </ul>
 </ul>
 
