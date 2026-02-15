@@ -47,6 +47,9 @@
     - [2.2.1 — Functions](#221-functions)
     - [2.2.2 — Objectives](#222-objectives)
     - [2.2.3 — Constraints](#223-constraints)
+  - [3 — Solutions](#3-solutions)
+  - [3.1 — Solution Set 1](#31-solution-set)
+  - [3.2 — Solution Set 2](#32-solution-set)
  
 
 
@@ -138,3 +141,9 @@ Functions such as these will lay the groundwork for a software solution that can
             <span style="font-size: 1em;">&nbsp;</span>
 
 </ul>
+
+## 3 — Solutions<a id="3-solutions"></a>
+
+### 3.1	— Solution Set 1<a id="31-solution-set"></a>
+
+### 3.2	— Solution Set 2<a id="32-solution-set"></a>
