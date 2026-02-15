@@ -636,7 +636,7 @@ UserRepository Testing Rules:
 
 
 
-<h3> ProductRepository — Interface</h3>
+
 <h2> ProductRepository — Interface </h2>
 <p></p>
 Data access layer for product listings. Exposes save(), findBySellerId(), and findById() methods. Ensures consistent product CRUD operations while hiding persistence details, allowing seamless database technology swaps without application code changes.
