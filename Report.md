@@ -243,7 +243,7 @@ User  Testing Rules:
     <th>Rule 8</th>
   </tr>
   <tr>
-    <th>email unique/valid?</th>
+    <th>Valid Email?</th>
     <th>T</th>
     <th>T</th>
     <th>F</th>
@@ -254,7 +254,7 @@ User  Testing Rules:
     <th>F</th>
   </tr>
   <tr>
-    <th>firstName present?</th>
+    <th>firstName Present?</th>
     <th>T</th>
     <th>F</th>
     <th>T</th>
@@ -268,7 +268,7 @@ User  Testing Rules:
     <th>Action Stubs</th>
   </tr>
   <tr>
-    <th>Create / Update User</th>
+    <th>Create/Update User</th>
     <th>X</th>
     <th></th>
     <th></th>
@@ -322,7 +322,7 @@ Product  Testing Rules:
     <th>Rule 8</th>
   </tr>
   <tr>
-    <th>title present?</th>
+    <th>title Present?</th>
     <th>T</th>
     <th>T</th>
     <th>F</th>
@@ -333,7 +333,7 @@ Product  Testing Rules:
     <th>F</th>
   </tr>
   <tr>
-    <th>price &amp; description valid?</th>
+    <th>price &amp; description Valid?</th>
     <th>T</th>
     <th>F</th>
     <th>T</th>
@@ -358,7 +358,7 @@ Product  Testing Rules:
     <th></th>
   </tr>
   <tr>
-    <th>Reject</th>
+    <th>Reject Product</th>
     <th></th>
     <th>X</th>
     <th>X</th>
@@ -400,7 +400,7 @@ UserComment Testing Rules:
     <th>Rule 8</th>
   </tr>
   <tr>
-    <th>rating between 1–5?</th>
+    <th>Rating Between 1–5?</th>
     <th>T</th>
     <th>T</th>
     <th>F</th>
@@ -411,7 +411,7 @@ UserComment Testing Rules:
     <th>F</th>
   </tr>
   <tr>
-    <th>comment ≤ 250 chars?</th>
+    <th>comment ≤ 250 Chars?</th>
     <th>T</th>
     <th>F</th>
     <th>T</th>
@@ -436,7 +436,7 @@ UserComment Testing Rules:
     <th></th>
   </tr>
   <tr>
-    <th>Reject</th>
+    <th>Reject Comment</th>
     <th></th>
     <th>X</th>
     <th>X</th>
@@ -478,7 +478,7 @@ RatingService Testing Rules:
     <th>Rule 8</th>
   </tr>
   <tr>
-    <th>rating between 1–5?</th>
+    <th>rating Between 1–5?</th>
     <th>T</th>
     <th>T</th>
     <th>F</th>
@@ -514,7 +514,7 @@ RatingService Testing Rules:
     <th></th>
   </tr>
   <tr>
-    <th>Throw Error</th>
+    <th>Error</th>
     <th></th>
     <th>X</th>
     <th>X</th>
@@ -556,7 +556,7 @@ UserRepository Testing Rules:
     <th>Rule 8</th>
   </tr>
   <tr>
-    <th>userId exists?</th>
+    <th>userId Exists?</th>
     <th>T</th>
     <th>T</th>
     <th>F</th>
@@ -567,7 +567,7 @@ UserRepository Testing Rules:
     <th>F</th>
   </tr>
   <tr>
-    <th>data valid?</th>
+    <th>data Valid?</th>
     <th>T</th>
     <th>F</th>
     <th>T</th>
@@ -645,7 +645,7 @@ ProductRepository Testing Rules:
     <th>Rule 8</th>
   </tr>
   <tr>
-    <th>sellerId exists?</th>
+    <th>sellerId Exists?</th>
     <th>T</th>
     <th>T</th>
     <th>F</th>
@@ -656,7 +656,7 @@ ProductRepository Testing Rules:
     <th>F</th>
   </tr>
   <tr>
-    <th>product data valid?</th>
+    <th>product Data Valid?</th>
     <th>T</th>
     <th>F</th>
     <th>T</th>
