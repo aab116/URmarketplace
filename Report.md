@@ -750,7 +750,7 @@ Based on the results, "Solution 2: Refined Modular Architecture" provides:
         • Validation rules are centralized and consistently enforced<br>
         • Isolating responsibilities and minimizing coupling between components<br>
         • Greater long-term scalability<br>
-<p></p>
+   </ul>
      Therefore, "Solution 2: Refined Modular Architectur" was selected as the architecture for URMarketplace.
 
 
