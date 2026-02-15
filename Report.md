@@ -209,11 +209,8 @@ These ratings and comments will be stored and referenced by other components of 
 
 ###  This table below involves the following:
    <ul style="margin-left: 40px;">
-        • ModifyItem.java (concrete class)<br>
-        • ArrangeStorage.java (interface)<br>
-        • ArrangeStorage.java (implementation)<br>
-        • FeeCalculator.java (interface)<br>
-        • TrackOwnerAndCalculateFees.java (implementation)<br>
+        • ModifyItem.java (concrete class)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• ArrangeStorage.java (interface)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• ArrangeStorage.java (implementation)<br>
+        • FeeCalculator.java (interface);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• TrackOwnerAndCalculateFees.java (implementation)<br>
    </ul>
   <p></p>
  
