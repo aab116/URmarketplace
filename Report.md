@@ -144,6 +144,572 @@ Functions such as these will lay the groundwork for a software solution that can
 
 ## 3 — Solutions<a id="3-solutions"></a>
 
+The proposed back-end solutions are done through the implementation of Java classes and interfaces to facilitate our systems architecture.
+
+A Rating class will be developed to handle the evaluation logic for both sellers and purchasers. This class will include methods that allow users to assign a numerical rating between 1 and 5 using a switch statement. Additionally, a text-based comment feature will enable users to provide qualitative feedback alongside their numerical rating. These ratings and comments will be stored and referenced by other components of the system, ensuring consistent data exchange between related modules.
+
+
+<ul style="margin-left: 40px;">
+  
 ### 3.1	— Solution Set 1<a id="31-solution-set"></a>
 
+
+
+### UserDatabase Class / Interface:
+<p></p>
+This component will maintain user profile information and rating data. The primary fields include:
+   <ul style="margin-left: 40px;">
+        • firstName<br>
+        • lastName<br>
+        • phoneNumber<br>
+        • email<br>
+        • currentRating —> An aggregate or referenced value obtained from the Rating class/interface<br>
+        • ratingComments —> textual feedback from other users (Maximum length: 250 characters
+   </ul>
+The design will ensure the storage of multiple user entries, supporting efficient retrieval and update operations. Looking into extending this or to interface with a storage layer, such as an SQL or NoSQL database system
+<br>
+<br>
+
+
+
+
+### ProductDatabase Class / Interface:
+<p></p>
+This component will manage product-related information for user-listed items. The primary fields include:
+   <ul style="margin-left: 40px;">
+        • title<br>
+        • description (maximum length: 500 characters)<br>
+        • price<br>
+        • biddingPrice<br>
+        • currentRating —> An aggregate or referenced value obtained from the Rating class/interface<br>
+        • ratingComments —> textual feedback from other users (Maximum length: 250 characters
+   </ul>
+This structure will enable users to post, modify, and query product listings, providing support for both fixed-price and bidding-based sales models.
+<br>
+<br>
+
+
+
+### Rating Class 
+<p></p>
+This class will handle will handle the evaluation logic for both sellers and purchasers. <br>
+This class will include methods that allow users to:
+These ratings and comments will be stored and referenced by other components of the system, ensuring consistent data exchange between related modules.
+
+   <ul style="margin-left: 40px;">
+        • Assign a numerical rating between 1 and 5 using a switch statement<br>
+        • Text-based comment feature will enable users to provide qualitative feedback alongside their numerical rating (Maximum length: 250 characters)<br>
+   </ul>
+These ratings and comments will be stored and referenced by other components of the system, ensuring consistent data exchange between related modules.
+
+
+
+<br>
+<br>
+
+
+
 ### 3.2	— Solution Set 2<a id="32-solution-set"></a>
+
+<ul style="margin-left: 40px;">
+<br>
+<br>
+
+
+
+### User — Entity Class
+<p></p>
+Represents a system participant with profile information and aggregated rating data. Stores core identity fields (firstName, lastName, email, phoneNumber) alongside a computed currentRating (double average) and a collection of received UserComment objects. Serves as the primary entity linking ratings to individuals.
+   <ul style="margin-left: 40px;">
+        • id<br>
+        • firstName<br>
+        • lastName<br>
+        • phoneNumber (1-5)<br>
+        • email (250 char max)<br>
+        • currentRating<br>  
+        • List<UserComment>       
+   </ul>
+User  Testing Rules:
+<table align="center">
+  <tr>
+    <th>Condition</th>
+    <th>Rule 1</th>
+    <th>Rule 2</th>
+    <th>Rule 3</th>
+    <th>Rule 4</th>
+    <th>Rule 5</th>
+    <th>Rule 6</th>
+    <th>Rule 7</th>
+    <th>Rule 8</th>
+  </tr>
+  <tr>
+    <th>email unique/valid?</th>
+    <th>T</th>
+    <th>T</th>
+    <th>F</th>
+    <th>F</th>
+    <th>T</th>
+    <th>T</th>
+    <th>F</th>
+    <th>F</th>
+  </tr>
+  <tr>
+    <th>firstName present?</th>
+    <th>T</th>
+    <th>F</th>
+    <th>T</th>
+    <th>F</th>
+    <th>T</th>
+    <th>T</th>
+    <th>F</th>
+    <th>F</th>
+  </tr>
+  <tr>
+    <th>Action Stubs</th>
+  </tr>
+  <tr>
+    <th>Create / Update User</th>
+    <th>X</th>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th>X</th>
+    <th>X</th>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <th>Reject</th>
+    <th></th>
+    <th>X</th>
+    <th>X</th>
+    <th>X</th>
+    <th></th>
+    <th></th>
+    <th>X</th>
+    <th>X</th>
+  </tr>
+</table>
+
+<br>
+<br>
+
+
+
+### Product — Entity Class
+<p></p>
+Models a marketplace listing created by a seller. Contains essential sales data: title for identification, description for details (500 char limit), price for fixed sales, biddingPrice for auctions, and sellerId foreign key. Enables product lifecycle management from posting to purchase.
+   <ul style="margin-left: 40px;">
+        • id<br>
+        • title<br>
+        • description (500 char max)<br>
+        • price (1-5)<br>
+        • comment (250 char max)<br>
+        • biddingPrice<br>
+        • sellerId
+   </ul>
+Product  Testing Rules:
+<table align="center">
+  <tr>
+    <th>Condition</th>
+    <th>Rule 1</th>
+    <th>Rule 2</th>
+    <th>Rule 3</th>
+    <th>Rule 4</th>
+    <th>Rule 5</th>
+    <th>Rule 6</th>
+    <th>Rule 7</th>
+    <th>Rule 8</th>
+  </tr>
+  <tr>
+    <th>title present?</th>
+    <th>T</th>
+    <th>T</th>
+    <th>F</th>
+    <th>F</th>
+    <th>T</th>
+    <th>T</th>
+    <th>F</th>
+    <th>F</th>
+  </tr>
+  <tr>
+    <th>price &amp; description valid?</th>
+    <th>T</th>
+    <th>F</th>
+    <th>T</th>
+    <th>F</th>
+    <th>T</th>
+    <th>T</th>
+    <th>F</th>
+    <th>F</th>
+  </tr>
+  <tr>
+    <th>Action Stubs</th>
+  </tr>
+  <tr>
+    <th>Save Product</th>
+    <th>X</th>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th>X</th>
+    <th>X</th>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <th>Reject</th>
+    <th></th>
+    <th>X</th>
+    <th>X</th>
+    <th>X</th>
+    <th></th>
+    <th></th>
+    <th>X</th>
+    <th>X</th>
+  </tr>
+</table>
+
+<br>
+<br>
+
+
+
+### UserComment — Entity Classes
+<p></p>
+Captures individual rating events between users. Records raterId, rateeId for relationship tracking, numeric rating (1-5 integer), textual comment (250 char limit), and timestamp for audit trail. Foundation for average rating calculations and comment history display.
+   <ul style="margin-left: 40px;">
+        • id<br>
+        • raterId<br>
+        • rateeId<br>
+        • rating (1-5)<br>
+        • comment (250 char max)<br>
+        • timestamp<br>     
+   </ul>
+UserComment Testing Rules:
+<table align="center">
+  <tr>
+    <th>Condition</th>
+    <th>Rule 1</th>
+    <th>Rule 2</th>
+    <th>Rule 3</th>
+    <th>Rule 4</th>
+    <th>Rule 5</th>
+    <th>Rule 6</th>
+    <th>Rule 7</th>
+    <th>Rule 8</th>
+  </tr>
+  <tr>
+    <th>rating between 1–5?</th>
+    <th>T</th>
+    <th>T</th>
+    <th>F</th>
+    <th>F</th>
+    <th>T</th>
+    <th>T</th>
+    <th>F</th>
+    <th>F</th>
+  </tr>
+  <tr>
+    <th>comment ≤ 250 chars?</th>
+    <th>T</th>
+    <th>F</th>
+    <th>T</th>
+    <th>F</th>
+    <th>T</th>
+    <th>T</th>
+    <th>F</th>
+    <th>F</th>
+  </tr>
+  <tr>
+    <th>Action Stubs</th>
+  </tr>
+  <tr>
+    <th>Save Comment</th>
+    <th>X</th>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th>X</th>
+    <th>X</th>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <th>Reject</th>
+    <th></th>
+    <th>X</th>
+    <th>X</th>
+    <th>X</th>
+    <th></th>
+    <th></th>
+    <th>X</th>
+    <th>X</th>
+  </tr>
+</table>
+<br>
+<br>
+
+
+
+### RatingService — Interface
+<p></p>
+Defines business logic for rating operations. <br>
+Core methods include are for submitting/validating ratings and getting the average rating. Encapsulates switch statements as validation ( Range: 1-5 ). As well as comment persistence (Data surviving after program ends), which will decouple UI from rating rules.
+   <ul style="margin-left: 40px;">
+        • rateUser()<br>
+        • raterId<br>
+        • rateeId<br>
+        • rating (1-5)<br>
+        • comment (250 char max)<br>
+        • timestamp<br>     
+   </ul>
+RatingService Testing Rules:
+<table align="center">
+  <tr>
+    <th>Condition</th>
+    <th>Rule 1</th>
+    <th>Rule 2</th>
+    <th>Rule 3</th>
+    <th>Rule 4</th>
+    <th>Rule 5</th>
+    <th>Rule 6</th>
+    <th>Rule 7</th>
+    <th>Rule 8</th>
+  </tr>
+  <tr>
+    <th>rating between 1–5?</th>
+    <th>T</th>
+    <th>T</th>
+    <th>F</th>
+    <th>F</th>
+    <th>T</th>
+    <th>T</th>
+    <th>F</th>
+    <th>F</th>
+  </tr>
+  <tr>
+    <th>rater &amp; ratee IDs valid?</th>
+    <th>T</th>
+    <th>F</th>
+    <th>T</th>
+    <th>F</th>
+    <th>T</th>
+    <th>T</th>
+    <th>F</th>
+    <th>F</th>
+  </tr>
+  <tr>
+    <th>Action Stubs</th>
+  </tr>
+  <tr>
+    <th>Process Rating</th>
+    <th>X</th>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th>X</th>
+    <th>X</th>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <th>Throw Error</th>
+    <th></th>
+    <th>X</th>
+    <th>X</th>
+    <th>X</th>
+    <th></th>
+    <th></th>
+    <th>X</th>
+    <th>X</th>
+  </tr>
+</table>
+<br>
+<br>
+
+
+
+### UserRepository — Interface
+<p></p>
+Standardizing the data access contract for user persistence (Data surviving after program ends). 
+Provides CRUD operations (saveUser(), findById(), findByEmail()) plus rating updates (updateRating()). Abstracts storage implementation, supporting in-memory, JDBC, JPA, or NoSQL backends through polymorphism.
+   <ul style="margin-left: 40px;">
+        • id<br>
+        • raterId<br>
+        • rateeId<br>
+        • rating (1-5)<br>
+        • comment (250 char max)<br>
+        • timestamp<br>     
+   </ul>
+UserRepository Testing Rules:
+<table align="center">
+  <tr>
+    <th>Condition</th>
+    <th>Rule 1</th>
+    <th>Rule 2</th>
+    <th>Rule 3</th>
+    <th>Rule 4</th>
+    <th>Rule 5</th>
+    <th>Rule 6</th>
+    <th>Rule 7</th>
+    <th>Rule 8</th>
+  </tr>
+  <tr>
+    <th>userId exists?</th>
+    <th>T</th>
+    <th>T</th>
+    <th>F</th>
+    <th>F</th>
+    <th>T</th>
+    <th>T</th>
+    <th>F</th>
+    <th>F</th>
+  </tr>
+  <tr>
+    <th>data valid?</th>
+    <th>T</th>
+    <th>F</th>
+    <th>T</th>
+    <th>F</th>
+    <th>T</th>
+    <th>T</th>
+    <th>F</th>
+    <th>F</th>
+  </tr>
+  <tr>
+    <th>Action Stubs</th>
+  </tr>
+  <tr>
+    <th>Update User</th>
+    <th>X</th>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th>X</th>
+    <th>X</th>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <th>Create User</th>
+    <th></th>
+    <th></th>
+    <th>X</th>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <th>Reject</th>
+    <th></th>
+    <th>X</th>
+    <th></th>
+    <th>X</th>
+    <th></th>
+    <th></th>
+    <th>X</th>
+    <th>X</th>
+  </tr>
+</table>
+<br>
+<br>
+
+
+
+<h3> ProductRepository — Interface</h3>
+<h2> ProductRepository — Interfac </h2>
+<p></p>
+Data access layer for product listings. Exposes save(), findBySellerId(), and findById() methods. Ensures consistent product CRUD operations while hiding persistence details, allowing seamless database technology swaps without application code changes.
+   <ul style="margin-left: 40px;">
+        • id<br>
+        • raterId<br>
+        • rateeId<br>
+        • rating (1-5)<br>
+        • comment (250 char max)<br>
+        • timestamp<br>     
+   </ul>
+ProductRepository Testing Rules:
+<table align="center">
+  <tr>
+    <th>Condition</th>
+    <th>Rule 1</th>
+    <th>Rule 2</th>
+    <th>Rule 3</th>
+    <th>Rule 4</th>
+    <th>Rule 5</th>
+    <th>Rule 6</th>
+    <th>Rule 7</th>
+    <th>Rule 8</th>
+  </tr>
+  <tr>
+    <th>sellerId exists?</th>
+    <th>T</th>
+    <th>T</th>
+    <th>F</th>
+    <th>F</th>
+    <th>T</th>
+    <th>T</th>
+    <th>F</th>
+    <th>F</th>
+  </tr>
+  <tr>
+    <th>product data valid?</th>
+    <th>T</th>
+    <th>F</th>
+    <th>T</th>
+    <th>F</th>
+    <th>T</th>
+    <th>T</th>
+    <th>F</th>
+    <th>F</th>
+  </tr>
+  <tr>
+    <th>Action Stubs</th>
+  </tr>
+  <tr>
+    <th>Save Product</th>
+    <th>X</th>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th>X</th>
+    <th>X</th>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <th>Reject</th>
+    <th></th>
+    <th>X</th>
+    <th>X</th>
+    <th>X</th>
+    <th></th>
+    <th></th>
+    <th>X</th>
+    <th>X</th>
+  </tr>
+</table>
+<br>
+<br>
+
+
+
+
+
+
+
+
+
+
+
+
+<br>
+<br>
+DO NOT DELETE THIS OR POST AFTER THIS
+</ul>
+</ul>
+
+
