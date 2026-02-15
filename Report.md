@@ -208,7 +208,7 @@ These ratings and comments will be stored and referenced by other components of 
 <br>
 
 
-### Evaluation Criteria for Solution 1
+### Evaluation for Solution 1
 
 | Evaluation Criterion | Assessment | Analysis |
 |----------------------|------------|----------|
