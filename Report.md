@@ -142,7 +142,7 @@ Functions such as these will lay the groundwork for a software solution that can
 
 </ul>
 
-## 3 — Solutions<a id="3-solutions"></a>
+##  <strong>3 — Solutions<a id="3-solutions"></a></strong>
 
 The proposed back-end solutions are done through the implementation of Java classes and interfaces to facilitate our systems architecture.
 
@@ -150,9 +150,13 @@ A Rating class will be developed to handle the evaluation logic for both sellers
 
 
 <ul style="margin-left: 40px;">
+<b>
+<p></p>
   
-### 3.1	— Solution Set 1<a id="31-solution-set"></a>
+### 3.1	<strong> — Solution Set 1<a id="31-solution-set"></a></strong>
 
+<br>
+<p></p>
 
 
 ### UserDatabase Class / Interface:
@@ -201,19 +205,20 @@ These ratings and comments will be stored and referenced by other components of 
         • Text-based comment feature will enable users to provide qualitative feedback alongside their numerical rating (Maximum length: 250 characters)<br>
    </ul>
 These ratings and comments will be stored and referenced by other components of the system, ensuring consistent data exchange between related modules.
+<br>
+<p></p>
 <p></p>
 
-
-<br>
-<br>
 
 ###  This table below involves the following:
    <ul style="margin-left: 40px;">
         • ModifyItem.java (concrete class)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• ArrangeStorage.java (interface)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• ArrangeStorage.java (implementation)<br>
         • FeeCalculator.java (interface);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• TrackOwnerAndCalculateFees.java (implementation)<br>
    </ul>
-  <p></p>
- 
+   <br>
+<p></p>
+<br>
+
 | Evaluation Criterion | Assessment | Analysis |
 |----------------------|------------|----------|
 | Clarity of Responsibility Separation | Moderate | Functional areas are grouped logically; however, validation, processing, and persistence logic are partially combined. The Single Responsibility Principle is not consistently applied. |
@@ -222,21 +227,34 @@ These ratings and comments will be stored and referenced by other components of 
 | Protection Against Invalid Input & Misuse | Moderate | Input checks and authorization controls are present but not centralized. This increases the possibility of uneven rule enforcement across different execution paths. |
 | Long-Term Maintainability & Scalability | Moderate to Low | Tightly coupled logic makes expansion and modification riskier. Introducing new features may require modifying multiple modules, increasing complexity. |
 
+<br>
 <p></p>
 Although operationally correct, Solution 1 lacks strict separation of concerns and strong structural safeguards. As the system grows, these weaknesses could negatively impact maintainability and reliability. Therefore, refinement was pursued.
 
 
 
+
+
+
+
+
+
+
 <br>
-<br>
+<p></p>
 
+###  <strong>3.2	— Solution Set 2<a id="32-solution-set"></a></strong>
 
-
-### 3.2	— Solution Set 2<a id="32-solution-set"></a>
-
+<p></p>
 <ul style="margin-left: 40px;">
 <br>
-<br>
+
+
+
+
+
+
+
 
 
 
@@ -722,9 +740,13 @@ ProductRepository Testing Rules:
   </tr>
 </table>
 <br>
-<br>
-
-
+<p></p>
+###  This table below involves the following:
+   <ul style="margin-left: 40px;">
+        • ModifyItem.java (concrete class)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• ArrangeStorage.java (interface)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• ArrangeStorage.java (implementation)<br>
+        • FeeCalculator.java (interface);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• TrackOwnerAndCalculateFees.java (implementation)<br>
+   </ul>
+  <p></p>
 | Evaluation Criterion | Assessment | Analysis |
 |----------------------|------------|----------|
 | Clarity of Responsibility Separation | High | Validation, business logic, persistence, and administrative functions are structurally isolated. Each service adheres closely to a single responsibility. |
@@ -732,23 +754,8 @@ ProductRepository Testing Rules:
 | Enforcement of Boundary & Validation Constraints | High | Validation logic is centralized, ensuring consistent enforcement of offer limits, rating boundaries, and lifecycle rules across all system interactions. |
 | Protection Against Invalid Input & Misuse | High | Authentication and authorization layers prevent unauthorized actions. Centralized validation ensures invalid inputs are rejected before reaching operational logic. |
 | Long-Term Maintainability & Scalability | High | Low coupling and high cohesion allow new features to be added with minimal modification to existing components. This structure supports safe expansion and easier testing. |
-
 <br>
 <br>
-
-| Criterion | Solution 1: Initial Modular Structure | Solution 2: Refined Modular Architecture | Why Solution 2 is Better |
-|------------|----------------------------------------|-------------------------------------------|----------------------------|
-| Responsibility Separation | Modules exist, but validation + processing + persistence can overlap | Clear separation: CLI → Services → Validators → Repositories | Reduces confusion, enforces single responsibility, easier to reason about |
-| Fault Isolation | Failures may propagate across features due to tighter coupling | Failures contained within components (validators/services isolated) | Prevents cascading errors and improves reliability |
-| Validation Consistency | Rules embedded in multiple flows → possible inconsistent enforcement | Centralized validators/rules ensure consistent checks everywhere | Stronger correctness guarantees and fewer edge-case bugs |
-| Security & Misuse Prevention | Authorization checks may be scattered or uneven | Auth and admin boundaries are explicit and isolated | Reduces privilege bypass and incorrect actions |
-| Lifecycle Management | Lifecycle transitions may be mixed into transaction logic | Lifecycle handled by dedicated service/state logic | Prevents invalid states (e.g., sold item still accepting offers) |
-| Fee & Earnings Calculation | Calculations can be embedded in transaction flows | Fee calculation isolated (e.g., FeeCalculator/Strategy) | Easier to change fee rules without breaking other code |
-| Testability | Harder to unit test due to mixed responsibilities | High testability: services + validators are testable in isolation | Enables strong unit/integration testing with clear coverage |
-| Maintainability | Feature growth increases risk of unintended side effects | Low coupling supports safer changes and extension | Easier long-term development and fewer regressions |
-| Scalability | Expansion risks complexity and “spaghetti growth” | Architecture supports adding features cleanly | Better fit for future growth and peak-term load |
-| Terminal-Only Compatibility | Works, but CLI may hold too much logic | CLI is thin; logic stays in services/validators | Cleaner design while staying fully terminal-based |
-
 Based on the results, "Solution 2: Refined Modular Architecture" provides:
    <ul style="margin-left: 40px;">
         • Stronger separation of concerns<br>
@@ -765,9 +772,482 @@ Therefore, "Solution 2: Refined Modular Architectur" was selected as the archite
 
 
 
+
+### UserManager —  Service Class
+<p></p>
+Manages user authentication and registration within the system. Maintains a collection of registered users, and controls session states. It also handles user validation, including unique username enforcement and credential verification during login attempts. This provides the foundation for the user identity management across the marketplace, using:
+ <ul style="margin-left: 40px;"> 
+ • users — List of registered User objects<br> 
+ • nextId — Auto-incremented ID counter for new users </ul> <p></p>
+ <br>
+Here are the UserManager Testing Rules (Register method):
+<table align="center">
+  <tr>
+    <th>Condition</th>
+    <th>Rule 1</th>
+    <th>Rule 2</th>
+    <th>Rule 3</th>
+    <th>Rule 4</th>
+  </tr>
+  <tr>
+    <th>Username unique?</th>
+    <th>T</th>
+    <th>F</th>
+    <th>T</th>
+    <th>F</th>
+  </tr>
+  <tr>
+    <th>Valid email format?</th>
+    <th>T</th>
+    <th>T</th>
+    <th>F</th>
+    <th>F</th>
+  </tr>
+  <tr>
+    <th>Action Stubs</th>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <th>Register User (return true)</th>
+    <th>X</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <th>Reject Registration (return false)</th>
+    <th></th>
+    <th>X</th>
+    <th>X</th>
+    <th>X</th>
+  </tr>
+</table>
 <br>
+Here are the UserManager Testing Rules (login method):
+<table align="center">
+  <tr>
+    <th>Condition</th>
+    <th>Rule 1</th>
+    <th>Rule 2</th>
+    <th>Rule 3</th>
+    <th>Rule 4</th>
+  </tr>
+  <tr>
+    <th>Username exists?</th>
+    <th>T</th>
+    <th>F</th>
+    <th>T</th>
+    <th>F</th>
+  </tr>
+  <tr>
+    <th>Password matches?</th>
+    <th>T</th>
+    <th>-</th>
+    <th>F</th>
+    <th>-</th>
+  </tr>
+  <tr>
+    <th>Action Stubs</th>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <th>Login Success (return User)</th>
+    <th>X</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <th>Login Failed (return null)</th>
+    <th></th>
+    <th>X</th>
+    <th>X</th>
+    <th>X</th>
+  </tr>
+</table>
 <br>
-DO NOT DELETE THIS OR POST AFTER THIS (Temporary Formatting Note)
+<p></p>
+
+
+
+### IssueManager — Service Class
+<p></p>
+Handles the reporting and tracking of user-reported issues within the platform; managing the lifecycle of support tickets from creation to resolution. Each issue maintains relevant metadata including category classification, current status, and reporter information. This provides a structured problem reporting system for marketplace moderation and support through the key implementations of:
+   <ul style="margin-left: 40px;"> 
+   • issues — List of reported Issue objects<br> 
+   • nextId — Auto-incremented ID counter for new issues <br>
+   </ul> 
+<p></p>
+<table align="center">
+  <tr>
+    <th>Condition</th>
+    <th>Rule 1</th>
+    <th>Rule 2</th>
+    <th>Rule 3</th>
+    <th>Rule 4</th>
+    <th>Rule 5</th>
+    <th>Rule 6</th>
+    <th>Rule 7</th>
+    <th>Rule 8</th>
+  </tr>
+  <tr>
+    <th>Title present?</th>
+    <th>T</th>
+    <th>T</th>
+    <th>F</th>
+    <th>F</th>
+    <th>T</th>
+    <th>T</th>
+    <th>F</th>
+    <th>F</th>
+  </tr>
+  <tr>
+    <th>Description present?</th>
+    <th>T</th>
+    <th>F</th>
+    <th>T</th>
+    <th>F</th>
+    <th>T</th>
+    <th>T</th>
+    <th>F</th>
+    <th>F</th>
+  </tr>
+  <tr>
+    <th>Category valid?</th>
+    <th>T</th>
+    <th>T</th>
+    <th>T</th>
+    <th>T</th>
+    <th>F</th>
+    <th>F</th>
+    <th>F</th>
+    <th>F</th>
+  </tr>
+  <tr>
+    <th>Action Stubs</th>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <th>Create Issue (return ID)</th>
+    <th>X</th>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <th>Reject Issue (return -1)</th>
+    <th></th>
+    <th>X</th>
+    <th>X</th>
+    <th>X</th>
+    <th>X</th>
+    <th>X</th>
+    <th>X</th>
+    <th>X</th>
+  </tr>
+</table>
+<br>
+<p></p>
+
+
+
+### BiddingManager —  Service Class
+<p></p>
+Manages the bidding and auction lifecycle within the marketplace program. Key aspects such as managing listing creation, offering submission, bid validation, and automatic auction expiration. By taking this route, this program maintains separate collections for active listings and submitted offers, along with state tracking for both entities/users. Of course implementing key core marketplace logic, such as the buy-now functionality and outbid notifications. 
+  <ul style="margin-left: 40px;"> 
+    • listings — List of Listing objects (items for sale/auction)<br> 
+    • offers — List of Offer objects (bids submitted)<br> 
+    • listingStates — Map of listing IDs to current status (ACTIVE, SOLD, EXPIRED)<br>
+    • offerStates — Map of offer IDs to current status (PENDING, ACCEPTED, REJECTED, OUTBID)<br> 
+    • nextListingId — Auto-incremented ID counter for new listings<br> 
+    • nextOfferId — Auto-incremented ID counter for new offers <br> 
+  </ul> 
+<p></p>
+BiddingManager Testing Rules (makeOffer method):
+<br>
+<table align="center"> 
+  <tr> 
+    <th>Condition</th> 
+    <th>Rule 1</th> 
+    <th>Rule 2</th> 
+    <th>Rule 3</th> 
+    <th>Rule 4</th> 
+    <th>Rule 5</th> 
+    <th>Rule 6</th> 
+    <th>Rule 7</th> 
+    <th>Rule 8</th> 
+  </tr> 
+  <tr> 
+    <th>Listing exists?</th> 
+    <th>T</th> 
+    <th>F</th> 
+    <th>T</th> 
+    <th>T</th> 
+    <th>T</th> 
+    <th>T</th> 
+    <th>F</th> 
+    <th>F</th> 
+  </tr> <tr> 
+    <th>Listing ACTIVE?</th> 
+    <th>T</th> 
+    <th>-</th> 
+    <th>F</th> 
+    <th>T</th> 
+    <th>T</th> 
+    <th>T</th> 
+    <th>-</th> 
+    <th>-</th> 
+  </tr> <tr> 
+    <th>Amount > currentBid?</th> 
+    <th>T</th> 
+    <th>-</th> 
+    <th>-</th> 
+    <th>F</th> 
+    <th>T</th> 
+    <th>T</th> 
+    <th>-</th> 
+    <th>-</th> 
+  </tr> 
+  <tr> 
+    <th>Bidder != seller?</th> 
+    <th>T</th> 
+    <th>-</th> 
+    <th>-</th> 
+    <th>-</th> 
+    <th>F</th> 
+    <th>T</th> 
+    <th>-</th> 
+    <th>-</th> 
+  </tr> <tr> 
+    <th>Action Stubs</th> 
+    <th></th> 
+    <th></th> 
+    <th></th> 
+    <th></th> 
+    <th></th> 
+    <th></th> 
+    <th></th> 
+    <th></th> 
+  </tr> 
+  <tr> 
+    <th>Return offerId (>0)</th> 
+    <th>X</th> 
+    <th></th> 
+    <th></th> 
+    <th></th> 
+    <th></th> 
+    <th>X</th> 
+    <th></th> 
+    <th></th> 
+  </tr> 
+  <tr> <th>Return -1 (listing not found)</th> 
+    <th></th> 
+    <th>X</th> 
+    <th></th> 
+    <th></th> 
+    <th></th> 
+    <th></th> 
+    <th>X</th> 
+    <th>X</th> 
+  </tr> 
+  <tr> 
+    <th>Return -2 (listing inactive)</th> 
+    <th></th> 
+    <th></th> 
+    <th>X</th> 
+    <th></th> 
+    <th></th> 
+    <th></th> 
+    <th></th> 
+    <th></th> 
+  </tr> 
+  <tr> 
+    <th>Return -3 (bid too low)</th> 
+    <th></th> 
+    <th></th> 
+    <th></th> 
+    <th>X</th> 
+    <th></th> 
+    <th></th> 
+    <th></th> 
+    <th></th> 
+  </tr> 
+  <tr> 
+    <th>Return -4 (cannot bid on own item)</th> 
+    <th></th> 
+    <th></th> 
+    <th></th> 
+    <th></th> 
+    <th>X</th> 
+    <th></th> 
+    <th></th> 
+    <th></th> 
+  </tr> 
+</table> 
+<p></p>
+<p></p>
+BiddingManager Testing Rules (buyNow method):
+<br>
+<table align="center">
+  <tr>
+    <th>Condition</th>
+    <th>Rule 1</th>
+    <th>Rule 2</th>
+    <th>Rule 3</th>
+    <th>Rule 4</th>
+    <th>Rule 5</th>
+    <th>Rule 6</th>
+    <th>Rule 7</th>
+    <th>Rule 8</th>
+  </tr>
+  <tr>
+    <th>Listing exists?</th>
+    <th>T</th>
+    <th>F</th>
+    <th>T</th>
+    <th>T</th>
+    <th>T</th>
+    <th>T</th>
+    <th>F</th>
+    <th>F</th>
+  </tr>
+  <tr>
+    <th>Listing ACTIVE?</th>
+    <th>T</th>
+    <th>-</th>
+    <th>F</th>
+    <th>T</th>
+    <th>T</th>
+    <th>T</th>
+    <th>-</th>
+    <th>-</th>
+  </tr>
+  <tr>
+    <th>BuyNowPrice &gt; 0?</th>
+    <th>T</th>
+    <th>-</th>
+    <th>-</th>
+    <th>F</th>
+    <th>T</th>
+    <th>T</th>
+    <th>-</th>
+    <th>-</th>
+  </tr>
+  <tr>
+    <th>Buyer != seller?</th>
+    <th>T</th>
+    <th>-</th>
+    <th>-</th>
+    <th>-</th>
+    <th>F</th>
+    <th>T</th>
+    <th>-</th>
+    <th>-</th>
+  </tr>
+  <tr>
+    <th>Action Stubs</th>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <th>BuyNow Success (return true)</th>
+    <th>X</th>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th>X</th>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <th>Return false (listing not found)</th>
+    <th></th>
+    <th>X</th>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th>X</th>
+    <th>X</th>
+  </tr>
+  <tr>
+    <th>Return false (listing inactive)</th>
+    <th></th>
+    <th></th>
+    <th>X</th>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <th>Return false (no buy now price)</th>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th>X</th>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <th>Return false (buying own item)</th>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th>X</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+</table>
+<br>
+<p></p>
+Based on the results, "Solution 2: Refined Modular Architecture" provides:
+   <ul style="margin-left: 40px;">
+        • Stronger separation of concerns<br>
+        • Improved reliability<br>
+        • Strict layering principles<br>
+        • Core domain entities (User, Product, UserComment) separated from business logic & handled through dedicated interfaces<br>
+        • Data persistence, managed by repository abstractions<br>
+        • Consistent validation enforcement<br>
+        • Validation rules are centralized and consistently enforced<br>
+        • Isolating responsibilities and minimizing coupling between components<br>
+        • Greater long-term scalability<br>
+   </ul>
+Therefore, "Solution 2: Refined Modular Architectur" was selected as the architecture for URMarketplace.
+<br>
+<p></p>
+
+
+
 </ul>
 </ul>
 
