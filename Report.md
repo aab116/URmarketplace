@@ -741,10 +741,10 @@ ProductRepository Testing Rules:
 
 Based on the results, "Solution 2: Refined Modular Architecture" provides:
    <ul style="margin-left: 40px;">
-        • Stronger sSeparation of concerns<br>
+        • Stronger separation of concerns<br>
         • Improved reliability<br>
-        • Strict Layering Principles<br>
-        • Core domain entities (Such as User, Product, and UserComment) separated from business logic & handled through dedicated service interfaces<br>
+        • Strict layering principles<br>
+        • Core domain entities (User, Product, UserComment) separated from business logic & handled through dedicated interfaces<br>
         • Data persistence, managed by repository abstractions<br>
         • Consistent validation enforcement<br>
         • Validation rules are centralized and consistently enforced<br>
