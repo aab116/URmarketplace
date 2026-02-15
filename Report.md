@@ -201,7 +201,7 @@ These ratings and comments will be stored and referenced by other components of 
         • Text-based comment feature will enable users to provide qualitative feedback alongside their numerical rating (Maximum length: 250 characters)<br>
    </ul>
 These ratings and comments will be stored and referenced by other components of the system, ensuring consistent data exchange between related modules.
-
+<p></p>
 
 
 <br>
@@ -216,9 +216,13 @@ These ratings and comments will be stored and referenced by other components of 
 | Protection Against Invalid Input & Misuse | Moderate | Input checks and authorization controls are present but not centralized. This increases the possibility of uneven rule enforcement across different execution paths. |
 | Long-Term Maintainability & Scalability | Moderate to Low | Tightly coupled logic makes expansion and modification riskier. Introducing new features may require modifying multiple modules, increasing complexity. |
 
+<p></p>
 Although operationally correct, Solution 1 lacks strict separation of concerns and strong structural safeguards. As the system grows, these weaknesses could negatively impact maintainability and reliability. Therefore, refinement was pursued.
 
 
+
+<br>
+<br>
 
 
 
