@@ -1,0 +1,27 @@
+/*  BiddingManagerManager
+
+createListing: Initializes a Listing object, assigns it a unique ID, and sets its initial state to ACTIVE.
+
+makeOffer: checks if the item is still ACTIVE, 
+if the amount is higher than the current bid, and if the auction hasn't ended. If successful, it updates the listing's current price and registers an offer
+
+buyNow: Immediately moves the item's state from ACTIVE to SOLD, effectively closing the transaction.
+
+searchByCategory: Iterates through all listings and returns a list of items that are both ACTIVE and match the specified category.
+
+
+closeExpiredListings: background-style process that checks the endTime. If the time has passed and there is a highestBidder, 
+it marks the item as SOLD. otherwise, it marks it as EXPIRED.
+
+*/  UserManager
+
+register: Iterates through the existing list of users to check if the requested username is already taken. 
+If the username is unique, it creates a new User object with the provided email and password, adds it to the list, and returns true.
+
+login: searches the user list for a match where both the username and password are correct. 
+If a match is found, it sets the user's status to isLoggedIn = true and returns the User object.
+
+
+/* IssueManager
+
+reportIssue: It takes the data from the user's input and creates a new Issue object.

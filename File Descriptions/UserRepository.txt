@@ -1,0 +1,9 @@
+| Field         | Type              | Constraints      |
+| ------------- | ----------------- | ---------------- |
+| id            | String            | Primary key      |
+| firstName     | String            | Required         |
+| lastName      | String            | Required         |
+| phoneNumber   | String            | Optional         |
+| email         | String            | Unique, required |
+| currentRating | Double            | 1.0-5.0          |
+| comments      | List<UserComment> | Lazy-loaded      |

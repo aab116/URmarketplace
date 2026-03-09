@@ -1,0 +1,8 @@
+| Field        | Type   | Constraints             |
+| ------------ | ------ | ----------------------- |
+| id           | String | Primary key             |
+| title        | String | Required, max 100 chars |
+| description  | String | Max 500 chars           |
+| price        | Double | > 0                     |
+| biddingPrice | Double | Optional                |
+| sellerId     | String | Foreign key to User     |
