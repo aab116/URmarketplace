@@ -50,6 +50,7 @@
   - [3 — Solutions](#3-solutions)
   - [3.1 — Solution Set 1](#31-solution-set)
   - [3.2 — Solution Set 2](#32-solution-set)
+  - [3.3 - Final Solution](#33-final-solution)
  
 
 
@@ -1254,3 +1255,58 @@ Therefore, "Solution 2: Refined Modular Architecture" was selected as the archit
 </ul>
 
 
+### 3.3 Final Solution
+
+<p></p>
+The final solution selected for URMarketplace is a modular Java back-end supported by an SQLite database and verified through JUnit-based testing. This solution was selected over the earlier alternatives because it provides clearer separation between data representation, business logic, persistence, and validation. From a testing perspective, this structure is significantly better than a more tightly coupled design because each major responsibility can be tested in isolation and then re-tested together through integration scenarios.
+
+In the final design, classes such as User, Product, Listing, Offer, and Issue represent the system state, while service-oriented classes such as UserManager, BiddingManager, IssueManager, ModifyItem, ArrangeStorageImpl, and TrackOwnerAndCalculateFees handle business rules and workflow execution. DatabaseHelper centralizes database connectivity and setup, which makes test initialization and controlled database reset easier. This separation improves testability because each class exposes a narrower and more predictable behavior surface. As a result, unit tests can target validation rules and state transitions, while integration tests can confirm that database-backed operations behave correctly under realistic usage.
+
+A major reason for selecting this solution is that it supports both positive testing and edge-case testing more effectively than the previous design concepts. Instead of testing one large, mixed component, the final architecture allows direct verification of item posting, bidding, issue reporting, storage booking, fee calculation, login behavior, and object state updates. This makes fault localization easier: if a test fails, it is much easier to determine whether the defect is in validation, database mapping, persistence, or business logic. In software testing and validation, this is a strong advantage because it reduces debugging time and improves confidence in the correctness of the final system.
+<p></p>
+
+The comparison in Table  summarizes why this final solution was selected.
+
+| Criterion | Earlier / More Coupled Solutions | Final Modular Solution |
+|-----------|----------------------------------|------------------------|
+| Testability | Lower, because logic and persistence are mixed together | Higher, because entities, managers, and utilities can be tested separately |
+| Fault Isolation | Weak, failures can affect several responsibilities at once | Stronger, because failures are easier to trace to one component |
+| Regression Testing | More difficult after changes | Easier, because each class can be re-tested independently |
+| Edge-Case Coverage | Harder to organize systematically | Easier to organize around each component and rule |
+| Maintainability | Lower as new features are added | Higher due to clearer responsibilities |
+| Reliability | More dependent on manual checking | More reliable through repeatable automated tests |
+
+Based on this comparison, the final modular solution was selected because it supports a more structured and repeatable verification process, which is especially important in a software testing and validation course.
+
+#### 3.3.1 Components
+<p></p>
+The final solution is composed of several cooperating components, each with a specific responsibility in the system. The main components and their testing methods are shown in Table .
+<p></p>
+
+| Component | Main Purpose | Testing Method Used |
+|-----------|--------------|---------------------|
+| URMarketplaceConsole | Provides the command-line interface and connects user actions to system operations | Manual functional testing and scenario-based testing |
+| DatabaseHelper | Creates the SQLite connection and initializes the required tables | Integration testing, schema verification, and database initialization tests |
+| User | Stores user account data and tracks rating averages | Unit testing of getters, setters, login state, and rating calculations |
+| UserManager | Handles registration, login, and rating persistence | Integration testing with SQLite and edge-case testing for duplicate users and invalid login attempts |
+| Product | Represents a product record with price and seller information | Unit testing of constructor behavior and data access |
+| Listing | Represents an active marketplace listing, including bidding and sale state | Unit testing of default state, setters, and status transitions |
+| Offer | Represents an offer or bid placed on a listing | Unit testing of object initialization, timestamps, and status values |
+| Issue | Represents a user-submitted issue report | Unit testing of default status, field storage, and update behavior |
+| IssueManager | Stores and retrieves issue reports from the database | Integration testing for insert, retrieval, generated IDs, and status mapping |
+| BiddingManager | Creates listings, processes offers, and handles buy-now operations | Integration testing with the database and boundary testing for inactive items, low bids, and invalid IDs |
+| ModifyItem | Validates titles, descriptions, and prices before item changes are applied | Unit testing and boundary value analysis |
+| ArrangeStorage / ArrangeStorageImpl | Handles temporary storage requests, fee calculation, and cancellation status | Unit testing and edge-case testing |
+| FeeCalculator / TrackOwnerAndCalculateFees | Tracks original ownership and computes platform fee, storage fee, and seller payout | Unit testing, equivalence class testing, and negative-value testing |
+
+#### 3.3.2 Environmental, Societal, Safety, and Economic Considerations
+
+The design of URMarketplace was developed with environmental, societal, safety, and economic constraints in mind. Environmentally, the software contributes positively by encouraging item reuse rather than disposal. Students often discard usable furniture, books, appliances, and supplies when moving out of residence at the end of a term. By offering a structured local marketplace, the design helps reduce unnecessary waste and extends the useful life of these items. In this way, the solution supports more sustainable consumption behavior on campus.
+
+From a societal perspective, the platform improves access and fairness within the student community. Instead of relying on informal social media posts or word-of-mouth transactions, URMarketplace provides a centralized and more transparent method for buying and selling used items. This helps students who may be under time pressure, may not have strong social connections, or may need lower-cost alternatives for household and academic goods. In addition, the issue-reporting mechanism gives users a formal way to report problems, which supports accountability and helps build trust in the platform.
+
+Economic considerations were also important in the design. The system includes fee calculation and storage tracking features so that the financial outcome of a transaction is more transparent. The seller can better understand the effect of platform and storage fees, while the platform design remains lightweight by using Java and SQLite rather than more expensive infrastructure. This choice reduces development complexity and deployment cost, which is appropriate for an academic prototype. The decision to begin without external payment gateway integration also reduces cost and keeps the project within a manageable scope.
+
+Safety and reliability were addressed primarily through validation and testing. Input validation is used to reject invalid prices, blank identifiers, and oversized text fields before data is accepted into the system. State-based rules are also enforced, such as preventing bids on inactive listings and preserving item status through the listing lifecycle. From a software safety standpoint, reliability was strengthened by writing repeatable automated tests for critical workflows and boundary cases. This reduces the likelihood that invalid input or inconsistent system state will silently produce incorrect outputs. Together, these choices make the design safer and more dependable for users while remaining realistic for a student engineering project.
+
+#### 3.3.3 Environmental, Societal, Safety, and Economic Considerations
