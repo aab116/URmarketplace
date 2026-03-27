@@ -55,7 +55,13 @@
 
 
 <h2 align="center"> List of Figures </h2>
-*No figures are included in this section.*
+
+
+<img width="1120" height="950" alt="image" src="https://github.com/user-attachments/assets/6d121a4f-61f1-45dc-bca4-c3d799dc7d90" />
+figure 1
+
+<img width="2630" height="1630" alt="image" src="https://github.com/user-attachments/assets/53074ae4-2507-46ac-8824-5d39f4a2dc25" />
+figure 2
 
 <h2 align="center"> List of Tables </h2>
 *No tables are included in this section.*
