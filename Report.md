@@ -1309,4 +1309,18 @@ Economic considerations were also important in the design. The system includes f
 
 Safety and reliability were addressed primarily through validation and testing. Input validation is used to reject invalid prices, blank identifiers, and oversized text fields before data is accepted into the system. State-based rules are also enforced, such as preventing bids on inactive listings and preserving item status through the listing lifecycle. From a software safety standpoint, reliability was strengthened by writing repeatable automated tests for critical workflows and boundary cases. This reduces the likelihood that invalid input or inconsistent system state will silently produce incorrect outputs. Together, these choices make the design safer and more dependable for users while remaining realistic for a student engineering project.
 
-#### 3.3.3 Environmental, Societal, Safety, and Economic Considerations
+#### 3.3.3 Test Cases and results
+
+The test cases were developed using the JUnit 5 framework, encompassing unit, integration, and business logic tests. These tests rely on standard JUnit assertions to check for expected results across different events, functions, and scenarios.
+
+The results demonstrate that the software's functions like user registration, bidding logic, and storage management behave properly and respect their intended limits. The tests successfully fail when given unsupported or invalid data, and pass when the data is acceptable for the scenario. Furthermore, they show a reliable connection with the SQLite database, correctly modifying table values and verifying those changes. The test suites also ensure consistency by running on a completely clean database slate, which guarantees predictable and expected results by using test isolation.
+
+#### 3.3.4 Limitations
+
+Since URMarketplace is designed for students and faculty to organize and track sales and inventory, certain operational boundaries exist. These stem from both explicit and inherent limitations within the software's various functional and non-functional aspects.
+
+A primary external constraint is the physical storage capacity allocated by the campus for items sold via the platform. Since the system must account for goods stored by students departing the institution, the available physical space imposes direct limitations on the volume, size, and nature of the inventory that can be managed within the software
+
+Access to the platform is strictly limited to authorized university members. People who have yet to be granted or do not have a university provided outlook/email account can not use the platform until they do due to one of the authentication methods checking if the email account that is being used to login or sign in is an active university account
+
+The current scope of the platform does not include payment verification. As a result, URMarketplace cannot guarantee or validate transactions conducted through physical cash exchanges or third-party payment services. Users are responsible for confirming the completion of payments externally, as the system does not feature an integrated escrow or payment gateway.
