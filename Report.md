@@ -93,7 +93,7 @@
   <br>
   <br>
   <ul style="margin-left: 40px;">
-    <h2 align = "left" id = "1-table">User — Entity Class — Testing Table 1</h2>
+    <h2 align = "left" id = "1-table">User Class Testing</h2>
     <br>
     <br>
     <ul style="margin-left: 40px;">
@@ -163,7 +163,7 @@
 
 
   
-<h2 align = "left" id = "2-table">Product — Entity Class — Testing Table 2</h2>
+<h2 align = "left" id = "2-table">Product Class Testing</h2>
   <br>
   <br>
   <ul style="margin-left: 40px;">
@@ -233,7 +233,7 @@
   
   
   
-  <h2 align = "left" id = "3-table">UserComment — Entity Classes — Testing Table 3</h2>
+  <h2 align = "left" id = "3-table">UserComment Class Testing</h2>
   <br>
   <br>
   <ul style="margin-left: 40px;">
@@ -303,7 +303,7 @@
 
     
 
-<h2 align = "left" id = "4-table">RatingService — Interface — Testing Table 4</h2>
+<h2 align = "left" id = "4-table">RatingService Interface Testing</h2>
   <br>
   <br>
   <ul style="margin-left: 40px;">
@@ -373,7 +373,7 @@
 
 
 
-<h2 align = "left" id = "5-table">UserRepository — Interface — Testing Table 5</h2>
+<h2 align = "left" id = "5-table">UserRepository Interface Testing</h2>
   <br>
   <br>
   <ul style="margin-left: 40px;">
@@ -455,7 +455,7 @@
 
   
   
-<h2 align = "left" id = "6-table">ProductRepository — Interface — Testing Table 6</h2>    
+<h2 align = "left" id = "6-table">ProductRepository Interface Testing</h2>    
 <br>
 <br>
   <ul style="margin-left: 40px;">
@@ -526,7 +526,7 @@
 
   
 
-  <h2>Alternative Architecture — Evaluation — Summary Table</h2>
+  <h2>Alternative Architecture Evaluation</h2>
   <br>
   <br>
     <ul style="margin-left: 40px;">
@@ -562,11 +562,682 @@
           <td>Tightly coupled logic makes expansion and modification riskier. Introducing new features may require modifying multiple modules, increasing complexity.</td>
         </tr>
       </table>
-      <p align="center">Evaluation Table <br> Table 7</p>
+      <p align="center">Table 7</p>
       <br>
       <br>
     </ul>
   </ul>
+
+
+
+
+
+<h2>UserManager Class Testing</h2> 
+  <br>
+  <br>
+  <ul style="margin-left: 40px;"> 
+    <table align="center">
+      <tr>
+        <th>Condition</th>
+        <th>Rule 1</th>
+        <th>Rule 2</th>
+        <th>Rule 3</th>
+        <th>Rule 4</th>
+      </tr>
+      <tr>
+        <th>Username unique?</th>
+        <th>T</th>
+        <th>F</th>
+        <th>T</th>
+        <th>F</th>
+      </tr>
+      <tr>
+        <th>Valid email format?</th>
+        <th>T</th>
+        <th>T</th>
+        <th>F</th>
+        <th>F</th>
+      </tr>
+      <tr>
+        <th>Action Stubs</th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+      <tr>
+        <th>Register User (return true)</th>
+        <th>X</th>
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+      <tr>
+        <th>Reject Registration (return false)</th>
+        <th></th>
+        <th>X</th>
+        <th>X</th>
+        <th>X</th>
+      </tr>
+    </table>
+    <p align="center">Table 8</p>
+  </ul>
+  <br>
+  <br>
+
+
+
+  
+  <h2>UserManager Testing</h2>
+  <br>
+  <br>
+  <ul style="margin-left: 40px;"> 
+    <table align="center">
+      <tr>
+        <th>Condition</th>
+        <th>Rule 1</th>
+        <th>Rule 2</th>
+        <th>Rule 3</th>
+        <th>Rule 4</th>
+      </tr>
+      <tr>
+        <th>Username exists?</th>
+        <th>T</th>
+        <th>F</th>
+        <th>T</th>
+        <th>F</th>
+      </tr>
+      <tr>
+        <th>Password matches?</th>
+        <th>T</th>
+        <th>-</th>
+        <th>F</th>
+        <th>-</th>
+      </tr>
+      <tr>
+        <th>Action Stubs</th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+      <tr>
+        <th>Login Success (return User)</th>
+        <th>X</th>
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+      <tr>
+        <th>Login Failed (return null)</th>
+        <th></th>
+        <th>X</th>
+        <th>X</th>
+        <th>X</th>
+      </tr>
+    </table>
+    <p align="center">Table 9</p>
+  </ul>
+  <br>
+<br>
+
+
+
+
+
+<h2>IssueManager Class Testing</h2>
+    <br>
+    <br>
+    <ul style="margin-left: 40px;"> 
+      <table align="center">
+        <tr>
+          <th>Condition</th>
+          <th>Rule 1</th>
+          <th>Rule 2</th>
+          <th>Rule 3</th>
+          <th>Rule 4</th>
+          <th>Rule 5</th>
+          <th>Rule 6</th>
+          <th>Rule 7</th>
+          <th>Rule 8</th>
+        </tr>
+        <tr>
+          <th>Title present?</th>
+          <th>T</th>
+          <th>T</th>
+          <th>F</th>
+          <th>F</th>
+          <th>T</th>
+          <th>T</th>
+          <th>F</th>
+          <th>F</th>
+        </tr>
+        <tr>
+          <th>Description present?</th>
+          <th>T</th>
+          <th>F</th>
+          <th>T</th>
+          <th>F</th>
+          <th>T</th>
+          <th>T</th>
+          <th>F</th>
+          <th>F</th>
+        </tr>
+        <tr>
+          <th>Category valid?</th>
+          <th>T</th>
+          <th>T</th>
+          <th>T</th>
+          <th>T</th>
+          <th>F</th>
+          <th>F</th>
+          <th>F</th>
+          <th>F</th>
+        </tr>
+        <tr>
+          <th>Action Stubs</th>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th></th>
+        </tr>
+        <tr>
+          <th>Create Issue (return ID)</th>
+          <th>X</th>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th></th>
+        </tr>
+        <tr>
+          <th>Reject Issue (return -1)</th>
+          <th></th>
+          <th>X</th>
+          <th>X</th>
+          <th>X</th>
+          <th>X</th>
+          <th>X</th>
+          <th>X</th>
+          <th>X</th>
+        </tr>
+      </table>
+      <p align="center">Table 10</p>
+    </ul>
+    <br>
+    <br>
+
+
+
+
+<h2>BiddingManager (makeOffer method) Testing</h2>
+  <br>
+  <br>
+  <ul style="margin-left: 40px;">
+      <table align="center"> 
+        <tr> 
+          <th>Condition</th> 
+          <th>Rule 1</th> 
+          <th>Rule 2</th> 
+          <th>Rule 3</th> 
+          <th>Rule 4</th> 
+          <th>Rule 5</th> 
+          <th>Rule 6</th> 
+          <th>Rule 7</th> 
+          <th>Rule 8</th> 
+        </tr> 
+        <tr> 
+          <th>Listing exists?</th> 
+          <th>T</th> 
+          <th>F</th> 
+          <th>T</th> 
+          <th>T</th> 
+          <th>T</th> 
+          <th>T</th> 
+          <th>F</th> 
+          <th>F</th> 
+        </tr> <tr> 
+          <th>Listing ACTIVE?</th> 
+          <th>T</th> 
+          <th>-</th> 
+          <th>F</th> 
+          <th>T</th> 
+          <th>T</th> 
+          <th>T</th> 
+          <th>-</th> 
+          <th>-</th> 
+        </tr> <tr> 
+          <th>Amount > currentBid?</th> 
+          <th>T</th> 
+          <th>-</th> 
+          <th>-</th> 
+          <th>F</th> 
+          <th>T</th> 
+          <th>T</th> 
+          <th>-</th> 
+          <th>-</th> 
+        </tr> 
+        <tr> 
+          <th>Bidder != seller?</th> 
+          <th>T</th> 
+          <th>-</th> 
+          <th>-</th> 
+          <th>-</th> 
+          <th>F</th> 
+          <th>T</th> 
+          <th>-</th> 
+          <th>-</th> 
+        </tr> <tr> 
+          <th>Action Stubs</th> 
+          <th></th> 
+          <th></th> 
+          <th></th> 
+          <th></th> 
+          <th></th> 
+          <th></th> 
+          <th></th> 
+          <th></th> 
+        </tr> 
+        <tr> 
+          <th>Return offerId (>0)</th> 
+          <th>X</th> 
+          <th></th> 
+          <th></th> 
+          <th></th> 
+          <th></th> 
+          <th>X</th> 
+          <th></th> 
+          <th></th> 
+        </tr> 
+        <tr> <th>Return -1 (listing not found)</th> 
+          <th></th> 
+          <th>X</th> 
+          <th></th> 
+          <th></th> 
+          <th></th> 
+          <th></th> 
+          <th>X</th> 
+          <th>X</th> 
+        </tr> 
+        <tr> 
+          <th>Return -2 (listing inactive)</th> 
+          <th></th> 
+          <th></th> 
+          <th>X</th> 
+          <th></th> 
+          <th></th> 
+          <th></th> 
+          <th></th> 
+          <th></th> 
+        </tr> 
+        <tr> 
+          <th>Return -3 (bid too low)</th> 
+          <th></th> 
+          <th></th> 
+          <th></th> 
+          <th>X</th> 
+          <th></th> 
+          <th></th> 
+          <th></th> 
+          <th></th> 
+        </tr> 
+        <tr> 
+          <th>Return -4 (cannot bid on own item)</th> 
+          <th></th> 
+          <th></th> 
+          <th></th> 
+          <th></th> 
+          <th>X</th> 
+          <th></th> 
+          <th></th> 
+          <th></th> 
+        </tr> 
+      </table> 
+    <p align="center">Table 11</p>
+    </ul>
+    <br>
+    <br>
+
+
+
+
+<h2>BiddingManager (buyNow method) Testing</h2>
+  <br>
+  <br>
+  <ul style="margin-left: 40px;">  
+      <table align="center">
+        <tr>
+          <th>Condition</th>
+          <th>Rule 1</th>
+          <th>Rule 2</th>
+          <th>Rule 3</th>
+          <th>Rule 4</th>
+          <th>Rule 5</th>
+          <th>Rule 6</th>
+          <th>Rule 7</th>
+          <th>Rule 8</th>
+        </tr>
+        <tr>
+          <th>Listing exists?</th>
+          <th>T</th>
+          <th>F</th>
+          <th>T</th>
+          <th>T</th>
+          <th>T</th>
+          <th>T</th>
+          <th>F</th>
+          <th>F</th>
+        </tr>
+        <tr>
+          <th>Listing ACTIVE?</th>
+          <th>T</th>
+          <th>-</th>
+          <th>F</th>
+          <th>T</th>
+          <th>T</th>
+          <th>T</th>
+          <th>-</th>
+          <th>-</th>
+        </tr>
+        <tr>
+          <th>BuyNowPrice &gt; 0?</th>
+          <th>T</th>
+          <th>-</th>
+          <th>-</th>
+          <th>F</th>
+          <th>T</th>
+          <th>T</th>
+          <th>-</th>
+          <th>-</th>
+        </tr>
+        <tr>
+          <th>Buyer != seller?</th>
+          <th>T</th>
+          <th>-</th>
+          <th>-</th>
+          <th>-</th>
+          <th>F</th>
+          <th>T</th>
+          <th>-</th>
+          <th>-</th>
+        </tr>
+        <tr>
+          <th>Action Stubs</th>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th></th>
+        </tr>
+        <tr>
+          <th>BuyNow Success (return true)</th>
+          <th>X</th>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th>X</th>
+          <th></th>
+          <th></th>
+        </tr>
+        <tr>
+          <th>Return false (listing not found)</th>
+          <th></th>
+          <th>X</th>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th>X</th>
+          <th>X</th>
+        </tr>
+        <tr>
+          <th>Return false (listing inactive)</th>
+          <th></th>
+          <th></th>
+          <th>X</th>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th></th>
+        </tr>
+        <tr>
+          <th>Return false (no buy now price)</th>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th>X</th>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th></th>
+        </tr>
+        <tr>
+          <th>Return false (buying own item)</th>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th>X</th>
+          <th></th>
+          <th></th>
+          <th></th>
+        </tr>
+      </table>
+    <p align="center">Table 12</p>
+    </ul>
+    <br>
+    <br>
+
+    
+
+  <h2>Alternative Architecture Evaluation</h2>
+    <br>
+    <br>
+    <ul style="margin-left: 40px;"> 
+      <table align="center">
+        <tr>
+          <th>Evaluation Criterion</th>
+          <th>Assessment</th>
+          <th>Analysis</th>
+        </tr>
+        <tr>
+          <td>Clarity of Responsibility Separation</td>
+          <td align="center">Moderate</td>
+          <td>Functional areas are grouped logically; however, validation, processing, and persistence logic are partially combined. The Single Responsibility Principle is not consistently applied.</td>
+        </tr>
+        <tr>
+          <td>Fault Isolation & System Reliability</td>
+          <td align="center">Moderate to Low</td>
+          <td>Because validation and operational logic are intertwined, an error in one component may propagate to others, increasing the risk of cascading failures.</td>
+        </tr>
+        <tr>
+          <td>Enforcement of Boundary & Validation Constraints</td>
+          <td align="center">Moderate</td>
+          <td>Validation rules exist but are embedded in multiple areas of the system. This may lead to inconsistent enforcement of rating limits, offer constraints, or lifecycle rules.</td>
+        </tr>
+        <tr>
+          <td>Protection Against Invalid Input & Misuse</td>
+          <td align="center">Moderate</td>
+          <td>Input checks and authorization controls are present but not centralized. This increases the possibility of uneven rule enforcement across different execution paths.</td>
+        </tr>
+        <tr>
+          <td>Long-Term Maintainability & Scalability</td>
+          <td align="center">Moderate to Low</td>
+          <td>Tightly coupled logic makes expansion and modification riskier. Introducing new features may require modifying multiple modules, increasing complexity.</td>
+        </tr>
+      </table>
+     </ul>
+    <p align="center">Table 13</p>
+    <br>
+  </ul>
+
+
+
+
+
+
+
+
+
+  <h2 align="left" id="comparison-table">Testing & Reliability Comparison</h2>
+    <br>
+    <br>
+    <ul style="margin-left: 40px;">
+      <table align="center">
+        <tr>
+          <th>Criterion</th>
+          <th>Earlier / More Coupled Solutions</th>
+          <th>Final Modular Solution</th>
+        </tr>
+        <tr>
+          <td>Testability</td>
+          <td>Lower, because logic and persistence are mixed together</td>
+          <td>Higher, because entities, managers, and utilities can be tested separately</td>
+        </tr>
+        <tr>
+          <td>Fault Isolation</td>
+          <td>Weak, failures can affect several responsibilities at once</td>
+          <td>Stronger, because failures are easier to trace to one component</td>
+        </tr>
+        <tr>
+          <td>Regression Testing</td>
+          <td>More difficult after changes</td>
+          <td>Easier, because each class can be re-tested independently</td>
+        </tr>
+        <tr>
+          <td>Edge-Case Coverage</td>
+          <td>Harder to organize systematically</td>
+          <td>Easier to organize around each component and rule</td>
+        </tr>
+        <tr>
+          <td>Maintainability</td>
+          <td>Lower as new features are added</td>
+          <td>Higher due to clearer responsibilities</td>
+        </tr>
+        <tr>
+          <td>Reliability</td>
+          <td>More dependent on manual checking</td>
+          <td>More reliable through repeatable automated tests</td>
+        </tr>
+      </table>
+    <p align="center">Table 14</p>
+  </ul>
+  <br>
+  <br>
+
+
+
+
+
+
+
+
+
+
+
+  <h2 align="left" id="component-testing-table">System Components</h2>
+  <br>
+  <br>
+  <ul style="margin-left: 40px;">
+      <table align="center">
+        <tr>
+          <th>Component</th>
+          <th>Main Purpose</th>
+          <th>Testing Method Used</th>
+        </tr>
+        <tr>
+          <td>URMarketplaceConsole</td>
+          <td>Provides the command-line interface and connects user actions to system operations</td>
+          <td>Manual functional testing and scenario-based testing</td>
+        </tr>
+        <tr>
+          <td>DatabaseHelper</td>
+          <td>Creates the SQLite connection and initializes the required tables</td>
+          <td>Integration testing, schema verification, and database initialization tests</td>
+        </tr>
+        <tr>
+          <td>User</td>
+          <td>Stores user account data and tracks rating averages</td>
+          <td>Unit testing of getters, setters, login state, and rating calculations</td>
+        </tr>
+        <tr>
+          <td>UserManager</td>
+          <td>Handles registration, login, and rating persistence</td>
+          <td>Integration testing with SQLite and edge-case testing for duplicate users and invalid login attempts</td>
+        </tr>
+        <tr>
+          <td>Product</td>
+          <td>Represents a product record with price and seller information</td>
+          <td>Unit testing of constructor behavior and data access</td>
+        </tr>
+        <tr>
+          <td>Listing</td>
+          <td>Represents an active marketplace listing, including bidding and sale state</td>
+          <td>Unit testing of default state, setters, and status transitions</td>
+        </tr>
+        <tr>
+          <td>Offer</td>
+          <td>Represents an offer or bid placed on a listing</td>
+          <td>Unit testing of object initialization, timestamps, and status values</td>
+        </tr>
+        <tr>
+          <td>Issue</td>
+          <td>Represents a user-submitted issue report</td>
+          <td>Unit testing of default status, field storage, and update behavior</td>
+        </tr>
+        <tr>
+          <td>IssueManager</td>
+          <td>Stores and retrieves issue reports from the database</td>
+          <td>Integration testing for insert, retrieval, generated IDs, and status mapping</td>
+        </tr>
+        <tr>
+          <td>BiddingManager</td>
+          <td>Creates listings, processes offers, and handles buy-now operations</td>
+          <td>Integration testing with the database and boundary testing for inactive items, low bids, and invalid IDs</td>
+        </tr>
+        <tr>
+          <td>ModifyItem</td>
+          <td>Validates titles, descriptions, and prices before item changes are applied</td>
+          <td>Unit testing and boundary value analysis</td>
+        </tr>
+        <tr>
+          <td>ArrangeStorage / ArrangeStorageImpl</td>
+          <td>Handles temporary storage requests, fee calculation, and cancellation status</td>
+          <td>Unit testing and edge-case testing</td>
+        </tr>
+        <tr>
+          <td>FeeCalculator / TrackOwnerAndCalculateFees</td>
+          <td>Tracks original ownership and computes platform fee, storage fee, and seller payout</td>
+          <td>Unit testing, equivalence class testing, and negative-value testing</td>
+        </tr>
+      </table>
+    <div align="center">
+      <p>Table 15</p>
+    </div>
+  </ul>
+  <br>
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -776,47 +1447,46 @@ A Rating class will be developed to handle the evaluation logic for both sellers
   <h2 align="left" id="evaluation-table-2">Alternative Architecture — Evaluation — Summary Table</h2>
     <ul style="margin-left: 40px;"> 
       <h3>  This table below involves the following:</h3>
-      <ul style="margin-left: 40px;">
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• ModifyItem.java (concrete class)                   <br>
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• ArrangeStorage.java (interface)                    <br>
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• ArrangeStorage.java (implementation)               <br>
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• FeeCalculator.java (interface)                     <br>
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• TrackOwnerAndCalculateFees.java (implementation)   <br>
-       </ul>
-     </ul>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• ModifyItem.java (concrete class)                   <br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• ArrangeStorage.java (interface)                    <br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• ArrangeStorage.java (implementation)               <br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• FeeCalculator.java (interface)                     <br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• TrackOwnerAndCalculateFees.java (implementation)   <br>
      <br>
-    <table align="center">
-      <tr>
-        <th>Evaluation Criterion</th>
-        <th>Assessment</th>
-        <th>Analysis</th>
-      </tr>
-      <tr>
-        <td>Clarity of Responsibility Separation</td>
-        <td align="center">Moderate</td>
-        <td>Functional areas are grouped logically; however, validation, processing, and persistence logic are partially combined. The Single Responsibility Principle is not consistently applied.</td>
-      </tr>
-      <tr>
-        <td>Fault Isolation & System Reliability</td>
-        <td align="center">Moderate to Low</td>
-        <td>Because validation and operational logic are intertwined, an error in one component may propagate to others, increasing the risk of cascading failures.</td>
-      </tr>
-      <tr>
-        <td>Enforcement of Boundary & Validation Constraints</td>
-        <td align="center">Moderate</td>
-        <td>Validation rules exist but are embedded in multiple areas of the system. This may lead to inconsistent enforcement of rating limits, offer constraints, or lifecycle rules.</td>
-      </tr>
-      <tr>
-        <td>Protection Against Invalid Input & Misuse</td>
-        <td align="center">Moderate</td>
-        <td>Input checks and authorization controls are present but not centralized. This increases the possibility of uneven rule enforcement across different execution paths.</td>
-      </tr>
-      <tr>
-        <td>Long-Term Maintainability & Scalability</td>
-        <td align="center">Moderate to Low</td>
-        <td>Tightly coupled logic makes expansion and modification riskier. Introducing new features may require modifying multiple modules, increasing complexity.</td>
-      </tr>
-    </table>
+     <ul style="margin-left: 40px;"> 
+      <table align="center">
+        <tr>
+          <th>Evaluation Criterion</th>
+          <th>Assessment</th>
+          <th>Analysis</th>
+        </tr>
+        <tr>
+          <td>Clarity of Responsibility Separation</td>
+          <td align="center">Moderate</td>
+          <td>Functional areas are grouped logically; however, validation, processing, and persistence logic are partially combined. The Single Responsibility Principle is not consistently applied.</td>
+        </tr>
+        <tr>
+          <td>Fault Isolation & System Reliability</td>
+          <td align="center">Moderate to Low</td>
+          <td>Because validation and operational logic are intertwined, an error in one component may propagate to others, increasing the risk of cascading failures.</td>
+        </tr>
+        <tr>
+          <td>Enforcement of Boundary & Validation Constraints</td>
+          <td align="center">Moderate</td>
+          <td>Validation rules exist but are embedded in multiple areas of the system. This may lead to inconsistent enforcement of rating limits, offer constraints, or lifecycle rules.</td>
+        </tr>
+        <tr>
+          <td>Protection Against Invalid Input & Misuse</td>
+          <td align="center">Moderate</td>
+          <td>Input checks and authorization controls are present but not centralized. This increases the possibility of uneven rule enforcement across different execution paths.</td>
+        </tr>
+        <tr>
+          <td>Long-Term Maintainability & Scalability</td>
+          <td align="center">Moderate to Low</td>
+          <td>Tightly coupled logic makes expansion and modification riskier. Introducing new features may require modifying multiple modules, increasing complexity.</td>
+        </tr>
+      </table>
+     </ul>
     <p align="center">Evaluation Table — Table 7</p>
     <br>
     <br>
@@ -841,6 +1511,8 @@ A Rating class will be developed to handle the evaluation logic for both sellers
   <p></p>
   <ul style="margin-left: 40px;"> 
   Represents a system participant with profile information and aggregated rating data. Stores core identity fields (firstName, lastName, email, phoneNumber) alongside a computed currentRating (double average) and a collection of received UserComment objects. Serves as the primary entity linking ratings to individuals.
+    <br>
+    <br>
      <ul style="margin-left: 40px;">
           • id<br>
           • firstName<br>
@@ -861,6 +1533,8 @@ A Rating class will be developed to handle the evaluation logic for both sellers
    <ul style="margin-left: 40px;"> 
   Models a marketplace listing created by a seller. 
   Contains essential sales data: title for identification, description for details (500 char limit), price for fixed sales, biddingPrice for auctions, and sellerId foreign key. Enables product lifecycle management from posting to purchase.
+     <br>
+     <br>
      <ul style="margin-left: 40px;">
           • id<br>
           • title<br>
@@ -881,6 +1555,8 @@ A Rating class will be developed to handle the evaluation logic for both sellers
   <p></p>
    <ul style="margin-left: 40px;"> 
   Captures individual rating events between users. Records raterId, rateeId for relationship tracking, numeric rating (1-5 integer), textual comment (250 char limit), and timestamp for audit trail. Foundation for average rating calculations and comment history display.
+     <br>
+     <br>
      <ul style="margin-left: 40px;">
           • id<br>
           • raterId<br>
@@ -900,6 +1576,8 @@ A Rating class will be developed to handle the evaluation logic for both sellers
      <ul style="margin-left: 40px;"> 
     Defines business logic for rating operations. <br>
     Core methods include are for submitting/validating ratings and getting the average rating. Encapsulates switch statements as validation ( Range: 1-5 ). As well as comment persistence (Data surviving after program ends), which will decouple UI from rating rules.
+       <br>
+       <br>
        <ul style="margin-left: 40px;">
             • rateUser()<br>
             • raterId<br>
@@ -919,7 +1597,8 @@ A Rating class will be developed to handle the evaluation logic for both sellers
   <p></p>
    <ul style="margin-left: 40px;"> 
   Standardizing the data access contract for user persistence (Data surviving after program ends). 
-  Provides CRUD operations (saveUser(), findById(), findByEmail()) plus rating updates (updateRating()). Abstracts storage implementation, supporting in-memory, JDBC, JPA, or NoSQL backends through polymorphism.
+  Provides CRUD operations (saveUser(), findById(), findByEmail()) plus rating updates (updateRating()). Abstracts storage implementation, supporting in-memory, JDBC, JPA, or NoSQL backends through polymorphism.<br>
+     <br>
      <ul style="margin-left: 40px;">
           • id<br>
           • raterId<br>
@@ -938,7 +1617,8 @@ A Rating class will be developed to handle the evaluation logic for both sellers
   <h2> ProductRepository — Interface </h2>
   <p></p>
    <ul style="margin-left: 40px;"> 
-  Data access layer for product listings. Exposes save(), findBySellerId(), and findById() methods. Ensures consistent product CRUD operations while hiding persistence details, allowing seamless database technology swaps without application code changes.
+  Data access layer for product listings. Exposes save(), findBySellerId(), and findById() methods. Ensures consistent product CRUD operations while hiding persistence details, allowing seamless database technology swaps without application code changes.<br>
+     <br>
      <ul style="margin-left: 40px;">
           • id<br>
           • raterId<br>
@@ -957,6 +1637,8 @@ A Rating class will be developed to handle the evaluation logic for both sellers
   <h2 align="left" id="evaluation-table">Architecture Evaluation Table</h2>
      <ul style="margin-left: 40px;">
        <h3>This table constitutes of the following files: </h3>
+       <br>
+       <br>
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• ModifyItem.java (concrete class)                          >br>
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• ArrangeStorage.java (interface)                           <br>
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• ArrangeStorage.java (implementation)                      <br>
@@ -1010,6 +1692,7 @@ A Rating class will be developed to handle the evaluation logic for both sellers
   <ul style="margin-left: 40px;">
     <strong>"Solution 2: Refined Modular Architecture"</strong>, as it provides:
     <br>
+    <br>
       <ul style="margin-left: 40px;">
             &nbsp;&nbsp;&nbsp;&nbsp;• Stronger separation of concerns    <br>
             &nbsp;&nbsp;&nbsp;&nbsp;• Improved reliability    <br>
@@ -1029,7 +1712,8 @@ A Rating class will be developed to handle the evaluation logic for both sellers
 
 
 
-<h2>UserManager —  Service Class</h2> <br>
+<h2>UserManager —  Service Class</h2> 
+<br>
   <br>
   Manages user authentication and registration within the system. Maintains a collection of registered users, and controls session states. It also handles user validation, including unique username enforcement and credential verification during login attempts. This provides the foundation for the user identity management across the marketplace, using:    <br>
   <br>
@@ -1039,6 +1723,7 @@ A Rating class will be developed to handle the evaluation logic for both sellers
    </ul> 
    <br>
   Here are the UserManager Testing Rules (Register method):    <br>
+  <br>
   <table align="center">
     <tr>
       <th>Condition</th>
@@ -1085,6 +1770,8 @@ A Rating class will be developed to handle the evaluation logic for both sellers
   </table>
   <br>
   Here are the UserManager Testing Rules (login method):
+  <br>
+  <br>
   <table align="center">
     <tr>
       <th>Condition</th>
