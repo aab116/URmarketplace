@@ -63,6 +63,9 @@ figure 1
 <img width="2630" height="1630" alt="image" src="https://github.com/user-attachments/assets/53074ae4-2507-46ac-8824-5d39f4a2dc25" />
 figure 2
 
+<img width="1760" height="1360" alt="image" src="https://github.com/user-attachments/assets/e5161fc7-4dab-4969-b687-9670e0b62cc7" />
+figure 3
+
 <h2 align="center"> List of Tables </h2>
 *No tables are included in this section.*
 
@@ -1304,6 +1307,11 @@ The final solution is composed of several cooperating components, each with a sp
 | ModifyItem | Validates titles, descriptions, and prices before item changes are applied | Unit testing and boundary value analysis |
 | ArrangeStorage / ArrangeStorageImpl | Handles temporary storage requests, fee calculation, and cancellation status | Unit testing and edge-case testing |
 | FeeCalculator / TrackOwnerAndCalculateFees | Tracks original ownership and computes platform fee, storage fee, and seller payout | Unit testing, equivalence class testing, and negative-value testing |
+
+
+<img width="1760" height="1360" alt="image" src="https://github.com/user-attachments/assets/39801251-ecc3-49f4-b81e-4928faec058e" />
+
+
 
 #### 3.3.2 Environmental, Societal, Safety, and Economic Considerations
 
