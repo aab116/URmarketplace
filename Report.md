@@ -47,10 +47,14 @@
     - [2.2.1 — Functions](#221-functions)
     - [2.2.2 — Objectives](#222-objectives)
     - [2.2.3 — Constraints](#223-constraints)
-  - [3 — Solutions](#3-solutions)
-  - [3.1 — Solution Set 1](#31-solution-set)
-  - [3.2 — Solution Set 2](#32-solution-set)
-  - [3.3 - Final Solution](#33-final-solution)
+- [3 — Solutions](#3-solutions)
+- [3.1 — Solution Set 1](#31-solution-set)
+- [3.2 — Solution Set 2](#32-solution-set)
+- [3.3 - Final Solution](#33-final-solution)
+  - [3.3.1 Components](#331-components)
+  - [3.3.2 Environmental, Societal, Safety, and Economic Considerations](#332-3.3.2-Environmental,-societal,-safety,-&-economic-considerations)
+  - [3.3.3 Test Cases & results](#333-test-cases-&-results)
+  - [3.3.4 - 3.3.4	Limitations](#334-limitations)
  
 
 
