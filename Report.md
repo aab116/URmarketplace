@@ -158,7 +158,7 @@ Figure 3<br>
   <p align="center">Table 1</p>  <br>
   <br>
 
-<h2 align = "left" id = "#2-table">Product — Entity Class — Testing Table 2</h2>
+<h2 align = "left" id = "2-table">Product — Entity Class — Testing Table 2</h2>
   <table align="center">
     <tr>
       <th>Condition</th>
@@ -224,7 +224,7 @@ Figure 3<br>
 
 
 
-<h2 align = "left" id = "#3-table">UserComment — Entity Classes — Testing Table 3</h2>
+<h2 align = "left" id = "3-table">UserComment — Entity Classes — Testing Table 3</h2>
   <table align="center">
     <tr>
       <th>Condition</th>
@@ -288,7 +288,7 @@ Figure 3<br>
   <p align="center">Table 3</p>  <br>
   <br>
 
-<h2 align = "left" id = "#4-table">RatingService — Interface — Testing Table 4</h2>
+<h2 align = "left" id = "4-table">RatingService — Interface — Testing Table 4</h2>
   <table align="center">
     <tr>
       <th>Condition</th>
@@ -352,7 +352,7 @@ Figure 3<br>
   <p align="center">Table 4</p>  <br>
   <br>
 
-<h2 align = "left" id = "#5-table">UserRepository — Interface — Testing Table 5</h2>
+<h2 align = "left" id = "5-table">UserRepository — Interface — Testing Table 5</h2>
   <table align="center">
     <tr>
       <th>Condition</th>
@@ -428,7 +428,7 @@ Figure 3<br>
   <br>
 
   
-<h2 align = "left" id = "#6-table">ProductRepository — Interface — Testing Table 6</h2>
+<h2 align = "left" id = "6-table">ProductRepository — Interface — Testing Table 6</h2>
   <table align="center">
     <tr>
       <th>Condition</th>
@@ -701,7 +701,7 @@ Although operationally correct, Solution 1 lacks strict separation of concerns a
      </ul>
   <div align="right">Testing Table Here! &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
     
-  [User — Entity Class — Testing Table 1](#1-table)  </div>  <br>
+   <a href="#1-table">User — Entity Class — Testing Table 1<a>  </div>  <br>
   <br>
 
 
@@ -720,7 +720,7 @@ Although operationally correct, Solution 1 lacks strict separation of concerns a
      </ul>
   <div align="right">Testing Table Here! &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
     
- <a href="#1-table">Product Testing Rules — Testing Table 2<a>  </div>  <br>
+ <a href="#2-table">Product Testing Rules — Testing Table 2<a>  </div>  <br>
   <br>
 
 
@@ -738,7 +738,7 @@ Although operationally correct, Solution 1 lacks strict separation of concerns a
      </ul>
   <div align="right">Testing Table Here! &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
     
-  [UserComment Testing Rules — Table 3](#3-table)  </div>  <br>
+   <a href="#3-table">UserComment Testing Rules — Table 3<a>  </div>  <br>
   <br>
   
 
@@ -756,7 +756,7 @@ Although operationally correct, Solution 1 lacks strict separation of concerns a
      </ul>
   <div align="right">Testing Table Here! &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
     
-  [RatingService Testing Rules — Table 3](#4-table)  </div>  <br>
+   <a href="#4-table">RatingService Testing Rules — Table 4<a>  </div>  <br>
   <br>
 
 
@@ -775,7 +775,7 @@ Although operationally correct, Solution 1 lacks strict separation of concerns a
      </ul>
   <div align="right">Testing Table Here! &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
     
-  [UserRepository Testing Rules — Table 4](#4-table)  </div>  <br>
+   <a href="#5-table">UserRepository Testing Rules — Table 5<a>  </div>  <br>
   <br>
 
 
@@ -793,7 +793,7 @@ Although operationally correct, Solution 1 lacks strict separation of concerns a
      </ul>
   <div align="right">Testing Table Here! &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
     
-  [ProductRepository Testing Rules — Table 5](#5-table)  </div>  <br>
+   <a href="#6-table">ProductRepository Testing Rules — Table 6<a>  </div>  <br>
   <br>
 
 
