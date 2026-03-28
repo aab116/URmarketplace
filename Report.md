@@ -90,10 +90,83 @@ Figure 3<br>
 
 
 
+<h2 align ="center"> List of Tables </h2>
+<br>
 
-<h2 align="center"> List of Tables </h2>
-*No tables are included in this section.*
 
+<h2 align = "left" id = "#1-table">User — Entity Class</h2>
+  Product  Testing Rules:
+<table align="center">
+  <tr>
+    <th>Condition</th>
+    <th>Rule 1</th>
+    <th>Rule 2</th>
+    <th>Rule 3</th>
+    <th>Rule 4</th>
+    <th>Rule 5</th>
+    <th>Rule 6</th>
+    <th>Rule 7</th>
+    <th>Rule 8</th>
+  </tr>
+  <tr>
+    <th>title Present?</th>
+    <th>T</th>
+    <th>T</th>
+    <th>F</th>
+    <th>F</th>
+    <th>T</th>
+    <th>T</th>
+    <th>F</th>
+    <th>F</th>
+  </tr>
+  <tr>
+    <th>price &amp; description Valid?</th>
+    <th>T</th>
+    <th>F</th>
+    <th>T</th>
+    <th>F</th>
+    <th>T</th>
+    <th>T</th>
+    <th>F</th>
+    <th>F</th>
+  </tr>
+  <tr>
+    <th>Action Stubs</th>
+  </tr>
+  <tr>
+    <th>Save Product</th>
+    <th>X</th>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th>X</th>
+    <th>X</th>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <th>Reject Product</th>
+    <th></th>
+    <th>X</th>
+    <th>X</th>
+    <th>X</th>
+    <th></th>
+    <th></th>
+    <th>X</th>
+    <th>X</th>
+  </tr>
+</table>
+
+<br>
+<br>
+
+- [2 — Table 2](#2-table)
+- [3 — Table 3](#3-table)
+- [4 — Table 4](#4-table)
+- [5 — Table 5](#5-table)
+- [6 — Table 6](#6-table)
+- [7 — Table 7](#7-table)
+- [8 — Table 8](#8-table)
 
 <h2 align="left" id="1-introduction">1 — Introduction</h2>
 
@@ -308,67 +381,9 @@ Represents a system participant with profile information and aggregated rating d
         • List<UserComment>       
    </ul>
 <p></p>
-User  Testing Rules:
-<table align="center">
-  <tr>
-    <th>Condition</th>
-    <th>Rule 1</th>
-    <th>Rule 2</th>
-    <th>Rule 3</th>
-    <th>Rule 4</th>
-    <th>Rule 5</th>
-    <th>Rule 6</th>
-    <th>Rule 7</th>
-    <th>Rule 8</th>
-  </tr>
-  <tr>
-    <th>Valid Email?</th>
-    <th>T</th>
-    <th>T</th>
-    <th>F</th>
-    <th>F</th>
-    <th>T</th>
-    <th>T</th>
-    <th>F</th>
-    <th>F</th>
-  </tr>
-  <tr>
-    <th>firstName Present?</th>
-    <th>T</th>
-    <th>F</th>
-    <th>T</th>
-    <th>F</th>
-    <th>T</th>
-    <th>T</th>
-    <th>F</th>
-    <th>F</th>
-  </tr>
-  <tr>
-    <th>Action Stubs</th>
-  </tr>
-  <tr>
-    <th>Create/Update User</th>
-    <th>X</th>
-    <th></th>
-    <th></th>
-    <th></th>
-    <th>X</th>
-    <th>X</th>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <th>Reject</th>
-    <th></th>
-    <th>X</th>
-    <th>X</th>
-    <th>X</th>
-    <th></th>
-    <th></th>
-    <th>X</th>
-    <th>X</th>
-  </tr>
-</table>
+<strong>Testing Table Here!</strong>
+
+[User — Entity Class](#1-table)
 
 <br>
 <br>
