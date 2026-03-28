@@ -61,7 +61,7 @@
 
 
 
-<div align="center>
+<div align="center">
 <h2> List of Figures </h2>
 
 <img width="1120" height="950" alt="image" src="https://github.com/user-attachments/assets/6d121a4f-61f1-45dc-bca4-c3d799dc7d90" />
