@@ -1369,6 +1369,10 @@ The test cases were developed using the JUnit 5 framework, encompassing unit, in
 
 The results demonstrate that the software's functions like user registration, bidding logic, and storage management behave properly and respect their intended limits. The tests successfully fail when given unsupported or invalid data, and pass when the data is acceptable for the scenario. Furthermore, they show a reliable connection with the SQLite database, correctly modifying table values and verifying those changes. The test suites also ensure consistency by running on a completely clean database slate, which guarantees predictable and expected results by using test isolation.
 
+The testing process specifically addresses the "No-Error Fallacy" by not only verifying successful paths but also actively seeking failure states. Using the Fail-Fast principle, the suite employs assertThrows to ensure the system immediately rejects invalid data such as negative price values, non-finite numbers, or unauthorized credentials before they can propagate to the database.
+
+The tests guarantee that the persistence layer is correctly structured through validation that spans multiple layers, from individual logic functions to database schema integrity and structure. This multi-layered approach checks that the application respects its operational limits and works as intended even when given incorrect user input or finds unexpected error states
+
 #### 3.3.4 Limitations
 
 Since URMarketplace is designed for students and faculty to organize and track sales and inventory, certain operational boundaries exist. These stem from both explicit and inherent limitations within the software's various functional and non-functional aspects.
