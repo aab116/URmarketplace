@@ -806,19 +806,57 @@ Although operationally correct, Solution 1 lacks strict separation of concerns a
 
 
 
-###  This table below involves the following:
+<h3> Solution 2 — Evaluation Table </h3>
    <ul style="margin-left: 40px;">
         • ModifyItem.java (concrete class)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• ArrangeStorage.java (interface)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• ArrangeStorage.java (implementation)<br>
         • FeeCalculator.java (interface);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• TrackOwnerAndCalculateFees.java (implementation)<br>
    </ul>
-  <p></p>
-| Evaluation Criterion | Assessment | Analysis |
-|----------------------|------------|----------|
-| Clarity of Responsibility Separation | High | Validation, business logic, persistence, and administrative functions are structurally isolated. Each service adheres closely to a single responsibility. |
-| Fault Isolation & System Reliability | High | Errors are confined to individual components. Validation failures do not affect persistence, and administrative operations do not interfere with marketplace logic. |
-| Enforcement of Boundary & Validation Constraints | High | Validation logic is centralized, ensuring consistent enforcement of offer limits, rating boundaries, and lifecycle rules across all system interactions. |
-| Protection Against Invalid Input & Misuse | High | Authentication and authorization layers prevent unauthorized actions. Centralized validation ensures invalid inputs are rejected before reaching operational logic. |
-| Long-Term Maintainability & Scalability | High | Low coupling and high cohesion allow new features to be added with minimal modification to existing components. This structure supports safe expansion and easier testing. |
+<br>
+<br>
+
+
+
+
+<h2 align="left" id="evaluation-table">Architecture — Evaluation — Summary Table</h2>
+  <table align="center">
+    <tr>
+      <th>Evaluation Criterion</th>
+      <th>Assessment</th>
+      <th>Analysis</th>
+    </tr>
+    <tr>
+      <td>Clarity of Responsibility Separation</td>
+      <td align="center">High</td>
+      <td>Validation, business logic, persistence, and administrative functions are structurally isolated. Each service adheres closely to a single responsibility.</td>
+    </tr>
+    <tr>
+      <td>Fault Isolation & System Reliability</td>
+      <td align="center">High</td>
+      <td>Errors are confined to individual components. Validation failures do not affect persistence, and administrative operations do not interfere with marketplace logic.</td>
+    </tr>
+    <tr>
+      <td>Enforcement of Boundary & Validation Constraints</td>
+      <td align="center">High</td>
+      <td>Validation logic is centralized, ensuring consistent enforcement of offer limits, rating boundaries, and lifecycle rules across all system interactions.</td>
+    </tr>
+    <tr>
+      <td>Protection Against Invalid Input & Misuse</td>
+      <td align="center">High</td>
+      <td>Authentication and authorization layers prevent unauthorized actions. Centralized validation ensures invalid inputs are rejected before reaching operational logic.</td>
+    </tr>
+    <tr>
+      <td>Long-Term Maintainability & Scalability</td>
+      <td align="center">High</td>
+      <td>Low coupling and high cohesion allow new features to be added with minimal modification to existing components. This structure supports safe expansion and easier testing.</td>
+    </tr>
+  </table>
+  <p align="center">Evaluation Table</p>
+  <br>
+  <br>
+
+
+
+
 <br>
 <br>
 Based on the results, "Solution 2: Refined Modular Architecture" provides:
