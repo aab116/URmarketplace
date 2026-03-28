@@ -798,80 +798,70 @@ Although operationally correct, Solution 1 lacks strict separation of concerns a
 
 
 
-
-
-
-
-
-
-
-
-<h3> Solution 2 — Evaluation Table </h3>
-   <ul style="margin-left: 40px;">
-        • ModifyItem.java (concrete class)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• ArrangeStorage.java (interface)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• ArrangeStorage.java (implementation)<br>
-        • FeeCalculator.java (interface);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• TrackOwnerAndCalculateFees.java (implementation)<br>
-   </ul>
-<br>
-<br>
-
-
-
-
-<h2 align="left" id="evaluation-table">Architecture — Evaluation — Summary Table</h2>
-  <table align="center">
-    <tr>
-      <th>Evaluation Criterion</th>
-      <th>Assessment</th>
-      <th>Analysis</th>
-    </tr>
-    <tr>
-      <td>Clarity of Responsibility Separation</td>
-      <td align="center">High</td>
-      <td>Validation, business logic, persistence, and administrative functions are structurally isolated. Each service adheres closely to a single responsibility.</td>
-    </tr>
-    <tr>
-      <td>Fault Isolation & System Reliability</td>
-      <td align="center">High</td>
-      <td>Errors are confined to individual components. Validation failures do not affect persistence, and administrative operations do not interfere with marketplace logic.</td>
-    </tr>
-    <tr>
-      <td>Enforcement of Boundary & Validation Constraints</td>
-      <td align="center">High</td>
-      <td>Validation logic is centralized, ensuring consistent enforcement of offer limits, rating boundaries, and lifecycle rules across all system interactions.</td>
-    </tr>
-    <tr>
-      <td>Protection Against Invalid Input & Misuse</td>
-      <td align="center">High</td>
-      <td>Authentication and authorization layers prevent unauthorized actions. Centralized validation ensures invalid inputs are rejected before reaching operational logic.</td>
-    </tr>
-    <tr>
-      <td>Long-Term Maintainability & Scalability</td>
-      <td align="center">High</td>
-      <td>Low coupling and high cohesion allow new features to be added with minimal modification to existing components. This structure supports safe expansion and easier testing.</td>
-    </tr>
-  </table>
-  <p align="center">Evaluation Table</p>
+  <h1 align="left" id="evaluation-table">Architecture Evaluation Table</h1>
+     <ul style="margin-left: 40px;">
+       <h3>This table constitutes of the following files: </h3>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• ModifyItem.java (concrete class)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• ArrangeStorage.java (interface)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• ArrangeStorage.java (implementation)<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• FeeCalculator.java (interface);
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• TrackOwnerAndCalculateFees.java (implementation)<br>
+     </ul>
   <br>
-  <br>
+  <h2 align="left" id="evaluation-table">Architecture — Evaluation — Summary Table</h2>
+    <table align="center">
+      <tr>
+        <th>Evaluation Criterion</th>
+        <th>Assessment</th>
+        <th>Analysis</th>
+      </tr>
+      <tr>
+        <td>Clarity of Responsibility Separation</td>
+        <td align="center">High</td>
+        <td>Validation, business logic, persistence, and administrative functions are structurally isolated. Each service adheres closely to a single responsibility.</td>
+      </tr>
+      <tr>
+        <td>Fault Isolation & System Reliability</td>
+        <td align="center">High</td>
+        <td>Errors are confined to individual components. Validation failures do not affect persistence, and administrative operations do not interfere with marketplace logic.</td>
+      </tr>
+      <tr>
+        <td>Enforcement of Boundary & Validation Constraints</td>
+        <td align="center">High</td>
+        <td>Validation logic is centralized, ensuring consistent enforcement of offer limits, rating boundaries, and lifecycle rules across all system interactions.</td>
+      </tr>
+      <tr>
+        <td>Protection Against Invalid Input & Misuse</td>
+        <td align="center">High</td>
+        <td>Authentication and authorization layers prevent unauthorized actions. Centralized validation ensures invalid inputs are rejected before reaching operational logic.</td>
+      </tr>
+      <tr>
+        <td>Long-Term Maintainability & Scalability</td>
+        <td align="center">High</td>
+        <td>Low coupling and high cohesion allow new features to be added with minimal modification to existing components. This structure supports safe expansion and easier testing.</td>
+      </tr>
+    </table>
+    <p align="center">Evaluation Table</p>
+    <br>
+    <br>
 
 
 
 
-<br>
-<br>
-Based on the results, "Solution 2: Refined Modular Architecture" provides:
-   <ul style="margin-left: 40px;">
-        • Stronger separation of concerns<br>
-        • Improved reliability<br>
-        • Strict layering principles<br>
-        • Core domain entities (User, Product, UserComment) separated from business logic & handled through dedicated interfaces<br>
-        • Data persistence, managed by repository abstractions<br>
-        • Consistent validation enforcement<br>
-        • Validation rules are centralized and consistently enforced<br>
-        • Isolating responsibilities and minimizing coupling between components<br>
-        • Greater long-term scalability<br>
-   </ul>
-Therefore, "Solution 2: Refined Modular Architecture" was selected as the architecture for URMarketplace.
+  <strong>Conclusion:</strong>  <br>
+  "Solution 2: Refined Modular Architecture", as it provides:
+    <ul style="margin-left: 40px;">
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Stronger separation of concerns<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Improved reliability<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Strict layering principles<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Core domain entities (User, Product, UserComment) separated from business logic & handled through dedicated interfaces<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Data persistence, managed by repository abstractions<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Consistent validation enforcement<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Validation rules are centralized and consistently enforced<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Isolating responsibilities and minimizing coupling between components<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Greater long-term scalability<br>
+    </ul>
+  Therefore, "Solution 2: Refined Modular Architecture" was selected as the architecture for URMarketplace.
 
 
 
