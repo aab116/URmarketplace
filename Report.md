@@ -77,7 +77,11 @@ Figure 2<br>
 <br>
 
 <img width="1760" height="1360" alt="image" src="https://github.com/user-attachments/assets/e5161fc7-4dab-4969-b687-9670e0b62cc7" />
-figure 3
+Layered Architecture Diagram<br>
+Figure 3<br>
+<br>
+<br>
+
 </div>
 
 
