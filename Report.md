@@ -94,7 +94,7 @@ Figure 3<br>
 <h2 align ="center"> List of Tables </h2>
   <br>
 
-  <h2 align = "left" id = "#1-table">User — Entity Class — Testing Table 1</h2>
+  <h2 align = "left" id = "1-table">User — Entity Class — Testing Table 1</h2>
   <table align="center">
     <tr>
       <th>Condition</th>
@@ -720,7 +720,7 @@ Although operationally correct, Solution 1 lacks strict separation of concerns a
      </ul>
   <div align="right">Testing Table Here! &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
     
-  [Product Testing Rules — Testing Table 2](#2-table)  </div>  <br>
+ <a href="#1-table">Product Testing Rules — Testing Table 2<a>  </div>  <br>
   <br>
 
 
