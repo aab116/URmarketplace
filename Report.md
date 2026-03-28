@@ -492,6 +492,42 @@ Figure 3<br>
   <p align="center">Table 6</p>  <br>
   <br>
 
+  <h2>Alternative Architecture — Evaluation — Summary Table</h2>
+    <table align="center">
+      <tr>
+        <th>Evaluation Criterion</th>
+        <th>Assessment</th>
+        <th>Analysis</th>
+      </tr>
+      <tr>
+        <td>Clarity of Responsibility Separation</td>
+        <td align="center">Moderate</td>
+        <td>Functional areas are grouped logically; however, validation, processing, and persistence logic are partially combined. The Single Responsibility Principle is not consistently applied.</td>
+      </tr>
+      <tr>
+        <td>Fault Isolation & System Reliability</td>
+        <td align="center">Moderate to Low</td>
+        <td>Because validation and operational logic are intertwined, an error in one component may propagate to others, increasing the risk of cascading failures.</td>
+      </tr>
+      <tr>
+        <td>Enforcement of Boundary & Validation Constraints</td>
+        <td align="center">Moderate</td>
+        <td>Validation rules exist but are embedded in multiple areas of the system. This may lead to inconsistent enforcement of rating limits, offer constraints, or lifecycle rules.</td>
+      </tr>
+      <tr>
+        <td>Protection Against Invalid Input & Misuse</td>
+        <td align="center">Moderate</td>
+        <td>Input checks and authorization controls are present but not centralized. This increases the possibility of uneven rule enforcement across different execution paths.</td>
+      </tr>
+      <tr>
+        <td>Long-Term Maintainability & Scalability</td>
+        <td align="center">Moderate to Low</td>
+        <td>Tightly coupled logic makes expansion and modification riskier. Introducing new features may require modifying multiple modules, increasing complexity.</td>
+      </tr>
+    </table>
+    <p align="center">Evaluation Table <br> Table 7</p>
+    <br>
+    <br>
 
 
 
@@ -499,196 +535,270 @@ Figure 3<br>
 
 
 
-<h2 align="left" id="1-introduction">1 — Introduction</h2>
-
-<ul style="margin-left: 40px;">
-  
-At the end of each academic term, students residing on the university's campus frequently leave behind personal items such as furniture, textbooks, kitchenware, and small appliances. These items are often still in good condition, usable and valuable to many; however, due to the lack of an easy-to-use and centralized system, many of these items are discarded or handled through informal channels. Not only does this void often result in unnecessary waste to students and the environment, but often a fiscal loss to the student leaving and the student in need. This issue will be alleviated by our software, **URMarketplace**. 
-
-Existing solutions, such as social media groups or by word of mouth are currently the trend in which these student adhere to; therefore, through such circumstances it isn't surprising that these are the results. Our design is oriented to lay the groundwork to help out these students at the University of Regina. 
-
-</ul>
-
-
-
-
-<h1>2 — Design Problem<a id="2-design-problem"></a></h1>
-
-<h1>2.1 — Problem Definition<a id="21-problem-definition"></a></h1> 
-<span style="font-size: 1em;">&nbsp;</span>
-
-<ul style="margin-left: 40px;">
-  
-Informal marketplaces do not support essential features such as tracking the original owner of an item, applying holding or storage fees, or calculating earnings returned to the seller after a purchase. Furthermore, these platforms lack administrative oversight to manage listings such as these for students. UR Marketplace will enforce marketplace rules, and control the lifecycle of items once they are listed. This creates challenges for sellers attempting to recover value from their items and for buyers seeking trustworthy and legitimate transactions.
-
-<strong>URMarketplace</strong> is ideal for addressing this gap, a dedicated software tool for the University of Regina's students living on campus. It will provide the necessary structure tailored to students' needs. The system must support, and not be limited to these key attributes focused on structure, transparency, and easy-to-use software that holds the administrative position to carry the weight so that the students can keep focusing on their academic studies during final and busiest times of their academic career. Strategically, this platform would fill the voids that other marketplace applications lack because it would be designed for students, by students. A few key characteristics of the user-end of the application would be, but not limited to:
-
-<ul style="margin-left: 40px;">
-<li> Posting items to sell.</li>
-<li> Ability to counter offer.</li>
-<li> An option for someone to seek out another person to store their item(s) temperarily until it sells; for a fee.</li>
-<li> Ability to rate users on both ends.</li>
-<li> University administration oversight ability for regulation and blacklisting if need be.</li>
-<li> Proper handling of item life-cycle</li>
-  <br>
-</ul>
-
-Functions such as these will lay the groundwork for a software solution that can be systematically tested and validated using established software testing techniques.
-
-</ul>
-<br>
-
-
-
-
-<h1>2.2	— Design Requirements<a id="22-problem-requirements"></a></h1> 
-<span style="font-size: 1em;">&nbsp;</span>
-
-<ul style="margin-left: 40px;">
-
-<h2><strong>2.2.1 — Functions<a id="221-functions"></a></strong></h2> 
+<h1 align="left" id="1-introduction">1 — Introduction</h1>    <br>
   <ul style="margin-left: 40px;">
-        •	Post items for sale with descriptions, photos, videos and prices.<br>
-        •	Submit counteroffers on listed items.<br>
-        •	Arrange temporary storage services for items with associated fees.<br>
-        •	Rate buyers and sellers after transactions.<br>
-        •	Allow administrators to oversee listings, enforce rules, and blacklist users.<br>
-        •	Manage item lifecycle from listing to sale or removal/republishing option to avoid orphan listings.<br>
-        •	Track original owners and calculate net seller earnings after fees.<br>
+    At the end of each academic term, students residing on the university's campus frequently leave behind personal items such as furniture, textbooks, kitchenware, and small appliances. These items are often still in good condition, usable and valuable to many; however, due to the lack of an easy-to-use and centralized system, many of these items are discarded or handled through informal channels. Not only does this void often result in unnecessary waste to students and the environment, but often a fiscal loss to the student leaving and the student in need. This issue will be alleviated by our software, <strong>URMarketplace</strong>.         <br>
+    <br>
+    Existing solutions, such as social media groups or by word of mouth are currently the trend in which these student adhere to; therefore, through such circumstances it isn't surprising that these are the results. Our design is oriented to lay the groundwork to help out these students at the University of Regina.       <br>
   </ul>
-            <span style="font-size: 1em;">&nbsp;</span>
 
-<h2><strong>2.2.2 — Objectives<a id="222-objectives"></a></strong></h2> 
-   <ul style="margin-left: 40px;">
-        •	User-friendly interface if we reach that far in testing for quick posting and browsing.<br>
-        •	Transparent transaction history that will build trust.<br>
-        •	Preventative processing for secure payments with fee deductions.<br>
-        •	Efficient administrative controls for compliance.<br>
-        •	Scalable to handle peak end-of-term traffic.<br>
-        •	Reliable for accurate ratings.<br>
-   </ul>
-            <span style="font-size: 1em;">&nbsp;</span>
 
-<h2><strong>2.2.3 — Constraints<a id="223-constraints"></a></strong></h2>  
-   <ul style="margin-left: 40px;">
-        • Accessible only to verified University of Regina campus residents.<br>
-        • Compliant with Canadian & University of Regina privacy laws (PIPEDA).<br>
-        • Handles up to 1,000 concurrent users.<br>
-        • Integrates no external payment gateways initially.<br>
-        • Operational within university network policies<br>
-   </ul>
-            <span style="font-size: 1em;">&nbsp;</span>
 
-</ul>
 
-<h1><strong>3 — Solutions<a id="3-solutions"></a></strong></h1>
 
-The proposed back-end solutions are done through the implementation of Java classes and interfaces to facilitate our systems architecture.
 
-A Rating class will be developed to handle the evaluation logic for both sellers and purchasers. This class will include methods that allow users to assign a numerical rating between 1 and 5 using a switch statement. Additionally, a text-based comment feature will enable users to provide qualitative feedback alongside their numerical rating. These ratings and comments will be stored and referenced by other components of the system, ensuring consistent data exchange between related modules.
+
+<br>
+<br>
+<h1>2 — Design Problem<a id="2-design-problem"></a></h1>      <br>
+  <ul style="margin-left: 40px;">
+
+
+
+
+
+
+  <h1>2.1 — Problem Definition<a id="21-problem-definition"></a></h1>     <br>
+    <span style="font-size: 1em;">&nbsp;</span>
+    <ul style="margin-left: 40px;">
+    Informal marketplaces do not support essential features such as tracking the original owner of an item, applying holding or storage fees, or calculating earnings returned to the seller after a purchase. Furthermore, these platforms lack administrative oversight to manage listings such as these for students. UR Marketplace will enforce marketplace rules, and control the lifecycle of items once they are listed. This creates challenges for sellers attempting to recover value from their items and for buyers seeking trustworthy and legitimate transactions.    <br>
+      <br>
+    <strong>URMarketplace</strong> is ideal for addressing this gap, a dedicated software tool for the University of Regina's students living on campus. It will provide the necessary structure tailored to students' needs. The system must support, and not be limited to these key attributes focused on structure, transparency, and easy-to-use software that holds the administrative position to carry the weight so that the students can keep focusing on their academic studies during final and busiest times of their academic career. Strategically, this platform would fill the voids that other marketplace applications lack because it would be designed for students, by students. A few key characteristics of the user-end of the application would be, but not limited to:    <br>
+      <br>
+    <ul style="margin-left: 40px;">
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; • Posting items to sell                                                                                            <br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; • Ability to counter offer                                                                                         <br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; • An option for someone to seek out another person to store their item(s) temperarily until it sells; for a fee    <br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; • Ability to rate users on both ends.                                                                              <br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; • University administration oversight ability for regulation and blacklisting if need be                           <br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; • Proper handling of item life-cycle                                                                               <br>
+      <br>
+    </ul>
+      Functions such as these will lay the groundwork for a software solution that can be systematically tested and validated using established software testing techniques.      <br>
+  </ul>
+  <br>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <h1>2.2	— Design Requirements<a id="22-problem-requirements"></a></h1> 
+  <span style="font-size: 1em;">&nbsp;</span>
+  
+  <ul style="margin-left: 40px;">
+
+
+  
+  <h2><strong>2.2.1 — Functions<a id="221-functions"></a></strong></h2> 
+    <ul style="margin-left: 40px;">
+          •	Post items for sale with descriptions, photos, videos and prices.<br>
+          •	Submit counteroffers on listed items.<br>
+          •	Arrange temporary storage services for items with associated fees.<br>
+          •	Rate buyers and sellers after transactions.<br>
+          •	Allow administrators to oversee listings, enforce rules, and blacklist users.<br>
+          •	Manage item lifecycle from listing to sale or removal/republishing option to avoid orphan listings.<br>
+          •	Track original owners and calculate net seller earnings after fees.<br>
+    </ul>
+              <span style="font-size: 1em;">&nbsp;</span>
+
+
+
+  <h2><strong>2.2.2 — Objectives<a id="222-objectives"></a></strong></h2> 
+     <ul style="margin-left: 40px;">
+          •	User-friendly interface if we reach that far in testing for quick posting and browsing.<br>
+          •	Transparent transaction history that will build trust.<br>
+          •	Preventative processing for secure payments with fee deductions.<br>
+          •	Efficient administrative controls for compliance.<br>
+          •	Scalable to handle peak end-of-term traffic.<br>
+          •	Reliable for accurate ratings.<br>
+     </ul>
+              <span style="font-size: 1em;">&nbsp;</span>
+
+
+  
+  <h2><strong>2.2.3 — Constraints<a id="223-constraints"></a></strong></h2>  
+     <ul style="margin-left: 40px;">
+          • Accessible only to verified University of Regina campus residents.<br>
+          • Compliant with Canadian & University of Regina privacy laws (PIPEDA).<br>
+          • Handles up to 1,000 concurrent users.<br>
+          • Integrates no external payment gateways initially.<br>
+          • Operational within university network policies<br>
+     </ul>
+              <span style="font-size: 1em;">&nbsp;</span>
+  </ul>
+  </ul>
+
+
+
+
+
+
+
+
+
+<br>
+<br>
+<h1><strong>3 — Solutions<a id="3-solutions"></a></strong></h1>                      <br>
+<br>
+The proposed back-end solutions are done through the implementation of Java classes and interfaces to facilitate our systems architecture.      <br>
+
+A Rating class will be developed to handle the evaluation logic for both sellers and purchasers. This class will include methods that allow users to assign a numerical rating between 1 and 5 using a switch statement. Additionally, a text-based comment feature will enable users to provide qualitative feedback alongside their numerical rating. These ratings and comments will be stored and referenced by other components of the system, ensuring consistent data exchange between related modules.      <br>
 
 
 <ul style="margin-left: 40px;">
 <b>
 <p></p>
+
+
+
+
+
+
+
+
+
+
   
 <h1> 3.1	<strong> — Solution Set 1<a id="31-solution-set"></a></strong></h1>
-
 <br>
-<p></p>
+   <ul style="margin-left: 40px;"> 
 
 
-### UserDatabase Class / Interface:
-<p></p>
-This component will maintain user profile information and rating data. The primary fields include:
-   <ul style="margin-left: 40px;">
-        • firstName<br>
-        • lastName<br>
-        • phoneNumber<br>
-        • email<br>
-        • currentRating —> An aggregate or referenced value obtained from the Rating class/interface<br>
-        • ratingComments —> textual feedback from other users (Maximum length: 250 characters
-   </ul>
-The design will ensure the storage of multiple user entries, supporting efficient retrieval and update operations. Looking into extending this or to interface with a storage layer, such as an SQL or NoSQL database system
-<br>
-<br>
-
-
-
-
-### ProductDatabase Class / Interface:
-<p></p>
-This component will manage product-related information for user-listed items. The primary fields include:
-   <ul style="margin-left: 40px;">
-        • title<br>
-        • description (maximum length: 500 characters)<br>
-        • price<br>
-        • biddingPrice<br>
-        • currentRating —> An aggregate or referenced value obtained from the Rating class/interface<br>
-        • ratingComments —> textual feedback from other users (Maximum length: 250 characters
-   </ul>
-This structure will enable users to post, modify, and query product listings, providing support for both fixed-price and bidding-based sales models.
-<br>
-<br>
-
-
-
-### Rating Class 
-<p></p>
-This class will handle will handle the evaluation logic for both sellers and purchasers. <br>
-This class will include methods that allow users to:
-These ratings and comments will be stored and referenced by other components of the system, ensuring consistent data exchange between related modules.
-
-   <ul style="margin-left: 40px;">
-        • Assign a numerical rating between 1 and 5 using a switch statement<br>
-        • Text-based comment feature will enable users to provide qualitative feedback alongside their numerical rating (Maximum length: 250 characters)<br>
-   </ul>
-These ratings and comments will be stored and referenced by other components of the system, ensuring consistent data exchange between related modules.
-<br>
-<p></p>
-<p></p>
-
-
-###  This table below involves the following:
-   <ul style="margin-left: 40px;">
-        • ModifyItem.java (concrete class)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• ArrangeStorage.java (interface)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• ArrangeStorage.java (implementation)<br>
-        • FeeCalculator.java (interface);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• TrackOwnerAndCalculateFees.java (implementation)<br>
-   </ul>
    
-<br>
-<p></p>
-<p></p>
-<br>
-
-| Evaluation Criterion | Assessment | Analysis |
-|----------------------|------------|----------|
-| Clarity of Responsibility Separation | Moderate | Functional areas are grouped logically; however, validation, processing, and persistence logic are partially combined. The Single Responsibility Principle is not consistently applied. |
-| Fault Isolation & System Reliability | Moderate to Low | Because validation and operational logic are intertwined, an error in one component may propagate to others, increasing the risk of cascading failures. |
-| Enforcement of Boundary & Validation Constraints | Moderate | Validation rules exist but are embedded in multiple areas of the system. This may lead to inconsistent enforcement of rating limits, offer constraints, or lifecycle rules. |
-| Protection Against Invalid Input & Misuse | Moderate | Input checks and authorization controls are present but not centralized. This increases the possibility of uneven rule enforcement across different execution paths. |
-| Long-Term Maintainability & Scalability | Moderate to Low | Tightly coupled logic makes expansion and modification riskier. Introducing new features may require modifying multiple modules, increasing complexity. |
-
-<br>
-<p></p>
-Although operationally correct, Solution 1 lacks strict separation of concerns and strong structural safeguards. As the system grows, these weaknesses could negatively impact maintainability and reliability. Therefore, refinement was pursued.
-
-</ul>
-<br>
-<br>
-<br>
+  <h2>UserDatabase Class / Interface:</h2>
+    <ul style="margin-left: 40px;"> 
+      This component will maintain user profile information and rating data.                                       <br>
+      <div style="height: 5px;"></div>
+      <ul style="margin-left: 40px;">
+        The primary fields include:          <br>
+         <ul style="margin-left: 40px;">
+              • firstName                                                                                          <br>
+              • lastName                                                                                           <br>
+              • phoneNumber                                                                                        <br>
+              • email                                                                                              <br>
+              • currentRating —> An aggregate or referenced value obtained from the Rating class/interface         <br>
+              • ratingComments —> textual feedback from other users (Maximum length: 250 characters                <br>
+         </ul>
+      </ul>
+      <div style="height: 5px;">&nbsp;</div>
+      The design will ensure the storage of multiple user entries, supporting efficient retrieval and update operations. Looking into extending this or to interface with a storage layer, such as an SQL or NoSQL database system   <br>
+      <br>
+    </ul>
 
 
-<p></p>
-<ul style="margin-left: 40px;">
-<br>
-<h1><strong>3.2	— Solution Set 2<a id="32-solution-set"></a></strong></h1>
+  
+  <h2>ProductDatabase Class / Interface:</h2>
+    <ul style="margin-left: 40px;"> 
+      This component will manage product-related information for user-listed items.                                 <br>
+      <br>
+      <ul style="margin-left: 40px;">
+        The primary fields include:      <br>
+         <ul style="margin-left: 40px;">
+              • title                                                                                                <br>
+              • description (maximum length: 500 characters)                                                         <br>
+              • price                                                                                                <br>
+              • biddingPrice                                                                                         <br>
+              • currentRating —> An aggregate or referenced value obtained from the Rating class/interface           <br>
+              • ratingComments —> textual feedback from other users (Maximum length: 250 characters                  <br>
+         </ul>
+      </ul>
+      <br>
+      This structure will enable users to post, modify, and query product listings, providing support for both fixed-price and bidding-based sales models.      <br>
+      <br>
+    </ul>
 
+
+
+  
+  <h2>Rating Class </h2>
+    <ul style="margin-left: 40px;"> 
+      This class will handle will handle the evaluation logic for both sellers and purchasers.                                                                        <br>
+      <br>
+      <ul style="margin-left: 40px;">
+        This class will include methods that allow users to:                                                                                                            <br>
+        <ul style="margin-left: 40px;">
+                • Assign a numerical rating between 1 and 5 using a switch statement                                                                                    <br>
+                • Text-based comment feature will enable users to provide qualitative feedback alongside their numerical rating (Maximum length: 250 characters)        <br>
+        </ul>
+      </ul>
+      <br>
+      These ratings and comments will be stored and referenced by other components of the system, ensuring consistent data exchange between related modules.          <br>
+    <br>
+    </ul>
+    
+
+  
+  <h2 align="left" id="evaluation-table-2">Alternative Architecture — Evaluation — Summary Table</h2>
+    <ul style="margin-left: 40px;"> 
+      <h3>  This table below involves the following:</h3>  <br>
+      <ul style="margin-left: 40px;">
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• ModifyItem.java (concrete class)                   <br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• ArrangeStorage.java (interface)                    <br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• ArrangeStorage.java (implementation)               <br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• FeeCalculator.java (interface)                     <br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• TrackOwnerAndCalculateFees.java (implementation)   <br>
+       </ul>
+     </ul>
+     <br>
+    <table align="center">
+      <tr>
+        <th>Evaluation Criterion</th>
+        <th>Assessment</th>
+        <th>Analysis</th>
+      </tr>
+      <tr>
+        <td>Clarity of Responsibility Separation</td>
+        <td align="center">Moderate</td>
+        <td>Functional areas are grouped logically; however, validation, processing, and persistence logic are partially combined. The Single Responsibility Principle is not consistently applied.</td>
+      </tr>
+      <tr>
+        <td>Fault Isolation & System Reliability</td>
+        <td align="center">Moderate to Low</td>
+        <td>Because validation and operational logic are intertwined, an error in one component may propagate to others, increasing the risk of cascading failures.</td>
+      </tr>
+      <tr>
+        <td>Enforcement of Boundary & Validation Constraints</td>
+        <td align="center">Moderate</td>
+        <td>Validation rules exist but are embedded in multiple areas of the system. This may lead to inconsistent enforcement of rating limits, offer constraints, or lifecycle rules.</td>
+      </tr>
+      <tr>
+        <td>Protection Against Invalid Input & Misuse</td>
+        <td align="center">Moderate</td>
+        <td>Input checks and authorization controls are present but not centralized. This increases the possibility of uneven rule enforcement across different execution paths.</td>
+      </tr>
+      <tr>
+        <td>Long-Term Maintainability & Scalability</td>
+        <td align="center">Moderate to Low</td>
+        <td>Tightly coupled logic makes expansion and modification riskier. Introducing new features may require modifying multiple modules, increasing complexity.</td>
+      </tr>
+    </table>
+    <p align="center">Evaluation Table — Table 7</p>
+    <br>
+    <br>
+    Although operationally correct, Solution 1 lacks strict separation of concerns and strong structural safeguards. As the system grows, these weaknesses could negatively impact maintainability and reliability. Therefore, refinement was pursued.        <br>
+    </ul>
+    <br>
+    <br>
+    <p></p>
+    </ul>
+
+
+
+
+
+  <ul style="margin-left: 40px;">
+  <br>
+  <h1><strong>3.2	— Solution Set 2<a id="32-solution-set"></a></strong></h1>
   <p></p>
   <ul style="margin-left: 40px;">
   <br>
-
-  ### User — Entity Class
+  <h2>User — Entity Class</h2> 
   <p></p>
+  <ul style="margin-left: 40px;"> 
   Represents a system participant with profile information and aggregated rating data. Stores core identity fields (firstName, lastName, email, phoneNumber) alongside a computed currentRating (double average) and a collection of received UserComment objects. Serves as the primary entity linking ratings to individuals.
      <ul style="margin-left: 40px;">
           • id<br>
@@ -700,13 +810,14 @@ Although operationally correct, Solution 1 lacks strict separation of concerns a
           • List<UserComment>       
      </ul>
   <div align="right">Testing Table Here! &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
-    
-   <a href="#1-table">User — Entity Class — Testing Table 1<a>  </div>  <br>
+   <a href="#1-table">User — Entity Class — Testing Table 1</a>  </div>  <br>
   <br>
+   </ul>
 
 
-  ### Product — Entity Class
+  <h2>Product — Entity Class</h2> 
   <p></p>
+   <ul style="margin-left: 40px;"> 
   Models a marketplace listing created by a seller. 
   Contains essential sales data: title for identification, description for details (500 char limit), price for fixed sales, biddingPrice for auctions, and sellerId foreign key. Enables product lifecycle management from posting to purchase.
      <ul style="margin-left: 40px;">
@@ -719,14 +830,15 @@ Although operationally correct, Solution 1 lacks strict separation of concerns a
           • sellerId
      </ul>
   <div align="right">Testing Table Here! &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
-    
- <a href="#2-table">Product Testing Rules — Testing Table 2<a>  </div>  <br>
+ <a href="#2-table">Product Testing Rules — Testing Table 2</a>  </div>  <br>
   <br>
+   </ul>
 
 
 
-  ### UserComment — Entity Classes
+  <h2>UserComment — Entity Classes</h2> 
   <p></p>
+   <ul style="margin-left: 40px;"> 
   Captures individual rating events between users. Records raterId, rateeId for relationship tracking, numeric rating (1-5 integer), textual comment (250 char limit), and timestamp for audit trail. Foundation for average rating calculations and comment history display.
      <ul style="margin-left: 40px;">
           • id<br>
@@ -737,32 +849,34 @@ Although operationally correct, Solution 1 lacks strict separation of concerns a
           • timestamp<br>     
      </ul>
   <div align="right">Testing Table Here! &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
-    
-   <a href="#3-table">UserComment Testing Rules — Table 3<a>  </div>  <br>
+   <a href="#3-table">UserComment Testing Rules — Table 3</a>  </div>  <br>
   <br>
+   </ul>
   
 
-  ### RatingService — Interface
-  <p></p>
-  Defines business logic for rating operations. <br>
-  Core methods include are for submitting/validating ratings and getting the average rating. Encapsulates switch statements as validation ( Range: 1-5 ). As well as comment persistence (Data surviving after program ends), which will decouple UI from rating rules.
-     <ul style="margin-left: 40px;">
-          • rateUser()<br>
-          • raterId<br>
-          • rateeId<br>
-          • rating (1-5)<br>
-          • comment (250 char max)<br>
-          • timestamp<br>     
-     </ul>
-  <div align="right">Testing Table Here! &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
-    
-   <a href="#4-table">RatingService Testing Rules — Table 4<a>  </div>  <br>
+  <h2>RatingService — Interface</h2> 
+    <p></p>
+     <ul style="margin-left: 40px;"> 
+    Defines business logic for rating operations. <br>
+    Core methods include are for submitting/validating ratings and getting the average rating. Encapsulates switch statements as validation ( Range: 1-5 ). As well as comment persistence (Data surviving after program ends), which will decouple UI from rating rules.
+       <ul style="margin-left: 40px;">
+            • rateUser()<br>
+            • raterId<br>
+            • rateeId<br>
+            • rating (1-5)<br>
+            • comment (250 char max)<br>
+            • timestamp<br>     
+       </ul>
+    <div align="right">Testing Table Here! &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+  <a href="#4-table">RatingService Testing Rules — Table 4</a>  </div>  <br>
   <br>
+     </ul>
 
 
 
-  ### UserRepository — Interface
+  <h2>UserRepository — Interface</h2> 
   <p></p>
+   <ul style="margin-left: 40px;"> 
   Standardizing the data access contract for user persistence (Data surviving after program ends). 
   Provides CRUD operations (saveUser(), findById(), findByEmail()) plus rating updates (updateRating()). Abstracts storage implementation, supporting in-memory, JDBC, JPA, or NoSQL backends through polymorphism.
      <ul style="margin-left: 40px;">
@@ -774,14 +888,15 @@ Although operationally correct, Solution 1 lacks strict separation of concerns a
           • timestamp<br>     
      </ul>
   <div align="right">Testing Table Here! &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
-    
-   <a href="#5-table">UserRepository Testing Rules — Table 5<a>  </div>  <br>
+   <a href="#5-table">UserRepository Testing Rules — Table 5</a>  </div>  <br>
   <br>
+   </ul>
 
 
 
   <h2> ProductRepository — Interface </h2>
   <p></p>
+   <ul style="margin-left: 40px;"> 
   Data access layer for product listings. Exposes save(), findBySellerId(), and findById() methods. Ensures consistent product CRUD operations while hiding persistence details, allowing seamless database technology swaps without application code changes.
      <ul style="margin-left: 40px;">
           • id<br>
@@ -792,9 +907,9 @@ Although operationally correct, Solution 1 lacks strict separation of concerns a
           • timestamp<br>     
      </ul>
   <div align="right">Testing Table Here! &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
-    
-   <a href="#6-table">ProductRepository Testing Rules — Table 6<a>  </div>  <br>
+   <a href="#6-table">ProductRepository Testing Rules — Table 6</a>  </div>  <br>
   <br>
+   </ul>
 
 
 
@@ -849,26 +964,26 @@ Although operationally correct, Solution 1 lacks strict separation of concerns a
 
 
   <strong>Conclusion:</strong>  <br>
-  "Solution 2: Refined Modular Architecture", as it provides:
+  "Solution 2: Refined Modular Architecture", as it provides:<br>
     <ul style="margin-left: 40px;">
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Stronger separation of concerns<br>
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Improved reliability<br>
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Strict layering principles<br>
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Core domain entities (User, Product, UserComment) separated from business logic & handled through dedicated interfaces<br>
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Data persistence, managed by repository abstractions<br>
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Consistent validation enforcement<br>
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Validation rules are centralized and consistently enforced<br>
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Isolating responsibilities and minimizing coupling between components<br>
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Greater long-term scalability<br>
-    </ul>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Stronger separation of concerns<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Improved reliability<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Strict layering principles<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Core domain entities (User, Product, UserComment) separated from business logic & handled through dedicated interfaces<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Data persistence, managed by repository abstractions<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Consistent validation enforcement<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Validation rules are centralized and consistently enforced<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Isolating responsibilities and minimizing coupling between components<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Greater long-term scalability<br>
+    </ul><br>
   Therefore, "Solution 2: Refined Modular Architecture" was selected as the architecture for URMarketplace.
 
 
 
 
-### UserManager —  Service Class
+<h2>UserManager —  Service Class</h2> 
 <p></p>
-Manages user authentication and registration within the system. Maintains a collection of registered users, and controls session states. It also handles user validation, including unique username enforcement and credential verification during login attempts. This provides the foundation for the user identity management across the marketplace, using:
+Manages user authentication and registration within the system. Maintains a collection of registered users, and controls session states. It also handles user validation, including unique username enforcement and credential verification during login attempts. This provides the foundation for the user identity management across the marketplace, using:<br>
  <ul style="margin-left: 40px;"> 
  • users — List of registered User objects<br> 
  • nextId — Auto-incremented ID counter for new users </ul> <p></p>
@@ -969,7 +1084,7 @@ Here are the UserManager Testing Rules (login method):
 
 
 
-### IssueManager — Service Class
+<h2>IssueManager — Service Class</h2> 
 <p></p>
 Handles the reporting and tracking of user-reported issues within the platform; managing the lifecycle of support tickets from creation to resolution. Each issue maintains relevant metadata including category classification, current status, and reporter information. This provides a structured problem reporting system for marketplace moderation and support through the key implementations of:
    <ul style="margin-left: 40px;"> 
