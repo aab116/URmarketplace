@@ -512,9 +512,9 @@ Existing solutions, such as social media groups or by word of mouth are currentl
 
 
 
-## 2 — Design Problem<a id="2-design-problem"></a>
+<h1>2 — Design Problem<a id="2-design-problem"></a></h1>
 
-### 2.1 — Problem Definition<a id="21-problem-definition"></a>
+<h1>2.1 — Problem Definition<a id="21-problem-definition"></a></h1> 
 <span style="font-size: 1em;">&nbsp;</span>
 
 <ul style="margin-left: 40px;">
@@ -541,12 +541,12 @@ Functions such as these will lay the groundwork for a software solution that can
 
 
 
-### 2.2	— Design Requirements<a id="22-problem-requirements"></a>
+<h1>2.2	— Design Requirements<a id="22-problem-requirements"></a></h1> 
 <span style="font-size: 1em;">&nbsp;</span>
 
 <ul style="margin-left: 40px;">
 
-### <strong>2.2.1 — Functions<a id="221-functions"></a></strong>
+<h2><strong>2.2.1 — Functions<a id="221-functions"></a></strong></h2> 
   <ul style="margin-left: 40px;">
         •	Post items for sale with descriptions, photos, videos and prices.<br>
         •	Submit counteroffers on listed items.<br>
@@ -558,7 +558,7 @@ Functions such as these will lay the groundwork for a software solution that can
   </ul>
             <span style="font-size: 1em;">&nbsp;</span>
 
-### <strong>2.2.2 — Objectives<a id="222-objectives"></a></strong>
+<h2><strong>2.2.2 — Objectives<a id="222-objectives"></a></strong></h2> 
    <ul style="margin-left: 40px;">
         •	User-friendly interface if we reach that far in testing for quick posting and browsing.<br>
         •	Transparent transaction history that will build trust.<br>
@@ -569,7 +569,7 @@ Functions such as these will lay the groundwork for a software solution that can
    </ul>
             <span style="font-size: 1em;">&nbsp;</span>
 
-###  <strong>2.2.3 — Constraints<a id="223-constraints"></a></strong>
+<h2><strong>2.2.3 — Constraints<a id="223-constraints"></a></strong></h2>  
    <ul style="margin-left: 40px;">
         • Accessible only to verified University of Regina campus residents.<br>
         • Compliant with Canadian & University of Regina privacy laws (PIPEDA).<br>
@@ -581,7 +581,7 @@ Functions such as these will lay the groundwork for a software solution that can
 
 </ul>
 
-##  <strong>3 — Solutions<a id="3-solutions"></a></strong>
+<h1><strong>3 — Solutions<a id="3-solutions"></a></strong></h1>
 
 The proposed back-end solutions are done through the implementation of Java classes and interfaces to facilitate our systems architecture.
 
@@ -592,7 +592,7 @@ A Rating class will be developed to handle the evaluation logic for both sellers
 <b>
 <p></p>
   
-### 3.1	<strong> — Solution Set 1<a id="31-solution-set"></a></strong>
+<h1> 3.1	<strong> — Solution Set 1<a id="31-solution-set"></a></strong></h1>
 
 <br>
 <p></p>
@@ -681,7 +681,7 @@ Although operationally correct, Solution 1 lacks strict separation of concerns a
 <p></p>
 <ul style="margin-left: 40px;">
 <br>
-<h2><strong>3.2	— Solution Set 2<a id="32-solution-set"></a></strong></h2>
+<h1><strong>3.2	— Solution Set 2<a id="32-solution-set"></a></strong></h1>
 
   <p></p>
   <ul style="margin-left: 40px;">
@@ -798,7 +798,7 @@ Although operationally correct, Solution 1 lacks strict separation of concerns a
 
 
 
-  <h1 align="left" id="evaluation-table">Architecture Evaluation Table</h1>
+  <h2 align="left" id="evaluation-table">Architecture Evaluation Table</h2>
      <ul style="margin-left: 40px;">
        <h3>This table constitutes of the following files: </h3>
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• ModifyItem.java (concrete class)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -1338,14 +1338,17 @@ Based on the results, "Solution 2: Refined Modular Architecture" provides:
 Therefore, "Solution 2: Refined Modular Architecture" was selected as the architecture for URMarketplace.
 <br>
 <p></p>
-
-
-
 </ul>
 </ul>
 
 
-### 3.3 Final Solution
+
+
+
+
+
+
+<h1>3.3 Final Solution </h1>
 
 <p></p>
 The final solution selected for URMarketplace is a modular Java back-end supported by an SQLite database and verified through JUnit-based testing. This solution was selected over the earlier alternatives because it provides clearer separation between data representation, business logic, persistence, and validation. From a testing perspective, this structure is significantly better than a more tightly coupled design because each major responsibility can be tested in isolation and then re-tested together through integration scenarios.
@@ -1368,7 +1371,12 @@ The comparison in Table  summarizes why this final solution was selected.
 
 Based on this comparison, the final modular solution was selected because it supports a more structured and repeatable verification process, which is especially important in a software testing and validation course.
 
-#### 3.3.1 Components
+
+
+
+
+
+<h1>3.3.1 Components</h1>
 <p></p>
 The final solution is composed of several cooperating components, each with a specific responsibility in the system. The main components and their testing methods are shown in Table .
 <p></p>
@@ -1394,7 +1402,7 @@ The final solution is composed of several cooperating components, each with a sp
 
 
 
-#### 3.3.2 Environmental, Societal, Safety, and Economic Considerations
+<h1>3.3.2 Environmental, Societal, Safety, and Economic Considerations</h1> 
 
 The design of URMarketplace was developed with environmental, societal, safety, and economic constraints in mind. Environmentally, the software contributes positively by encouraging item reuse rather than disposal. Students often discard usable furniture, books, appliances, and supplies when moving out of residence at the end of a term. By offering a structured local marketplace, the design helps reduce unnecessary waste and extends the useful life of these items. In this way, the solution supports more sustainable consumption behavior on campus.
 
