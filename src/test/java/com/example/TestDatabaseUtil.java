@@ -1,5 +1,9 @@
 package com.example;
 
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -152,5 +156,14 @@ final class TestDatabaseUtil {
         } catch (SQLException e) {
             throw new RuntimeException("Failed SQL execution", e);
         }
+    }
+
+    static void deleteDatabaseFile() {
+    try {
+        // Delete the real SQLite file so tests can simulate a true first run
+        Files.deleteIfExists(Path.of("marketplace.db"));
+    } catch (IOException e) {
+        throw new RuntimeException("Failed to delete test database file", e);
+    }
     }
 }

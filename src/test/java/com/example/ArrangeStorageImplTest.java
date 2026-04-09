@@ -11,7 +11,8 @@ class ArrangeStorageImplTest {
 
     @BeforeEach
     void setUp() {
-        // Create a fresh storage object before each test so tests do not affect each other.
+        // Create a fresh storage object before each test so tests do not affect each
+        // other.
         storage = new ArrangeStorageImpl();
     }
 
@@ -39,7 +40,8 @@ class ArrangeStorageImplTest {
         // After cancelling, the booking should no longer be active.
         assertFalse(storage.isActive(bookingId));
 
-        // Cancelling the same booking again should fail because it is already cancelled.
+        // Cancelling the same booking again should fail because it is already
+        // cancelled.
         assertFalse(storage.cancelStorage(bookingId));
     }
 
@@ -87,4 +89,27 @@ class ArrangeStorageImplTest {
         assertFalse(storage.isActive(null));
         assertFalse(storage.isActive("missing"));
     }
+
+    @Test
+    void getActiveStorageFeeForItemReturnsOnlyActiveFeesForMatchingItem() {
+        // Two bookings for the same item
+        String booking1 = storage.requestStorage("item-101", "user-9", 5, 2.0); // 10.0
+        String booking2 = storage.requestStorage("item-101", "user-9", 3, 4.0); // 12.0
+
+        // One booking for a different item
+        storage.requestStorage("item-999", "user-9", 10, 1.0); // should not count
+
+        // Cancel one booking so only one active booking remains for item-101
+        storage.cancelStorage(booking1);
+
+        double fee = storage.getActiveStorageFeeForItem("item-101");
+
+        // Only booking2 should count
+        assertEquals(12.0, fee, 0.0001);
+    }
+
+    @Test
+    void getActiveStorageFeeForItemReturnsZeroWhenNoActiveBookingExists() {
+    assertEquals(0.0, storage.getActiveStorageFeeForItem("missing-item"), 0.0001);
+}
 }

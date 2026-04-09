@@ -13,27 +13,27 @@ class DatabaseHelperTest {
 
     @BeforeEach
     void setUp() {
-        // Reset the tables so schema-based tests start from a known state.
-        TestDatabaseUtil.resetAllTables();
+        // Delete the actual SQLite file so each test simulates a fresh first run
+        TestDatabaseUtil.deleteDatabaseFile();
     }
 
     @Test
     void connectReturnsOpenConnection() throws Exception {
         try (Connection conn = DatabaseHelper.connect()) {
-            // The helper should return a real connection object.
+            // The helper should return a real connection object
             assertNotNull(conn);
 
-            // The connection should already be open and usable.
+            // The connection should already be open and usable
             assertFalse(conn.isClosed());
         }
     }
 
     @Test
     void initializeDatabaseLeavesCoreTablesAvailable() {
-        // Run the main database initialization method.
+        // Run the real startup initialization on a fresh database file
         DatabaseHelper.initializeDatabase();
 
-        // The core app tables should exist afterward.
+        // The core app tables should exist afterward
         assertTrue(TestDatabaseUtil.tableExists("users"));
         assertTrue(TestDatabaseUtil.tableExists("listings"));
         assertTrue(TestDatabaseUtil.tableExists("issues"));
@@ -41,10 +41,10 @@ class DatabaseHelperTest {
 
     @Test
     void initializeDatabaseCreatesExpectedUsersColumns() {
-        // Initialize the schema, then inspect the users table definition.
+        // Build the schema from scratch
         DatabaseHelper.initializeDatabase();
 
-        // These column types are important for login and rating logic.
+        // These columns must exist as separate columns in the users table
         assertEquals("TEXT", TestDatabaseUtil.getUserColumnType("password"));
         assertEquals("REAL", TestDatabaseUtil.getUserColumnType("rating_sum"));
         assertEquals("INTEGER", TestDatabaseUtil.getUserColumnType("rating_count"));
@@ -52,10 +52,11 @@ class DatabaseHelperTest {
 
     @Test
     void seedMockDataPopulatesUsersListingsAndIssuesWhenUsersTableIsEmpty() {
-        // Seed the database from an empty state.
+        // Initialize schema first, then seed it
+        DatabaseHelper.initializeDatabase();
         DatabaseHelper.seedMockData();
 
-        // The seed method should insert its starter data once.
+        // The seed method should insert its starter data once
         assertEquals(3, TestDatabaseUtil.countRows("users"));
         assertEquals(5, TestDatabaseUtil.countRows("listings"));
         assertEquals(1, TestDatabaseUtil.countRows("issues"));
@@ -63,27 +64,26 @@ class DatabaseHelperTest {
 
     @Test
     void seedMockDataDoesNotDuplicateRowsOnSecondCall() {
-        // Seed twice to make sure duplicates are not inserted.
+        // Initialize schema and seed twice
+        DatabaseHelper.initializeDatabase();
         DatabaseHelper.seedMockData();
         DatabaseHelper.seedMockData();
 
-        // The row counts should stay the same after the second call.
+        // The row counts should stay the same after the second call
         assertEquals(3, TestDatabaseUtil.countRows("users"));
         assertEquals(5, TestDatabaseUtil.countRows("listings"));
         assertEquals(1, TestDatabaseUtil.countRows("issues"));
     }
 
     @Test
-    void connectCanQueryDatabaseMetadata() throws Exception {
+    void connectCanRunSimpleQuery() throws Exception {
         try (Connection conn = DatabaseHelper.connect();
              Statement stmt = conn.createStatement();
-             ResultSet rs = stmt.executeQuery("SELECT name FROM sqlite_master WHERE type='table' ORDER BY name")) {
+             ResultSet rs = stmt.executeQuery("SELECT 1")) {
 
-            // If the query returns at least one row, the connection is actually usable.
+            // If this works, the connection is usable even before schema creation
             assertTrue(rs.next());
-
-            // The returned table name should not be null.
-            assertNotNull(rs.getString(1));
+            assertEquals(1, rs.getInt(1));
         }
     }
 }

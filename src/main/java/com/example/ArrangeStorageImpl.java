@@ -1,13 +1,11 @@
 package com.example;
 
-
 import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
 
 /**
  * ArrangeStorageImpl
- * ------------------
  * In-memory implementation of ArrangeStorage.
  *
  * Notes:
@@ -18,8 +16,7 @@ import java.util.UUID;
 public class ArrangeStorageImpl implements ArrangeStorage {
 
     /**
-     * Storage record (kept private so you don't "own" the domain model).
-     * This is just internal bookkeeping for this implementation.
+     * Storage record
      */
     private static class StorageRecord {
         String storageId;
@@ -39,7 +36,7 @@ public class ArrangeStorageImpl implements ArrangeStorage {
         }
     }
 
-    // In-memory "database"
+    // In-memory storage records
     private final Map<String, StorageRecord> bookings = new HashMap<>();
 
     @Override
@@ -58,10 +55,10 @@ public class ArrangeStorageImpl implements ArrangeStorage {
             throw new IllegalArgumentException("dailyRate cannot be negative.");
         }
 
-        // Create booking ID
+        // Create a booking id
         String storageId = UUID.randomUUID().toString();
 
-        // Store booking record
+        // Save the booking
         StorageRecord record = new StorageRecord(storageId, itemId.trim(), requesterUserId.trim(), days, dailyRate);
         bookings.put(storageId, record);
 
@@ -70,13 +67,18 @@ public class ArrangeStorageImpl implements ArrangeStorage {
 
     @Override
     public boolean cancelStorage(String storageBookingId) {
-        if (storageBookingId == null) return false;
+        if (storageBookingId == null) {
+            return false;
+        }
 
         StorageRecord record = bookings.get(storageBookingId);
-        if (record == null) return false;
+        if (record == null) {
+            return false;
+        }
 
-        // If already cancelled/inactive, do nothing
-        if (!record.active) return false;
+        if (!record.active) {
+            return false;
+        }
 
         record.active = false;
         return true;
@@ -84,15 +86,41 @@ public class ArrangeStorageImpl implements ArrangeStorage {
 
     @Override
     public double calculateStorageFee(int days, double dailyRate) {
-        if (days <= 0) throw new IllegalArgumentException("days must be > 0.");
-        if (dailyRate < 0) throw new IllegalArgumentException("dailyRate cannot be negative.");
+        if (days <= 0) {
+            throw new IllegalArgumentException("days must be > 0.");
+        }
+        if (dailyRate < 0) {
+            throw new IllegalArgumentException("dailyRate cannot be negative.");
+        }
         return days * dailyRate;
     }
 
     @Override
     public boolean isActive(String storageBookingId) {
-        if (storageBookingId == null) return false;
+        if (storageBookingId == null) {
+            return false;
+        }
+
         StorageRecord record = bookings.get(storageBookingId);
         return record != null && record.active;
+    }
+
+    @Override
+    public double getActiveStorageFeeForItem(String itemId) {
+        if (itemId == null || itemId.trim().isEmpty()) {
+            throw new IllegalArgumentException("itemId cannot be blank.");
+        }
+
+        String cleanedItemId = itemId.trim();
+        double totalFee = 0.0;
+
+        // Sum all active storage bookings for this item
+        for (StorageRecord record : bookings.values()) {
+            if (record.active && cleanedItemId.equals(record.itemId)) {
+                totalFee += calculateStorageFee(record.days, record.dailyRate);
+            }
+        }
+
+        return totalFee;
     }
 }

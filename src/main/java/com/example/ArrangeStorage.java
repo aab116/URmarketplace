@@ -39,4 +39,10 @@ public interface ArrangeStorage {
      * Returns whether a booking is currently active.
      */
     boolean isActive(String storageBookingId);
+
+    /**
+     * Returns the total active storage fee for an item.
+     * If there are no active bookings, returns 0.0.
+     */
+    double getActiveStorageFeeForItem(String itemId);
 }
