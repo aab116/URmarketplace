@@ -1276,11 +1276,10 @@
       <br>
     <ul style="margin-left: 40px;">
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; • Posting items to sell                                                                                            <br>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; • Ability to counter offer                                                                                         <br>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; • An option for someone to seek out another person to store their item(s) temperarily until it sells; for a fee    <br>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; • Ability to rate users on both ends.                                                                              <br>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; • University administration oversight ability for regulation and blacklisting if need be                           <br>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; • Proper handling of item life-cycle                                                                               <br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; • Ability to submit offers or bids                                                                                 <br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; • An option for someone to store item(s) temporarily until they sell, for a fee                                  <br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; • Ability to submit issue reports                                                                                 <br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; • Tracking original ownership and seller earnings after fees                                                     <br>
       <br>
     </ul>
       Functions such as these will lay the groundwork for a software solution that can be systematically tested and validated using established software testing techniques.      <br>
@@ -1303,14 +1302,14 @@
 
   
   <h2><strong>2.2.1 — Functions<a id="221-functions"></a></strong></h2> 
-    <ul style="margin-left: 40px;">
-          •	Post items for sale with descriptions, photos, videos and prices.<br>
-          •	Submit counteroffers on listed items.<br>
-          •	Arrange temporary storage services for items with associated fees.<br>
-          •	Rate buyers and sellers after transactions.<br>
-          •	Allow administrators to oversee listings, enforce rules, and blacklist users.<br>
-          •	Manage item lifecycle from listing to sale or removal/republishing option to avoid orphan listings.<br>
-          •	Track original owners and calculate net seller earnings after fees.<br>
+  <ul style="margin-left: 40px;">
+          • Register users and support login authentication.<br>
+          • Post items for sale with descriptions and prices.<br>
+          • Submit counteroffers or bids on listed items.<br>
+          • Purchase items using a buy-now option when available.<br>
+          • Arrange temporary storage services for items with associated fees.<br>
+          • Submit issue reports related to marketplace activity.<br>
+          • Track original owners and calculate net seller earnings after fees.<br>
     </ul>
               <span style="font-size: 1em;">&nbsp;</span>
 
