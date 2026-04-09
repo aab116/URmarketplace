@@ -1267,19 +1267,19 @@
 
 
 
-  <h1>2.1 — Problem Definition<a id="21-problem-definition"></a></h1>     <br>
-    <span style="font-size: 1em;">&nbsp;</span>
-    <ul style="margin-left: 40px;">
-    Informal marketplaces do not support essential features such as tracking the original owner of an item, applying holding or storage fees, or calculating earnings returned to the seller after a purchase. Furthermore, these platforms lack administrative oversight to manage listings such as these for students. UR Marketplace will enforce marketplace rules, and control the lifecycle of items once they are listed. This creates challenges for sellers attempting to recover value from their items and for buyers seeking trustworthy and legitimate transactions.    <br>
+<h1>2.1 — Problem Definition<a id="21-problem-definition"></a></h1>     <br>
+  <span style="font-size: 1em;">&nbsp;</span>
+  <ul style="margin-left: 40px;">
+    Informal marketplaces do not support important features such as tracking the original owner of an item, arranging temporary storage, recording issue reports, or calculating seller earnings after fees. As a result, sellers may struggle to recover value from their items, while buyers may have less structure and transparency during transactions. URMarketplace is intended to address this gap by providing a dedicated software tool for University of Regina students living on campus.    <br>
       <br>
-    <strong>URMarketplace</strong> is ideal for addressing this gap, a dedicated software tool for the University of Regina's students living on campus. It will provide the necessary structure tailored to students' needs. The system must support, and not be limited to these key attributes focused on structure, transparency, and easy-to-use software that holds the administrative position to carry the weight so that the students can keep focusing on their academic studies during final and busiest times of their academic career. Strategically, this platform would fill the voids that other marketplace applications lack because it would be designed for students, by students. A few key characteristics of the user-end of the application would be, but not limited to:    <br>
+    Rather than relying only on social media posts or word of mouth, the platform provides a more organized environment for listing items, submitting bids, using buy-now purchasing when available, reporting problems, and tracking storage-related costs. The goal is to create a marketplace prototype that is easier to test and validate than informal alternatives, while still being realistic for student use during busy end-of-term periods. A few key characteristics of the user-end of the application would be, but not limited to:    <br>
       <br>
     <ul style="margin-left: 40px;">
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; • Posting items to sell                                                                                            <br>
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; • Ability to submit offers or bids                                                                                 <br>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; • An option for someone to store item(s) temporarily until they sell, for a fee                                  <br>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; • Ability to submit issue reports                                                                                 <br>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; • Tracking original ownership and seller earnings after fees                                                     <br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; • An option for someone to store item(s) temporarily until they sell; for a fee                                   <br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; • Ability to submit issue reports                                                                                  <br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; • Tracking original ownership and seller earnings after fees                                                       <br>
       <br>
     </ul>
       Functions such as these will lay the groundwork for a software solution that can be systematically tested and validated using established software testing techniques.      <br>
