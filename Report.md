@@ -55,10 +55,10 @@
     - [3.3.2 — Environmental, Societal, Safety, and Economic Considerations](#332-3.3.2-Environmental,-societal,-safety,-&-economic-considerations)
     - [3.3.3 — Test Cases & results](#333-test-cases-&-results)
     - [3.3.4 — Limitations](#334-limitations)
-  -[4 — Team Work]
-    - [4.1 — Meeting 1]
-    - [4.2 — Meeting 2]
-    - [4.3 — Meeting 3] 
+- [4 — Team Work]
+  - [4.1 — Meeting 1]
+  - [4.2 — Meeting 2]
+  - [4.3 — Meeting 3] 
 
 
 
@@ -2448,74 +2448,167 @@ A Rating class will be developed to handle the evaluation logic for both sellers
   </ul>
   </ul>
 
-## 4 Team Work
+<br>
+<br>
+<h1>4 — Team Work<a id="4-team-work"></a></h1>      <br>
+  <ul style="margin-left: 40px;">
+    Because of the team work focused nature of the project, we held a few meetings to distribute tasks, decision making, and check-ins amongst each other to properly and in unity tackle the project's big milestones and the course's delivery dates.      <br>
+    <br>
 
-Because of the team work focused nature of the project, we held a few meetings to distribute tasks, decision making and check ins amongst each other to properly and in unity tackle the project's big milestones and the course's delivery dates.
 
-### 4.1 Meeting 1
+    <h2><strong>4.1 — Meeting 1<a id="41-meeting-1"></a></strong></h2> 
+    <ul style="margin-left: 40px;">
+      <b>Time:</b> February 3, 2026, 4:00 pm to 5:00 pm <br>
+      <b>Agenda:</b> Distribution of Project Tasks <br>
+      <br>
+      <table align="center">
+        <tr>
+          <th>Team Member</th>
+          <th>Previous Task</th>
+          <th>Completion State</th>
+          <th>Next Task</th>
+        </tr>
+        <tr>
+          <td>Tom Goncin</td>
+          <td align="center">N/A</td>
+          <td align="center">N/A</td>
+          <td>Support planning, workflow discussion, and implementation tasks</td>
+        </tr>
+        <tr>
+          <td>Esteban Mendoza</td>
+          <td align="center">N/A</td>
+          <td align="center">N/A</td>
+          <td>Work on the GitHub repository, core implementation, and architecture refinement</td>
+        </tr>
+        <tr>
+          <td>Amr Azouz</td>
+          <td align="center">N/A</td>
+          <td align="center">N/A</td>
+          <td>Generate tests, organize testing documentation, and support report planning</td>
+        </tr>
+      </table>
+      <p align="center">Table 16</p>
+      <br>
+      During this meeting, the team agreed on the project scope, discussed the marketplace problem, and distributed the first major responsibilities. Esteban took the lead on the GitHub repository and much of the implementation work, while Amr focused mainly on generating tests and organizing the testing-related documentation. Tom supported planning, implementation discussion, and overall project coordination.
+    </ul>
+    <br>
+    <br>
 
-**Time:** January 14, 2026, 1:00 pm to 3:00 pm  
-**Agenda:** Project Idea and defintion brainstorming
 
-| Team Member | Previous Task | Completion State | Next Task |
-|---|---|---|---|
-| Tom Goncin | N/A | N/A | Proposing possible ideas for the project and reviewing team's other options |
-| Esteban Mendoza | N/A | N/A | Proposing possible ideas for the project and reviewing team's other options |
-| Amr Azouz | N/A | N/A | Proposing possible ideas for the project and reviewing team's other options|
+    <h2><strong>4.2 — Meeting 2<a id="42-meeting-2"></a></strong></h2> 
+    <ul style="margin-left: 40px;">
+      <b>Time:</b> March 9, 2026, 5:00 pm to 6:00 pm <br>
+      <b>Agenda:</b> Review of Individual Progress <br>
+      <br>
+      <table align="center">
+        <tr>
+          <th>Team Member</th>
+          <th>Previous Task</th>
+          <th>Completion State</th>
+          <th>Next Task</th>
+        </tr>
+        <tr>
+          <td>Tom Goncin</td>
+          <td>Planning and implementation support</td>
+          <td align="center">75%</td>
+          <td>Continue supporting implementation, review progress, and help prepare final deliverables</td>
+        </tr>
+        <tr>
+          <td>Esteban Mendoza</td>
+          <td>GitHub repository work, implementation, and architecture refinement</td>
+          <td align="center">85%</td>
+          <td>Finalize core GitHub codebase, expand features, and support integration work</td>
+        </tr>
+        <tr>
+          <td>Amr Azouz</td>
+          <td>Test generation and testing documentation</td>
+          <td align="center">70%</td>
+          <td>Expand generated tests and improve Testing.md and report testing sections</td>
+        </tr>
+      </table>
+      <p align="center">Table 17</p>
+      <br>
+      During this meeting, the team reviewed the transition from planning into implementation. Esteban had completed most of the GitHub and implementation progress by this stage, while Amr had made solid progress on generating tests and documenting the testing work. The team identified remaining work in integration, testing expansion, and report development.
+    </ul>
+    <br>
+    <br>
 
-During this meeting, the team got together to decide on possible ideas scopes, challenges and issues to solve with different aproaches and solutions, discus each others ideas and suggestions and decide on what to focus on going forward.
 
-### 4.2 Meeting 2
+    <h2><strong>4.3 — Meeting 3<a id="43-meeting-3"></a></strong></h2> 
+    <ul style="margin-left: 40px;">
+      <b>Time:</b> March 28, 2026, 4:30 pm to 5:30 pm <br>
+      <b>Agenda:</b> Testing Expansion and Report Refinement <br>
+      <br>
+      <table align="center">
+        <tr>
+          <th>Team Member</th>
+          <th>Previous Task</th>
+          <th>Completion State</th>
+          <th>Next Task</th>
+        </tr>
+        <tr>
+          <td>Tom Goncin</td>
+          <td>Implementation support and project coordination</td>
+          <td align="center">90%</td>
+          <td>Help with final fixes, presentation preparation, and system review</td>
+        </tr>
+        <tr>
+          <td>Esteban Mendoza</td>
+          <td>GitHub implementation and feature completion</td>
+          <td align="center">95%</td>
+          <td>Complete final codebase fixes and support demo preparation</td>
+        </tr>
+        <tr>
+          <td>Amr Azouz</td>
+          <td>Test generation and testing documentation</td>
+          <td align="center">90%</td>
+          <td>Add more tests, refine testing evidence, and finalize report testing content</td>
+        </tr>
+      </table>
+      <p align="center">Table 18</p>
+      <br>
+      At this stage, the team confirmed that the core implementation was mostly complete. Esteban had completed most of the codebase work on GitHub, while Amr focused mainly on expanding and refining the generated tests. The team used this meeting to align the technical work, testing evidence, and report expectations.
+    </ul>
+    <br>
+    <br>
 
-**Time:** February 3, 2026, 4:00 pm to 5:00 pm  
-**Agenda:** Distribution of Project Tasks for the initial structure of the software
 
-| Team Member | Previous Task | Completion State | Next Task |
-|---|---|---|---|
-| Tom Goncin | Proposing possible ideas for the project and reviewing team's other options  | 100% | Work on the GitHub repository, core implementation, and architecture refinement |
-| Esteban Mendoza | Proposing possible ideas for the project and reviewing team's other options | 100% | Support planning, workflow discussion, and implementation tasks |
-| Amr Azouz | Proposing possible ideas for the project and reviewing team's other options | 100% | Generate tests, organize testing documentation, and support report planning |
-
-During this meeting, the team agreed on the project scope, discussed the marketplace problem, and distributed the first major responsibilities. Tom took the lead on the GitHub repository and much of the implementation work, while Amr focused mainly on generating tests and organizing the testing-related documentation. Esteban supported planning, implementation discussion, and overall project coordination.
-
-### 4.3 Meeting 3
-
-**Time:** March 9, 2026, 5:00 pm to 6:00 pm  
-**Agenda:** Review of Individual Progress
-
-| Team Member | Previous Task | Completion State | Next Task |
-|---|---|---|---|
-| Tom Goncin | GitHub repository work, implementation, and architecture refinement | 100% | Finalize core GitHub codebase, expand features, and support integration work |
-| Esteban Mendoza | Planning and implementation support  | 100% | Continue supporting implementation, review progress, and help prepare final deliverables|
-| Amr Azouz | Test generation and testing documentation | 100% | Expand generated tests and improve Testing.md and report testing sections |
-
-During this meeting, the team reviewed the transition from planning into implementation. Tom had completed most of the GitHub and implementation progress by this stage, while Amr had made solid progress on generating tests and documenting the testing work. The team identified remaining work in integration, testing expansion, and report development.
-
-### 4.4 Meeting 4
-
-**Time:** March 26, 2026, 6:30 pm to 11:30 pm  
-**Agenda:** Final design implementation and Report Refinement
-
-| Team Member | Previous Task | Completion State | Next Task |
-|---|---|---|---|
-| Tom Goncin | Implementation support and project coordination | 90% | Help with final fixes, presentation preparation, and system review |
-| Esteban Mendoza | GitHub implementation and feature completion | 95% | Complete final codebase fixes and support demo preparation |
-| Amr Azouz | Test generation and testing documentation | 90% | Add more tests, refine testing evidence, and finalize report testing content |
-
-At this stage, the team confirmed that the core implementation was mostly complete. Esteban had completed most of the codebase work on GitHub, while Amr focused mainly on expanding and refining the generated tests. The team used this meeting to align the technical work, testing evidence, and report expectations.
-
-### 4.5 Meeting 5
-
-**Time:** April 9, 2026, 6:00 pm to 7:00 pm  
-**Agenda:** Final Fixes, Presentation Preparation, and Submission Check
-
-| Team Member | Previous Task | Completion State | Next Task |
-|---|---|---|---|
-| Tom Goncin | Final support, review, and coordination | 100% | Rehearse the demo and verify final functionality |
-| Esteban Mendoza | Final GitHub fixes and implementation completion | 100% | Finalize demo support and confirm the repository is submission-ready |
-| Amr Azouz | Final test generation, testing evidence, and report updates | 100% | Finalize presentation polishing and submission review |
-
-In the final meeting, the team verified that the codebase, generated tests, report, and presentation were aligned. Esteban finalized the GitHub implementation work, while Amr finalized most of the generated tests and testing evidence. The remaining effort focused on polishing and submission readiness.
+    <h2><strong>4.4 — Meeting 4<a id="44-meeting-4"></a></strong></h2> 
+    <ul style="margin-left: 40px;">
+      <b>Time:</b> April 9, 2026, 6:00 pm to 7:00 pm <br>
+      <b>Agenda:</b> Final Fixes, Presentation Preparation, and Submission Check <br>
+      <br>
+      <table align="center">
+        <tr>
+          <th>Team Member</th>
+          <th>Previous Task</th>
+          <th>Completion State</th>
+          <th>Next Task</th>
+        </tr>
+        <tr>
+          <td>Tom Goncin</td>
+          <td>Final support, review, and coordination</td>
+          <td align="center">100%</td>
+          <td>Rehearse the demo and verify final functionality</td>
+        </tr>
+        <tr>
+          <td>Esteban Mendoza</td>
+          <td>Final GitHub fixes and implementation completion</td>
+          <td align="center">100%</td>
+          <td>Finalize demo support and confirm the repository is submission-ready</td>
+        </tr>
+        <tr>
+          <td>Amr Azouz</td>
+          <td>Final test generation, testing evidence, and report updates</td>
+          <td align="center">100%</td>
+          <td>Finalize presentation polishing and submission review</td>
+        </tr>
+      </table>
+      <p align="center">Table 19</p>
+      <br>
+      In the final meeting, the team verified that the codebase, generated tests, report, and presentation were aligned. Esteban finalized the GitHub implementation work, while Amr finalized most of the generated tests and testing evidence. The remaining effort focused on polishing and submission readiness.
+    </ul>
+  </ul>
 
 ## 5 Project Management
 
@@ -2543,7 +2636,7 @@ The project progressed in stages, beginning with requirements and architecture p
 | C | Core GitHub implementation and repository development | B | 0 days | Yes |
 | D | SQLite integration and feature completion | C | 0 days | Yes |
 | E | Generated test development and testing expansion | D | 0 days | Yes |
-| F | Testing.md and report refinements | E | 1 day | No |
+| F | Testing.md and report refinements | E | 2 day | No |
 | G | Final fixes, validation, and polish | E, F | 0 days | Yes |
 | H | Presentation, demo, and final submission checks | G | 0 days | Yes |
 
