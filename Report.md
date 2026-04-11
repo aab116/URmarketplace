@@ -2464,7 +2464,10 @@ A Rating class will be developed to handle the evaluation logic for both sellers
   Because of the team work focused nature of the project, we held a few meetings to distribute tasks, decision making and check ins amongst each other to properly and in unity tackle the project's big milestones and the course's delivery dates.
 </ul>
 </ul>
-### 4.1 Meeting 1
+
+<h2 align="left" id="41-meeting-1">4.1 — Meeting 1</h2>
+  <br>
+  <br>
 
 **Time:** January 14, 2026, 1:00 pm to 3:00 pm  
 **Agenda:** Project Idea and defintion brainstorming
@@ -2477,7 +2480,9 @@ A Rating class will be developed to handle the evaluation logic for both sellers
 
 During this meeting, the team got together to decide on possible ideas scopes, challenges and issues to solve with different aproaches and solutions, discus each others ideas and suggestions and decide on what to focus on going forward.
 
-### 4.2 Meeting 2
+<h2 align="left" id="42-meeting-2">4.2 — Meeting 2</h2>
+  <br>
+  <br>
 
 **Time:** February 3, 2026, 4:00 pm to 5:00 pm  
 **Agenda:** Distribution of Project Tasks for the initial structure of the software
@@ -2490,7 +2495,9 @@ During this meeting, the team got together to decide on possible ideas scopes, c
 
 During this meeting, the team agreed on the project scope, discussed the marketplace problem, and distributed the first major responsibilities. Tom took the lead on the GitHub repository and much of the implementation work, while Amr focused mainly on generating tests and organizing the testing-related documentation. Esteban supported planning, implementation discussion, and overall project coordination.
 
-### 4.3 Meeting 3
+<h2 align="left" id="43-meeting-3">4.3 — Meeting 3</h2>
+  <br>
+  <br>
 
 **Time:** March 9, 2026, 5:00 pm to 6:00 pm  
 **Agenda:** Review of Individual Progress
@@ -2503,7 +2510,9 @@ During this meeting, the team agreed on the project scope, discussed the marketp
 
 During this meeting, the team reviewed the transition from planning into implementation. Tom had completed most of the GitHub and implementation progress by this stage, while Amr had made solid progress on generating tests and documenting the testing work. The team identified remaining work in integration, testing expansion, and report development.
 
-### 4.4 Meeting 4
+<h2 align="left" id="44-meeting-4">4.4 — Meeting 4</h2>
+  <br>
+  <br>
 
 **Time:** March 28, 2026, 4:30 pm to 5:30 pm  
 **Agenda:** Testing Expansion and Report Refinement
