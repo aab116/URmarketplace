@@ -2459,10 +2459,11 @@ A Rating class will be developed to handle the evaluation logic for both sellers
 <h1 align="left" id="4-team-work">4 — Team Work</h1>
   <br>
   <br>
-
-Since this was a group project, the team maintained a fair distribution of tasks through regular meetings to assign work, review progress, and prepare the final deliverables.
-Because of the team work focused nature of the project, we held a few meetings to distribute tasks, decision making and check ins amongst each other to properly and in unity tackle the project's big milestones and the course's delivery dates.
-
+<ul style="margin-left: 40px;">
+  Since this was a group project, the team maintained a fair distribution of tasks through regular meetings to assign work, review progress, and prepare the final deliverables.
+  Because of the team work focused nature of the project, we held a few meetings to distribute tasks, decision making and check ins amongst each other to properly and in unity tackle the project's big milestones and the course's delivery dates.
+</ul>
+</ul>
 ### 4.1 Meeting 1
 
 **Time:** January 14, 2026, 1:00 pm to 3:00 pm  
