@@ -55,10 +55,18 @@
     - [3.3.2 — Environmental, Societal, Safety, and Economic Considerations](#332-3.3.2-Environmental,-societal,-safety,-&-economic-considerations)
     - [3.3.3 — Test Cases & results](#333-test-cases-&-results)
     - [3.3.4 — Limitations](#334-limitations)
-- [4 — Team Work]
-  - [4.1 — Meeting 1]
-  - [4.2 — Meeting 2]
-  - [4.3 — Meeting 3] 
+- [4 — Team Work](#4-team-work)
+  - [4.1 — Meeting 1](#41-meeting-1)
+  - [4.2 — Meeting 2](#42-meeting-2)
+  - [4.3 — Meeting 3](#43-meeting-3)
+  - [4.4 — Meeting 4](#44-meeting-4)
+- [5 — Project Management](#5-project-management)
+  - [5.1 — Gantt Chart](#51-gantt-chart)
+  - [5.2 — Task List, Predecessors, Slack Time, and Critical Path](#52-task-list)
+  - [5.3 — Project Management Summary](#53-project-management-summary)
+- [6 — Conclusion and Future Work](#6-conclusion-and-future-work)
+  - [6.1 — Conclusion](#61-conclusion)
+  - [6.2 — Future Work](#62-future-work)
 
 
 
@@ -2448,7 +2456,9 @@ A Rating class will be developed to handle the evaluation logic for both sellers
   </ul>
   </ul>
 
-## 4 Team Work
+<h1 align="left" id="4-team-work">4 — Team Work</h1>
+  <br>
+  <br>
 
 Since this was a group project, the team maintained a fair distribution of tasks through regular meetings to assign work, review progress, and prepare the final deliverables.
 Because of the team work focused nature of the project, we held a few meetings to distribute tasks, decision making and check ins amongst each other to properly and in unity tackle the project's big milestones and the course's delivery dates.
@@ -2520,9 +2530,13 @@ At this stage, the team confirmed that the core implementation was mostly comple
 
 In the final meeting, the team verified that the codebase, generated tests, report, and presentation were aligned. Esteban finalized the GitHub implementation work, while Amr finalized most of the generated tests and testing evidence. The remaining effort focused on polishing and submission readiness.
 
-## 5 Project Management
+<h1 align="left" id="5-project-management">5 — Project Management</h1>
+  <br>
+  <br>
 
-### 5.1 Gantt Chart
+<h2 align="left" id="51-gantt-chart">5.1 — Gantt Chart</h2>
+  <br>
+  <br>
 
 The project progressed in stages, beginning with requirements and architecture planning, followed by core implementation, then testing expansion, and finally presentation and submission preparation.
 
@@ -2537,7 +2551,9 @@ The project progressed in stages, beginning with requirements and architecture p
 | Final fixes, polish, and validation |  |  |  |  |  |  |  |  | X |
 | Presentation, demo, and final submission checks |  |  |  |  |  |  |  |  | X |
 
-### 5.2 Task List, Predecessors, Slack Time, and Critical Path
+<h2 align="left" id="52-task-list">5.2 — Task List, Predecessors, Slack Time, and Critical Path</h2>
+  <br>
+  <br>
 
 | ID | Task | Predecessor(s) | Slack Time | Critical? |
 |---|---|---|---|---|
@@ -2554,20 +2570,27 @@ The project progressed in stages, beginning with requirements and architecture p
 
 The critical path passed through the most important technical and documentation milestones: defining requirements, refining the architecture, completing the main GitHub implementation, integrating SQLite, expanding the generated tests, applying final fixes, and preparing the presentation. These tasks had little or no slack because delays in them would have directly affected the final submission.
 
-### 5.3 Project Management Summary
-
+<h2 align="left" id="53-project-management-summary">5.3 — Project Management Summary</h2>
+  <br>
+  <br>
+  
 Project management was structured around progressive milestones. The first phase focused on understanding the design problem, organizing the report, and comparing architecture alternatives. The second phase focused on GitHub implementation and feature development, largely driven through Esteban's codebase work. The third phase emphasized generated test development, Testing.md refinement, and report updates, which were mainly handled by Amr. The final phase addressed validation, polishing, and presentation preparation. This staged approach helped ensure that implementation, testing, and reporting advanced together instead of being left until the end.
 
-## 6 Conclusion and Future Work
+<h1 align="left" id="6-conclusion-and-future-work">6 — Conclusion and Future Work</h1>
+  <br>
+  <br>
 
-### 6.1 Conclusion
+<h2 align="left" id="61-conclusion">6.1 — Conclusion</h2>
+  <br>
+  <br>
 
 URMarketplace successfully addressed a real end-of-term campus problem by replacing informal selling methods with a structured Java-based prototype. The final solution achieved the core design functions and objectives within the intended course scope. In particular, the system supported user registration and login, listing creation, bidding, buy-now purchasing, issue reporting, temporary storage booking, and seller payout calculation after platform and storage fees. The project also achieved an important architectural objective by separating validation, business logic, and persistence, making the software easier to test, debug, and explain.
 
 From a software testing and validation perspective, the project satisfied its testing requirements through multiple complementary techniques. These included boundary value testing, equivalence class testing, decision table testing, state transition testing, use case testing, path testing, data flow testing, and SQLite-backed integration testing. A major part of this validation work came from generating and refining the automated tests used to verify the system behaviour. The results showed that valid workflows completed correctly, invalid inputs were rejected properly, and important state changes such as storage handling, bidding behaviour, and payout calculation behaved as expected. Overall, the project met its main goal of producing a small but realistic software system whose behaviour could be validated directly through code and repeatable automated tests.
 
-### 6.2 Future Work
-
+<h2 align="left" id="62-future-work">6.2 — Future Work</h2>
+  <br>
+  <br>
 Although the project achieved its intended academic scope, several improvements could strengthen the system in future iterations.
 
 - Add a full GUI or web-based interface instead of relying only on a console-based interface.
