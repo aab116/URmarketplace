@@ -2444,3 +2444,360 @@ A Rating class will be developed to handle the evaluation logic for both sellers
     The current scope of the platform does not include payment verification. As a result, URMarketplace cannot guarantee or validate transactions conducted through physical cash exchanges or third-party payment services. Users are responsible for confirming the completion of payments externally, as the system does not feature an integrated escrow or payment gateway.
   </ul>
   </ul>
+
+
+esteking222
+esteking222
+Invisible
+Group chat for pondering ideas.
+
+Copernicus — Yesterday at 11:54 PM
+yea the timer i had included the hiatus
+(
+okay
+legggo
+esteking222 — Yesterday at 11:55 PM
+Told u it wasn't that long
+esteking222 — Yesterday at 11:55 PM
+Yeee
+Copernicus — Yesterday at 11:55 PM
+make the zoom grand master zoom boi
+esteking222 — Yesterday at 11:55 PM
+:bearWoah:
+Copernicus — Yesterday at 11:55 PM
+thats good
+ideal
+Amr Azouz — Yesterday at 11:56 PM
+It's telling me I should start my meeting in 5 minutes
+cuz I don't have Zoom Pro
+esteking222 — Yesterday at 11:56 PM
+:v
+Copernicus — Yesterday at 11:56 PM
+Amario broke zoom zoom
+Amr Azouz — Yesterday at 11:56 PM
+Lmaooo
+Copernicus — Yesterday at 11:56 PM
+made zoom zoom go doom doom
+esteking222 — Yesterday at 11:57 PM
+Wáter break i suppose
+Amr Azouz — 12:04 AM
+https://us04web.zoom.us/j/71396660769?pwd=SbPOHXF7V8aScIcNAuEwMfYPgvNai7.1
+Zoom
+Join our Cloud HD Video Meeting
+Zoom is the leader in modern enterprise cloud communications.
+Join our Cloud HD Video Meeting
+Copernicus — 12:50 AM
+tommys feeling tired
+gotta drive to the airport at 04:00
+esteking222 — 12:51 AM
+the due date is tomorrow at midnight
+Copernicus — 12:51 AM
+that means i have 3.5 hours to work
+esteking222 — 12:51 AM
+so we can do this tomorrow if you guys are sleepy
+Copernicus — 12:51 AM
+oh yea were finishing this
+no fuck no
+video completed tonight
+esteking222 — 12:51 AM
+oh oki
+:btw_sit:
+Amr Azouz — 12:52 AM
+https://us04web.zoom.us/j/71089362352?pwd=y0LSr8O3aMScrVPgeMaHiDgY3BBn7J.1
+Zoom
+Join our Cloud HD Video Meeting
+Zoom is the leader in modern enterprise cloud communications.
+Join our Cloud HD Video Meeting
+Copernicus — 1:18 AM
+Good job! Goodnight!
+Tip, if its too large to share:
+Add to school OneDrive (Schools user & idea) 
+& share
+night
+Amr Azouz — 1:19 AM
+bet
+Amr Azouz — 1:27 AM
+Hey @esteking222 , I sent you the videos on URcourses
+esteking222 — 1:40 AM
+:Okie:
+Copernicus — 8:46 AM
+Manage to get that completed?
+esteking222 — 1:43 PM
+i tried cutting it up in a few places but we are over the maximum time for a whole minute :FnT_Panda_Scared:
+esteking222 — 2:34 PM
+so either i speed up some part like the demonstration on the terminal, or we have to redo one of the takes :AFoxy_PogPoint:
+Copernicus — 2:58 PM
+I woulsnt worry about a minute
+Amr said it didnt say exactly
+esteking222 — 3:26 PM
+Image
+esteking222 — 4:00 PM
+so what do we do :FnT_CalicoCat_Think_Hmm:
+my and amr part is 8 and a half minutes while yours and the conclusions are 6 and 40 second ish
+Copernicus — 4:01 PM
+Yea I purposely rushed i saw after Amr it was like nearly 5
+Idk.. if you wanted, could voice over your guys' just with slides
+Or speed it up 1.1?
+esteking222 — 4:05 PM
+let me try
+esteking222 — 4:17 PM
+oki yeah 1.1 is fine and its right on 14:56
+esteking222 — 6:06 PM
+there we go
+Image
+Amr Azouz — 6:32 PM
+@esteking222 Can you add the remaining parts of the report?
+esteking222 — 7:50 PM
+Im not hone right now tho, i can when i come back
+Copernicus — 8:17 PM
+https://www.instagram.com/reel/DSSKkL3jSui/?igsh=NnJmM2gwYWhiOGdx
+
+_times.itna_
+Lieutenant General Oliver Leese (1894–1978) was a senior British commander who played a major role in both the North African and Italian campaigns.
+
+He commanded XXX Corps during key operations, including the pursuit after El Alamein, before taking over the British Eighth Army in Italy. Leese focused on coordination, logistics, and sustained ...
+Likes
+27200
+Image
+
+Instagram
+https://youtu.be/oL_RaMJ3oc8?si=xOsZFRaHyz6GM94X
+YouTube
+The Schnitt Show
+SchnittShow.com: BRUNO INTERVIEWS AYMAN ABU AITA terrorist with the...
+Image
+Amr Azouz — 10:22 PM
+@esteking222 Follow this format for the github
+## 4 Team Work
+
+Since this was a group project, the team maintained a fair distribution of tasks through regular meetings to assign work, review progress, and prepare the final deliverables.
+
+### 4.1 Meeting 1
+
+**Time:** February 3, 2026, 4:00 pm to 5:00 pm  
+**Agenda:** Distribution of Project Tasks
+
+| Team Member | Previous Task | Completion State | Next Task |
+|---|---|---|---|
+| Tom Goncin | N/A | N/A | Support planning, workflow discussion, and implementation tasks |
+| Esteban Mendoza | N/A | N/A | Work on the GitHub repository, core implementation, and architecture refinement |
+| Amr Azouz | N/A | N/A | Generate tests, organize testing documentation, and support report planning |
+
+During this meeting, the team agreed on the project scope, discussed the marketplace problem, and distributed the first major responsibilities. Esteban took the lead on the GitHub repository and much of the implementation work, while Amr focused mainly on generating tests and organizing the testing-related documentation. Tom supported planning, implementation discussion, and overall project coordination.
+
+### 4.2 Meeting 2
+
+**Time:** March 9, 2026, 5:00 pm to 6:00 pm  
+**Agenda:** Review of Individual Progress
+
+| Team Member | Previous Task | Completion State | Next Task |
+|---|---|---|---|
+| Tom Goncin | Planning and implementation support | 75% | Continue supporting implementation, review progress, and help prepare final deliverables |
+| Esteban Mendoza | GitHub repository work, implementation, and architecture refinement | 85% | Finalize core GitHub codebase, expand features, and support integration work |
+| Amr Azouz | Test generation and testing documentation | 70% | Expand generated tests and improve Testing.md and report testing sections |
+
+During this meeting, the team reviewed the transition from planning into implementation. Esteban had completed most of the GitHub and implementation progress by this stage, while Amr had made solid progress on generating tests and documenting the testing work. The team identified remaining work in integration, testing expansion, and report development.
+
+### 4.3 Meeting 3
+
+**Time:** March 28, 2026, 4:30 pm to 5:30 pm  
+**Agenda:** Testing Expansion and Report Refinement
+
+| Team Member | Previous Task | Completion State | Next Task |
+|---|---|---|---|
+| Tom Goncin | Implementation support and project coordination | 90% | Help with final fixes, presentation preparation, and system review |
+| Esteban Mendoza | GitHub implementation and feature completion | 95% | Complete final codebase fixes and support demo preparation |
+| Amr Azouz | Test generation and testing documentation | 90% | Add more tests, refine testing evidence, and finalize report testing content |
+
+At this stage, the team confirmed that the core implementation was mostly complete. Esteban had completed most of the codebase work on GitHub, while Amr focused mainly on expanding and refining the generated tests. The team used this meeting to align the technical work, testing evidence, and report expectations.
+
+### 4.4 Meeting 4
+
+**Time:** April 9, 2026, 6:00 pm to 7:00 pm  
+**Agenda:** Final Fixes, Presentation Preparation, and Submission Check
+
+| Team Member | Previous Task | Completion State | Next Task |
+|---|---|---|---|
+| Tom Goncin | Final support, review, and coordination | 100% | Rehearse the demo and verify final functionality |
+| Esteban Mendoza | Final GitHub fixes and implementation completion | 100% | Finalize demo support and confirm the repository is submission-ready |
+| Amr Azouz | Final test generation, testing evidence, and report updates | 100% | Finalize presentation polishing and submission review |
+
+In the final meeting, the team verified that the codebase, generated tests, report, and presentation were aligned. Esteban finalized the GitHub implementation work, while Amr finalized most of the generated tests and testing evidence. The remaining effort focused on polishing and submission readiness.
+
+## 5 Project Management
+
+### 5.1 Gantt Chart
+
+The project progressed in stages, beginning with requirements and architecture planning, followed by core implementation, then testing expansion, and finally presentation and submission preparation.
+
+| Task | Feb 3-9 | Feb 10-16 | Feb 17-23 | Feb 24-28 | Mar 1-9 | Mar 10-21 | Mar 22-28 | Mar 29-Apr 8 | Apr 9-11 |
+|---|---|---|---|---|---|---|---|---|---|
+| Requirements and problem definition | X | X |  |  |  |  |  |  |  |
+| Architecture alternatives and report structure |  | X | X | X |  |  |  |  |  |
+| Core GitHub implementation and repository development |  |  |  |  | X | X |  |  |  |
+| SQLite integration and feature completion |  |  |  |  | X | X |  |  |  |
+| Generated test development and testing expansion |  |  |  |  |  |  | X | X |  |
+| Testing.md and report refinements |  |  |  |  |  |  | X | X |  |
+| Final fixes, polish, and validation |  |  |  |  |  |  |  |  | X |
+| Presentation, demo, and final submission checks |  |  |  |  |  |  |  |  | X |
+
+### 5.2 Task List, Predecessors, Slack Time, and Critical Path
+
+| ID | Task | Predecessor(s) | Slack Time | Critical? |
+|---|---|---|---|---|
+| A | Requirements and problem definition | None | 0 days | Yes |
+| B | Architecture alternatives and report structure | A | 0 days | Yes |
+| C | Core GitHub implementation and repository development | B | 0 days | Yes |
+| D | SQLite integration and feature completion | C | 0 days | Yes |
+| E | Generated test development and testing expansion | D | 0 days | Yes |
+| F | Testing.md and report refinements | E | 1 day | No |
+| G | Final fixes, validation, and polish | E, F | 0 days | Yes |
+| H | Presentation, demo, and final submission checks | G | 0 days | Yes |
+
+**Critical Path:** A -> B -> C -> D -> E -> G -> H
+
+The critical path passed through the most important technical and documentation milestones: defining requirements, refining the architecture, completing the main GitHub implementation, integrating SQLite, expanding the generated tests, applying final fixes, and preparing the presentation. These tasks had little or no slack because delays in them would have directly affected the final submission.
+
+### 5.3 Project Management Summary
+
+Project management was structured around progressive milestones. The first phase focused on understanding the design problem, organizing the report, and comparing architecture alternatives. The second phase focused on GitHub implementation and feature development, largely driven through Esteban's codebase work. The third phase emphasized generated test development, Testing.md refinement, and report updates, which were mainly handled by Amr. The final phase addressed validation, polishing, and presentation preparation. This staged approach helped ensure that implementation, testing, and reporting advanced together instead of being left until the end.
+
+## 6 Conclusion and Future Work
+
+### 6.1 Conclusion
+
+URMarketplace successfully addressed a real end-of-term campus problem by replacing informal selling methods with a structured Java-based prototype. The final solution achieved the core design functions and objectives within the intended course scope. In particular, the system supported user registration and login, listing creation, bidding, buy-now purchasing, issue reporting, temporary storage booking, and seller payout calculation after platform and storage fees. The project also achieved an important architectural objective by separating validation, business logic, and persistence, making the software easier to test, debug, and explain.
+
+... (14 lines left)
+
+message.txt
+10 KB
+Don't copy everything exactly
+We still got 2 more hours
+esteking222 — 10:23 PM
+i am already editing it, did you commit that :bcaCrySob: ?
+Amr Azouz — 10:23 PM
+no
+esteking222 — 10:23 PM
+oh oki
+Amr Azouz — 10:23 PM
+Just a template
+thought I might help out hahahahahahaha
+Make sure to have it done before 11:59 pm todya
+﻿
+## 4 Team Work
+
+Since this was a group project, the team maintained a fair distribution of tasks through regular meetings to assign work, review progress, and prepare the final deliverables.
+
+### 4.1 Meeting 1
+
+**Time:** February 3, 2026, 4:00 pm to 5:00 pm  
+**Agenda:** Distribution of Project Tasks
+
+| Team Member | Previous Task | Completion State | Next Task |
+|---|---|---|---|
+| Tom Goncin | N/A | N/A | Support planning, workflow discussion, and implementation tasks |
+| Esteban Mendoza | N/A | N/A | Work on the GitHub repository, core implementation, and architecture refinement |
+| Amr Azouz | N/A | N/A | Generate tests, organize testing documentation, and support report planning |
+
+During this meeting, the team agreed on the project scope, discussed the marketplace problem, and distributed the first major responsibilities. Esteban took the lead on the GitHub repository and much of the implementation work, while Amr focused mainly on generating tests and organizing the testing-related documentation. Tom supported planning, implementation discussion, and overall project coordination.
+
+### 4.2 Meeting 2
+
+**Time:** March 9, 2026, 5:00 pm to 6:00 pm  
+**Agenda:** Review of Individual Progress
+
+| Team Member | Previous Task | Completion State | Next Task |
+|---|---|---|---|
+| Tom Goncin | Planning and implementation support | 75% | Continue supporting implementation, review progress, and help prepare final deliverables |
+| Esteban Mendoza | GitHub repository work, implementation, and architecture refinement | 85% | Finalize core GitHub codebase, expand features, and support integration work |
+| Amr Azouz | Test generation and testing documentation | 70% | Expand generated tests and improve Testing.md and report testing sections |
+
+During this meeting, the team reviewed the transition from planning into implementation. Esteban had completed most of the GitHub and implementation progress by this stage, while Amr had made solid progress on generating tests and documenting the testing work. The team identified remaining work in integration, testing expansion, and report development.
+
+### 4.3 Meeting 3
+
+**Time:** March 28, 2026, 4:30 pm to 5:30 pm  
+**Agenda:** Testing Expansion and Report Refinement
+
+| Team Member | Previous Task | Completion State | Next Task |
+|---|---|---|---|
+| Tom Goncin | Implementation support and project coordination | 90% | Help with final fixes, presentation preparation, and system review |
+| Esteban Mendoza | GitHub implementation and feature completion | 95% | Complete final codebase fixes and support demo preparation |
+| Amr Azouz | Test generation and testing documentation | 90% | Add more tests, refine testing evidence, and finalize report testing content |
+
+At this stage, the team confirmed that the core implementation was mostly complete. Esteban had completed most of the codebase work on GitHub, while Amr focused mainly on expanding and refining the generated tests. The team used this meeting to align the technical work, testing evidence, and report expectations.
+
+### 4.4 Meeting 4
+
+**Time:** April 9, 2026, 6:00 pm to 7:00 pm  
+**Agenda:** Final Fixes, Presentation Preparation, and Submission Check
+
+| Team Member | Previous Task | Completion State | Next Task |
+|---|---|---|---|
+| Tom Goncin | Final support, review, and coordination | 100% | Rehearse the demo and verify final functionality |
+| Esteban Mendoza | Final GitHub fixes and implementation completion | 100% | Finalize demo support and confirm the repository is submission-ready |
+| Amr Azouz | Final test generation, testing evidence, and report updates | 100% | Finalize presentation polishing and submission review |
+
+In the final meeting, the team verified that the codebase, generated tests, report, and presentation were aligned. Esteban finalized the GitHub implementation work, while Amr finalized most of the generated tests and testing evidence. The remaining effort focused on polishing and submission readiness.
+
+## 5 Project Management
+
+### 5.1 Gantt Chart
+
+The project progressed in stages, beginning with requirements and architecture planning, followed by core implementation, then testing expansion, and finally presentation and submission preparation.
+
+| Task | Feb 3-9 | Feb 10-16 | Feb 17-23 | Feb 24-28 | Mar 1-9 | Mar 10-21 | Mar 22-28 | Mar 29-Apr 8 | Apr 9-11 |
+|---|---|---|---|---|---|---|---|---|---|
+| Requirements and problem definition | X | X |  |  |  |  |  |  |  |
+| Architecture alternatives and report structure |  | X | X | X |  |  |  |  |  |
+| Core GitHub implementation and repository development |  |  |  |  | X | X |  |  |  |
+| SQLite integration and feature completion |  |  |  |  | X | X |  |  |  |
+| Generated test development and testing expansion |  |  |  |  |  |  | X | X |  |
+| Testing.md and report refinements |  |  |  |  |  |  | X | X |  |
+| Final fixes, polish, and validation |  |  |  |  |  |  |  |  | X |
+| Presentation, demo, and final submission checks |  |  |  |  |  |  |  |  | X |
+
+### 5.2 Task List, Predecessors, Slack Time, and Critical Path
+
+| ID | Task | Predecessor(s) | Slack Time | Critical? |
+|---|---|---|---|---|
+| A | Requirements and problem definition | None | 0 days | Yes |
+| B | Architecture alternatives and report structure | A | 0 days | Yes |
+| C | Core GitHub implementation and repository development | B | 0 days | Yes |
+| D | SQLite integration and feature completion | C | 0 days | Yes |
+| E | Generated test development and testing expansion | D | 0 days | Yes |
+| F | Testing.md and report refinements | E | 1 day | No |
+| G | Final fixes, validation, and polish | E, F | 0 days | Yes |
+| H | Presentation, demo, and final submission checks | G | 0 days | Yes |
+
+**Critical Path:** A -> B -> C -> D -> E -> G -> H
+
+The critical path passed through the most important technical and documentation milestones: defining requirements, refining the architecture, completing the main GitHub implementation, integrating SQLite, expanding the generated tests, applying final fixes, and preparing the presentation. These tasks had little or no slack because delays in them would have directly affected the final submission.
+
+### 5.3 Project Management Summary
+
+Project management was structured around progressive milestones. The first phase focused on understanding the design problem, organizing the report, and comparing architecture alternatives. The second phase focused on GitHub implementation and feature development, largely driven through Esteban's codebase work. The third phase emphasized generated test development, Testing.md refinement, and report updates, which were mainly handled by Amr. The final phase addressed validation, polishing, and presentation preparation. This staged approach helped ensure that implementation, testing, and reporting advanced together instead of being left until the end.
+
+## 6 Conclusion and Future Work
+
+### 6.1 Conclusion
+
+URMarketplace successfully addressed a real end-of-term campus problem by replacing informal selling methods with a structured Java-based prototype. The final solution achieved the core design functions and objectives within the intended course scope. In particular, the system supported user registration and login, listing creation, bidding, buy-now purchasing, issue reporting, temporary storage booking, and seller payout calculation after platform and storage fees. The project also achieved an important architectural objective by separating validation, business logic, and persistence, making the software easier to test, debug, and explain.
+
+From a software testing and validation perspective, the project satisfied its testing requirements through multiple complementary techniques. These included boundary value testing, equivalence class testing, decision table testing, state transition testing, use case testing, path testing, data flow testing, and SQLite-backed integration testing. A major part of this validation work came from generating and refining the automated tests used to verify the system behaviour. The results showed that valid workflows completed correctly, invalid inputs were rejected properly, and important state changes such as storage handling, bidding behaviour, and payout calculation behaved as expected. Overall, the project met its main goal of producing a small but realistic software system whose behaviour could be validated directly through code and repeatable automated tests.
+
+### 6.2 Future Work
+
+Although the project achieved its intended academic scope, several improvements could strengthen the system in future iterations.
+
+- Add a full GUI or web-based interface instead of relying only on a console-based interface.
+- Store temporary storage bookings in SQLite so that storage data persists across runs.
+- Improve item browsing with stronger search, filtering, and category-based navigation.
+- Expand the rating and feedback system into a more complete feature with clearer transaction history.
+- Add secure payment integration or transaction verification, since the current scope does not validate external payments.
+- Strengthen the system further with richer lifecycle features such as item deletion, stronger moderation tools, and broader automated workflow testing.
+
+These improvements would make URMarketplace more practical, more user-friendly, and closer to a production-ready system while preserving the modular structure and testing advantages achieved in the current design.
+message.txt
+10 KB
