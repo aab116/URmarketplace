@@ -2593,11 +2593,16 @@ Project management was structured around progressive milestones. The first phase
 <h2 align="left" id="61-conclusion">6.1 — Conclusion</h2>
   <br>
   <br>
-
+<ul style="margin-left: 40px;">
 URMarketplace successfully addressed a real end-of-term campus problem by replacing informal selling methods with a structured Java-based prototype. The final solution achieved the core design functions and objectives within the intended course scope. In particular, the system supported user registration and login, listing creation, bidding, buy-now purchasing, issue reporting, temporary storage booking, and seller payout calculation after platform and storage fees. The project also achieved an important architectural objective by separating validation, business logic, and persistence, making the software easier to test, debug, and explain.
-
+</ul>
+</ul>
+  
+<ul style="margin-left: 40px;">
 From a software testing and validation perspective, the project satisfied its testing requirements through multiple complementary techniques. These included boundary value testing, equivalence class testing, decision table testing, state transition testing, use case testing, path testing, data flow testing, and SQLite-backed integration testing. A major part of this validation work came from generating and refining the automated tests used to verify the system behaviour. The results showed that valid workflows completed correctly, invalid inputs were rejected properly, and important state changes such as storage handling, bidding behaviour, and payout calculation behaved as expected. Overall, the project met its main goal of producing a small but realistic software system whose behaviour could be validated directly through code and repeatable automated tests.
-
+</ul>
+</ul>
+  
 <h2 align="left" id="62-future-work">6.2 — Future Work</h2>
   <br>
   <br>
